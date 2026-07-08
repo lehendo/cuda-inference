@@ -1,0 +1,27 @@
+# Internal documents / planning notes are never committed (user policy)
+*.md
+!/README.md
+docs/
+PLAN*
+NOTES*
+.claude/
+
+# Build and run artifacts (raw benchmark results ARE kept: every reported number must be traceable)
+build*/
+cmake-build-*/
+__pycache__/
+*.pyc
+*.out
+*.err
+.vscode/
+.idea/
+*.nsys-rep
+*.ncu-rep
+*.sqlite
+
+# synthetic fixture outputs (test-only, never results)
+analysis/fixtures/out/
+
+# derived, regenerable data kept out of git to keep the repository small (raw results are tracked)
+results/processed/all_results.csv
+results/figures/*.pdf
