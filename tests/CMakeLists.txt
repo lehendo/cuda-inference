@@ -1,0 +1,22 @@
+# Each test is a standalone executable registered with CTest. Run on a GPU node:
+#   ctest --test-dir <build> --output-on-failure
+function(gie_add_test name)
+  add_executable(${name} ${ARGN})
+  target_link_libraries(${name} PRIVATE gie)
+  target_include_directories(${name} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+  target_compile_options(${name} PRIVATE $<$<COMPILE_LANGUAGE:CXX>:${GIE_CXX_WARN}> ${GIE_CUDA_FLAGS})
+  add_test(NAME ${name} COMMAND ${name})
+  set_tests_properties(${name} PROPERTIES TIMEOUT 1800)
+endfunction()
+
+gie_add_test(test_cpu_reference test_cpu_reference.cpp)
+gie_add_test(test_validation test_validation.cpp)
+gie_add_test(test_direct_conv test_direct_conv.cpp)
+gie_add_test(test_implicit_gemm test_implicit_gemm.cpp)
+gie_add_test(test_tensor_core test_tensor_core.cpp)
+gie_add_test(test_fusion test_fusion.cpp)
+gie_add_test(test_dispatcher test_dispatcher.cpp)
+gie_add_test(test_autotuner test_autotuner.cu)
+gie_add_test(test_rmsnorm test_rmsnorm.cpp)
+gie_add_test(test_runtime_concurrency test_runtime_concurrency.cu)
+gie_add_test(test_cuda_graph test_cuda_graph.cu)
