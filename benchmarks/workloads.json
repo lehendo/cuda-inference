@@ -1,0 +1,282 @@
+{
+ "version": 1,
+ "split": "tune",
+ "description": "Public ResNet/VGG/Inception-style and adversarial convolution shapes used for tuning and development (disjoint from heldout_workloads.json).",
+ "workloads": [
+  {
+   "name": "lat_b1_c16_28_k3",
+   "category": "latency",
+   "B": 1,
+   "C": 16,
+   "H": 28,
+   "O": 16,
+   "K": 3,
+   "P": 1
+  },
+  {
+   "name": "lat_b1_c32_14_k3",
+   "category": "latency",
+   "B": 1,
+   "C": 32,
+   "H": 14,
+   "O": 32,
+   "K": 3,
+   "P": 1
+  },
+  {
+   "name": "lat_b1_c64_7_k1",
+   "category": "latency",
+   "B": 1,
+   "C": 64,
+   "H": 7,
+   "O": 64,
+   "K": 1,
+   "P": 0
+  },
+  {
+   "name": "lat_b1_c64_14_k3",
+   "category": "latency",
+   "B": 1,
+   "C": 64,
+   "H": 14,
+   "O": 64,
+   "K": 3,
+   "P": 1
+  },
+  {
+   "name": "lat_b1_c128_28_k1",
+   "category": "latency",
+   "B": 1,
+   "C": 128,
+   "H": 28,
+   "O": 128,
+   "K": 1,
+   "P": 0
+  },
+  {
+   "name": "lat_b1_c256_14_k3",
+   "category": "latency",
+   "B": 1,
+   "C": 256,
+   "H": 14,
+   "O": 256,
+   "K": 3,
+   "P": 1
+  },
+  {
+   "name": "lat_b1_c512_7_k3",
+   "category": "latency",
+   "B": 1,
+   "C": 512,
+   "H": 7,
+   "O": 512,
+   "K": 3,
+   "P": 1
+  },
+  {
+   "name": "lat_b1_stem_224_k7s2",
+   "category": "latency",
+   "B": 1,
+   "C": 3,
+   "H": 224,
+   "O": 64,
+   "K": 7,
+   "S": 2,
+   "P": 3
+  },
+  {
+   "name": "thr_b32_c64_56_k3",
+   "category": "throughput",
+   "B": 32,
+   "C": 64,
+   "H": 56,
+   "O": 64,
+   "K": 3,
+   "P": 1
+  },
+  {
+   "name": "thr_b32_c64_56_k1_expand",
+   "category": "throughput",
+   "B": 32,
+   "C": 64,
+   "H": 56,
+   "O": 256,
+   "K": 1,
+   "P": 0
+  },
+  {
+   "name": "thr_b32_c128_28_k3",
+   "category": "throughput",
+   "B": 32,
+   "C": 128,
+   "H": 28,
+   "O": 128,
+   "K": 3,
+   "P": 1
+  },
+  {
+   "name": "thr_b32_c256_14_k3",
+   "category": "throughput",
+   "B": 32,
+   "C": 256,
+   "H": 14,
+   "O": 256,
+   "K": 3,
+   "P": 1
+  },
+  {
+   "name": "thr_b32_c512_7_k3",
+   "category": "throughput",
+   "B": 32,
+   "C": 512,
+   "H": 7,
+   "O": 512,
+   "K": 3,
+   "P": 1
+  },
+  {
+   "name": "thr_b16_c128_56_k3",
+   "category": "throughput",
+   "B": 16,
+   "C": 128,
+   "H": 56,
+   "O": 128,
+   "K": 3,
+   "P": 1
+  },
+  {
+   "name": "thr_b32_stem_224_k7s2",
+   "category": "throughput",
+   "B": 32,
+   "C": 3,
+   "H": 224,
+   "O": 64,
+   "K": 7,
+   "S": 2,
+   "P": 3
+  },
+  {
+   "name": "thr_b16_c64_28_k5",
+   "category": "throughput",
+   "B": 16,
+   "C": 64,
+   "H": 28,
+   "O": 96,
+   "K": 5,
+   "P": 2
+  },
+  {
+   "name": "thr_b16_c64_112_k3",
+   "category": "throughput",
+   "B": 16,
+   "C": 64,
+   "H": 112,
+   "O": 64,
+   "K": 3,
+   "P": 1
+  },
+  {
+   "name": "thr_b8_c256_56_k1",
+   "category": "throughput",
+   "B": 8,
+   "C": 256,
+   "H": 56,
+   "O": 64,
+   "K": 1,
+   "P": 0
+  },
+  {
+   "name": "adv_b2_c3_o5_57x59_k3",
+   "category": "adversarial",
+   "B": 2,
+   "C": 3,
+   "H": 57,
+   "O": 5,
+   "K": 3,
+   "W": 59,
+   "P": 1
+  },
+  {
+   "name": "adv_b4_c7_o9_33x31_k5s2",
+   "category": "adversarial",
+   "B": 4,
+   "C": 7,
+   "H": 33,
+   "O": 9,
+   "K": 5,
+   "W": 31,
+   "S": 2,
+   "P": 2
+  },
+  {
+   "name": "adv_b1_c1_o8_512_k3",
+   "category": "adversarial",
+   "B": 1,
+   "C": 1,
+   "H": 512,
+   "O": 8,
+   "K": 3,
+   "P": 1
+  },
+  {
+   "name": "adv_b8_c96_o255_27_k3",
+   "category": "adversarial",
+   "B": 8,
+   "C": 96,
+   "H": 27,
+   "O": 255,
+   "K": 3,
+   "P": 1
+  },
+  {
+   "name": "adv_b1_c16_10_k5_pad4",
+   "category": "adversarial",
+   "B": 1,
+   "C": 16,
+   "H": 10,
+   "O": 16,
+   "K": 5,
+   "P": 4
+  },
+  {
+   "name": "adv_b8_c32_28_k7_unroll49x",
+   "category": "adversarial",
+   "B": 8,
+   "C": 32,
+   "H": 28,
+   "O": 32,
+   "K": 7,
+   "P": 3
+  },
+  {
+   "name": "adv_b16_c32_56_k5_unroll25x",
+   "category": "adversarial",
+   "B": 16,
+   "C": 32,
+   "H": 56,
+   "O": 32,
+   "K": 5,
+   "P": 2
+  },
+  {
+   "name": "adv_b4_c130_o130_15_k3",
+   "category": "adversarial",
+   "B": 4,
+   "C": 130,
+   "H": 15,
+   "O": 130,
+   "K": 3,
+   "P": 1
+  },
+  {
+   "name": "adv_b32_c8_o8_112_k1_membound",
+   "category": "adversarial",
+   "B": 32,
+   "C": 8,
+   "H": 112,
+   "O": 8,
+   "K": 1,
+   "P": 0
+  }
+ ]
+}

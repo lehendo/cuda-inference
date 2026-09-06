@@ -1,0 +1,181 @@
+{
+ "version": 1,
+ "split": "heldout",
+ "description": "Held-out evaluation shapes never used to tune or calibrate anything.",
+ "workloads": [
+  {
+   "name": "ho_lat_b1_c24_20_k3",
+   "category": "latency",
+   "B": 1,
+   "C": 24,
+   "H": 20,
+   "O": 24,
+   "K": 3,
+   "P": 1
+  },
+  {
+   "name": "ho_lat_b1_c48_10_k3",
+   "category": "latency",
+   "B": 1,
+   "C": 48,
+   "H": 10,
+   "O": 96,
+   "K": 3,
+   "P": 1
+  },
+  {
+   "name": "ho_lat_b1_c96_14_k1",
+   "category": "latency",
+   "B": 1,
+   "C": 96,
+   "H": 14,
+   "O": 192,
+   "K": 1,
+   "P": 0
+  },
+  {
+   "name": "ho_lat_b2_c64_16_k3",
+   "category": "latency",
+   "B": 2,
+   "C": 64,
+   "H": 16,
+   "O": 64,
+   "K": 3,
+   "P": 1
+  },
+  {
+   "name": "ho_lat_b1_c3_96_k5s2",
+   "category": "latency",
+   "B": 1,
+   "C": 3,
+   "H": 96,
+   "O": 32,
+   "K": 5,
+   "S": 2,
+   "P": 2
+  },
+  {
+   "name": "ho_thr_b32_c96_40_k3",
+   "category": "throughput",
+   "B": 32,
+   "C": 96,
+   "H": 40,
+   "O": 96,
+   "K": 3,
+   "P": 1
+  },
+  {
+   "name": "ho_thr_b16_c192_20_k3",
+   "category": "throughput",
+   "B": 16,
+   "C": 192,
+   "H": 20,
+   "O": 192,
+   "K": 3,
+   "P": 1
+  },
+  {
+   "name": "ho_thr_b32_c128_14_k1",
+   "category": "throughput",
+   "B": 32,
+   "C": 128,
+   "H": 14,
+   "O": 512,
+   "K": 1,
+   "P": 0
+  },
+  {
+   "name": "ho_thr_b24_c80_48_k3",
+   "category": "throughput",
+   "B": 24,
+   "C": 80,
+   "H": 48,
+   "O": 160,
+   "K": 3,
+   "P": 1
+  },
+  {
+   "name": "ho_thr_b8_c256_32_k3s2",
+   "category": "throughput",
+   "B": 8,
+   "C": 256,
+   "H": 32,
+   "O": 256,
+   "K": 3,
+   "S": 2,
+   "P": 1
+  },
+  {
+   "name": "ho_thr_b32_c32_64_k5",
+   "category": "throughput",
+   "B": 32,
+   "C": 32,
+   "H": 64,
+   "O": 64,
+   "K": 5,
+   "P": 2
+  },
+  {
+   "name": "ho_adv_b3_c5_o11_45x47_k3",
+   "category": "adversarial",
+   "B": 3,
+   "C": 5,
+   "H": 45,
+   "O": 11,
+   "K": 3,
+   "W": 47,
+   "P": 1
+  },
+  {
+   "name": "ho_adv_b2_c2_o6_128_k7s2",
+   "category": "adversarial",
+   "B": 2,
+   "C": 2,
+   "H": 128,
+   "O": 6,
+   "K": 7,
+   "S": 2,
+   "P": 3
+  },
+  {
+   "name": "ho_adv_b6_c100_o250_19_k3",
+   "category": "adversarial",
+   "B": 6,
+   "C": 100,
+   "H": 19,
+   "O": 250,
+   "K": 3,
+   "P": 1
+  },
+  {
+   "name": "ho_adv_b1_c48_12_k3_pad3",
+   "category": "adversarial",
+   "B": 1,
+   "C": 48,
+   "H": 12,
+   "O": 48,
+   "K": 3,
+   "P": 3
+  },
+  {
+   "name": "ho_adv_b10_c20_o20_30_k7",
+   "category": "adversarial",
+   "B": 10,
+   "C": 20,
+   "H": 30,
+   "O": 20,
+   "K": 7,
+   "P": 3
+  },
+  {
+   "name": "ho_adv_b16_c4_o4_96_k3_lowC",
+   "category": "adversarial",
+   "B": 16,
+   "C": 4,
+   "H": 96,
+   "O": 4,
+   "K": 3,
+   "P": 1
+  }
+ ]
+}
