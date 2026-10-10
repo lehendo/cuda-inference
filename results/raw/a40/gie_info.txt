@@ -1,0 +1,5 @@
+CUDA devices: 1
+[0] NVIDIA A40 (sm_86, 84 SMs, 45488 MiB, L2 6144 KiB, smem/block 48/99 KiB (default/opt-in), driver 13.0, runtime 12.8)
+    theoretical (spec-derived, NOT measured): fp32 37.417 TFLOP/s, fp16-TC 149.668 TFLOP/s, bandwidth 696.096 GB/s
+    measured ceilings: fp32 31.3119 TFLOP/s, fp16-TC 149.479 TFLOP/s, copy bandwidth 553.722 GB/s, launch 2.01933 us
+    registered kernels: 93 (direct 3, im2col_gemm 4, simt_tiled 20, implicit_gemm 16, tensor_core 50)

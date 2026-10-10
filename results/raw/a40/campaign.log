@@ -1,0 +1,543 @@
+=== [18:13:25] device ceilings
+CUDA devices: 1
+[0] NVIDIA A40 (sm_86, 84 SMs, 45488 MiB, L2 6144 KiB, smem/block 48/99 KiB (default/opt-in), driver 13.0, runtime 12.8)
+    theoretical (spec-derived, NOT measured): fp32 37.417 TFLOP/s, fp16-TC 149.668 TFLOP/s, bandwidth 696.096 GB/s
+    measured ceilings: fp32 31.3119 TFLOP/s, fp16-TC 149.479 TFLOP/s, copy bandwidth 553.722 GB/s, launch 2.01933 us
+    registered kernels: 93 (direct 3, im2col_gemm 4, simt_tiled 20, implicit_gemm 16, tensor_core 50)
+=== [18:13:26] main: tuning set, fp32+fp16, fixed+tuned, fused+unfused, e2e
+[gie_bench] NVIDIA A40 (sm_86, 84 SMs, 45488 MiB, L2 6144 KiB, smem/block 48/99 KiB (default/opt-in), driver 13.0, runtime 12.8)
+[gie_bench] 27 workloads -> /scratch/arjunc4/cuda-inference-work/campaign_v3_a40/tuning_set
+[1/27] lat_b1_c16_28_k3 fp32 B1_C16_28x28_O16_K3x3_s1x1_p1x1_d1x1_g1
+[1/27] lat_b1_c16_28_k3 fp16 B1_C16_28x28_O16_K3x3_s1x1_p1x1_d1x1_g1
+[2/27] lat_b1_c32_14_k3 fp32 B1_C32_14x14_O32_K3x3_s1x1_p1x1_d1x1_g1
+[2/27] lat_b1_c32_14_k3 fp16 B1_C32_14x14_O32_K3x3_s1x1_p1x1_d1x1_g1
+[3/27] lat_b1_c64_7_k1 fp32 B1_C64_7x7_O64_K1x1_s1x1_p0x0_d1x1_g1
+[3/27] lat_b1_c64_7_k1 fp16 B1_C64_7x7_O64_K1x1_s1x1_p0x0_d1x1_g1
+[4/27] lat_b1_c64_14_k3 fp32 B1_C64_14x14_O64_K3x3_s1x1_p1x1_d1x1_g1
+[4/27] lat_b1_c64_14_k3 fp16 B1_C64_14x14_O64_K3x3_s1x1_p1x1_d1x1_g1
+[5/27] lat_b1_c128_28_k1 fp32 B1_C128_28x28_O128_K1x1_s1x1_p0x0_d1x1_g1
+[5/27] lat_b1_c128_28_k1 fp16 B1_C128_28x28_O128_K1x1_s1x1_p0x0_d1x1_g1
+[6/27] lat_b1_c256_14_k3 fp32 B1_C256_14x14_O256_K3x3_s1x1_p1x1_d1x1_g1
+[6/27] lat_b1_c256_14_k3 fp16 B1_C256_14x14_O256_K3x3_s1x1_p1x1_d1x1_g1
+[7/27] lat_b1_c512_7_k3 fp32 B1_C512_7x7_O512_K3x3_s1x1_p1x1_d1x1_g1
+[7/27] lat_b1_c512_7_k3 fp16 B1_C512_7x7_O512_K3x3_s1x1_p1x1_d1x1_g1
+[8/27] lat_b1_stem_224_k7s2 fp32 B1_C3_224x224_O64_K7x7_s2x2_p3x3_d1x1_g1
+[8/27] lat_b1_stem_224_k7s2 fp16 B1_C3_224x224_O64_K7x7_s2x2_p3x3_d1x1_g1
+[9/27] thr_b32_c64_56_k3 fp32 B32_C64_56x56_O64_K3x3_s1x1_p1x1_d1x1_g1
+[9/27] thr_b32_c64_56_k3 fp16 B32_C64_56x56_O64_K3x3_s1x1_p1x1_d1x1_g1
+[10/27] thr_b32_c64_56_k1_expand fp32 B32_C64_56x56_O256_K1x1_s1x1_p0x0_d1x1_g1
+[10/27] thr_b32_c64_56_k1_expand fp16 B32_C64_56x56_O256_K1x1_s1x1_p0x0_d1x1_g1
+[11/27] thr_b32_c128_28_k3 fp32 B32_C128_28x28_O128_K3x3_s1x1_p1x1_d1x1_g1
+[11/27] thr_b32_c128_28_k3 fp16 B32_C128_28x28_O128_K3x3_s1x1_p1x1_d1x1_g1
+[12/27] thr_b32_c256_14_k3 fp32 B32_C256_14x14_O256_K3x3_s1x1_p1x1_d1x1_g1
+[12/27] thr_b32_c256_14_k3 fp16 B32_C256_14x14_O256_K3x3_s1x1_p1x1_d1x1_g1
+[13/27] thr_b32_c512_7_k3 fp32 B32_C512_7x7_O512_K3x3_s1x1_p1x1_d1x1_g1
+[13/27] thr_b32_c512_7_k3 fp16 B32_C512_7x7_O512_K3x3_s1x1_p1x1_d1x1_g1
+[14/27] thr_b16_c128_56_k3 fp32 B16_C128_56x56_O128_K3x3_s1x1_p1x1_d1x1_g1
+[14/27] thr_b16_c128_56_k3 fp16 B16_C128_56x56_O128_K3x3_s1x1_p1x1_d1x1_g1
+[15/27] thr_b32_stem_224_k7s2 fp32 B32_C3_224x224_O64_K7x7_s2x2_p3x3_d1x1_g1
+[15/27] thr_b32_stem_224_k7s2 fp16 B32_C3_224x224_O64_K7x7_s2x2_p3x3_d1x1_g1
+[16/27] thr_b16_c64_28_k5 fp32 B16_C64_28x28_O96_K5x5_s1x1_p2x2_d1x1_g1
+[16/27] thr_b16_c64_28_k5 fp16 B16_C64_28x28_O96_K5x5_s1x1_p2x2_d1x1_g1
+[17/27] thr_b16_c64_112_k3 fp32 B16_C64_112x112_O64_K3x3_s1x1_p1x1_d1x1_g1
+[17/27] thr_b16_c64_112_k3 fp16 B16_C64_112x112_O64_K3x3_s1x1_p1x1_d1x1_g1
+[18/27] thr_b8_c256_56_k1 fp32 B8_C256_56x56_O64_K1x1_s1x1_p0x0_d1x1_g1
+[18/27] thr_b8_c256_56_k1 fp16 B8_C256_56x56_O64_K1x1_s1x1_p0x0_d1x1_g1
+[19/27] adv_b2_c3_o5_57x59_k3 fp32 B2_C3_57x59_O5_K3x3_s1x1_p1x1_d1x1_g1
+[19/27] adv_b2_c3_o5_57x59_k3 fp16 B2_C3_57x59_O5_K3x3_s1x1_p1x1_d1x1_g1
+[20/27] adv_b4_c7_o9_33x31_k5s2 fp32 B4_C7_33x31_O9_K5x5_s2x2_p2x2_d1x1_g1
+[20/27] adv_b4_c7_o9_33x31_k5s2 fp16 B4_C7_33x31_O9_K5x5_s2x2_p2x2_d1x1_g1
+[21/27] adv_b1_c1_o8_512_k3 fp32 B1_C1_512x512_O8_K3x3_s1x1_p1x1_d1x1_g1
+[21/27] adv_b1_c1_o8_512_k3 fp16 B1_C1_512x512_O8_K3x3_s1x1_p1x1_d1x1_g1
+[22/27] adv_b8_c96_o255_27_k3 fp32 B8_C96_27x27_O255_K3x3_s1x1_p1x1_d1x1_g1
+[22/27] adv_b8_c96_o255_27_k3 fp16 B8_C96_27x27_O255_K3x3_s1x1_p1x1_d1x1_g1
+[23/27] adv_b1_c16_10_k5_pad4 fp32 B1_C16_10x10_O16_K5x5_s1x1_p4x4_d1x1_g1
+[23/27] adv_b1_c16_10_k5_pad4 fp16 B1_C16_10x10_O16_K5x5_s1x1_p4x4_d1x1_g1
+[24/27] adv_b8_c32_28_k7_unroll49x fp32 B8_C32_28x28_O32_K7x7_s1x1_p3x3_d1x1_g1
+[24/27] adv_b8_c32_28_k7_unroll49x fp16 B8_C32_28x28_O32_K7x7_s1x1_p3x3_d1x1_g1
+[25/27] adv_b16_c32_56_k5_unroll25x fp32 B16_C32_56x56_O32_K5x5_s1x1_p2x2_d1x1_g1
+[25/27] adv_b16_c32_56_k5_unroll25x fp16 B16_C32_56x56_O32_K5x5_s1x1_p2x2_d1x1_g1
+[26/27] adv_b4_c130_o130_15_k3 fp32 B4_C130_15x15_O130_K3x3_s1x1_p1x1_d1x1_g1
+[26/27] adv_b4_c130_o130_15_k3 fp16 B4_C130_15x15_O130_K3x3_s1x1_p1x1_d1x1_g1
+[27/27] adv_b32_c8_o8_112_k1_membound fp32 B32_C8_112x112_O8_K1x1_s1x1_p0x0_d1x1_g1
+[27/27] adv_b32_c8_o8_112_k1_membound fp16 B32_C8_112x112_O8_K1x1_s1x1_p0x0_d1x1_g1
+[gie_bench] done
+=== [18:20:48] held-out set
+[gie_bench] NVIDIA A40 (sm_86, 84 SMs, 45488 MiB, L2 6144 KiB, smem/block 48/99 KiB (default/opt-in), driver 13.0, runtime 12.8)
+[gie_bench] 17 workloads -> /scratch/arjunc4/cuda-inference-work/campaign_v3_a40/heldout
+[1/17] ho_lat_b1_c24_20_k3 fp32 B1_C24_20x20_O24_K3x3_s1x1_p1x1_d1x1_g1
+[1/17] ho_lat_b1_c24_20_k3 fp16 B1_C24_20x20_O24_K3x3_s1x1_p1x1_d1x1_g1
+[2/17] ho_lat_b1_c48_10_k3 fp32 B1_C48_10x10_O96_K3x3_s1x1_p1x1_d1x1_g1
+[2/17] ho_lat_b1_c48_10_k3 fp16 B1_C48_10x10_O96_K3x3_s1x1_p1x1_d1x1_g1
+[3/17] ho_lat_b1_c96_14_k1 fp32 B1_C96_14x14_O192_K1x1_s1x1_p0x0_d1x1_g1
+[3/17] ho_lat_b1_c96_14_k1 fp16 B1_C96_14x14_O192_K1x1_s1x1_p0x0_d1x1_g1
+[4/17] ho_lat_b2_c64_16_k3 fp32 B2_C64_16x16_O64_K3x3_s1x1_p1x1_d1x1_g1
+[4/17] ho_lat_b2_c64_16_k3 fp16 B2_C64_16x16_O64_K3x3_s1x1_p1x1_d1x1_g1
+[5/17] ho_lat_b1_c3_96_k5s2 fp32 B1_C3_96x96_O32_K5x5_s2x2_p2x2_d1x1_g1
+[5/17] ho_lat_b1_c3_96_k5s2 fp16 B1_C3_96x96_O32_K5x5_s2x2_p2x2_d1x1_g1
+[6/17] ho_thr_b32_c96_40_k3 fp32 B32_C96_40x40_O96_K3x3_s1x1_p1x1_d1x1_g1
+[6/17] ho_thr_b32_c96_40_k3 fp16 B32_C96_40x40_O96_K3x3_s1x1_p1x1_d1x1_g1
+[7/17] ho_thr_b16_c192_20_k3 fp32 B16_C192_20x20_O192_K3x3_s1x1_p1x1_d1x1_g1
+[7/17] ho_thr_b16_c192_20_k3 fp16 B16_C192_20x20_O192_K3x3_s1x1_p1x1_d1x1_g1
+[8/17] ho_thr_b32_c128_14_k1 fp32 B32_C128_14x14_O512_K1x1_s1x1_p0x0_d1x1_g1
+[8/17] ho_thr_b32_c128_14_k1 fp16 B32_C128_14x14_O512_K1x1_s1x1_p0x0_d1x1_g1
+[9/17] ho_thr_b24_c80_48_k3 fp32 B24_C80_48x48_O160_K3x3_s1x1_p1x1_d1x1_g1
+[9/17] ho_thr_b24_c80_48_k3 fp16 B24_C80_48x48_O160_K3x3_s1x1_p1x1_d1x1_g1
+[10/17] ho_thr_b8_c256_32_k3s2 fp32 B8_C256_32x32_O256_K3x3_s2x2_p1x1_d1x1_g1
+[10/17] ho_thr_b8_c256_32_k3s2 fp16 B8_C256_32x32_O256_K3x3_s2x2_p1x1_d1x1_g1
+[11/17] ho_thr_b32_c32_64_k5 fp32 B32_C32_64x64_O64_K5x5_s1x1_p2x2_d1x1_g1
+[11/17] ho_thr_b32_c32_64_k5 fp16 B32_C32_64x64_O64_K5x5_s1x1_p2x2_d1x1_g1
+[12/17] ho_adv_b3_c5_o11_45x47_k3 fp32 B3_C5_45x47_O11_K3x3_s1x1_p1x1_d1x1_g1
+[12/17] ho_adv_b3_c5_o11_45x47_k3 fp16 B3_C5_45x47_O11_K3x3_s1x1_p1x1_d1x1_g1
+[13/17] ho_adv_b2_c2_o6_128_k7s2 fp32 B2_C2_128x128_O6_K7x7_s2x2_p3x3_d1x1_g1
+[13/17] ho_adv_b2_c2_o6_128_k7s2 fp16 B2_C2_128x128_O6_K7x7_s2x2_p3x3_d1x1_g1
+[14/17] ho_adv_b6_c100_o250_19_k3 fp32 B6_C100_19x19_O250_K3x3_s1x1_p1x1_d1x1_g1
+[14/17] ho_adv_b6_c100_o250_19_k3 fp16 B6_C100_19x19_O250_K3x3_s1x1_p1x1_d1x1_g1
+[15/17] ho_adv_b1_c48_12_k3_pad3 fp32 B1_C48_12x12_O48_K3x3_s1x1_p3x3_d1x1_g1
+[15/17] ho_adv_b1_c48_12_k3_pad3 fp16 B1_C48_12x12_O48_K3x3_s1x1_p3x3_d1x1_g1
+[16/17] ho_adv_b10_c20_o20_30_k7 fp32 B10_C20_30x30_O20_K7x7_s1x1_p3x3_d1x1_g1
+[16/17] ho_adv_b10_c20_o20_30_k7 fp16 B10_C20_30x30_O20_K7x7_s1x1_p3x3_d1x1_g1
+[17/17] ho_adv_b16_c4_o4_96_k3_lowC fp32 B16_C4_96x96_O4_K3x3_s1x1_p1x1_d1x1_g1
+[17/17] ho_adv_b16_c4_o4_96_k3_lowC fp16 B16_C4_96x96_O4_K3x3_s1x1_p1x1_d1x1_g1
+[gie_bench] done
+=== [18:23:45] Experiment B (search strategies)
+[tuning] lat_b1_c16_28_k3 fp32 best=im2col_gemm_fp32
+[tuning] lat_b1_c16_28_k3 fp16 best=im2col_gemm_fp16
+[tuning] lat_b1_c32_14_k3 fp32 best=im2col_gemm_fp32
+[tuning] lat_b1_c32_14_k3 fp16 best=im2col_gemm_fp16
+[tuning] lat_b1_c64_7_k1 fp32 best=implicit_gemm_fp32_128x32x8_t4x4
+[tuning] lat_b1_c64_7_k1 fp16 best=tensor_core_fp16_128x64x32_w4x2
+[tuning] lat_b1_c64_14_k3 fp32 best=im2col_gemm_fp32
+[tuning] lat_b1_c64_14_k3 fp16 best=im2col_gemm_fp16
+[tuning] lat_b1_c128_28_k1 fp32 best=im2col_gemm_fp32
+[tuning] lat_b1_c128_28_k1 fp16 best=im2col_gemm_fp16
+[tuning] lat_b1_c256_14_k3 fp32 best=im2col_gemm_fp32
+[tuning] lat_b1_c256_14_k3 fp16 best=im2col_gemm_fp16
+[tuning] lat_b1_c512_7_k3 fp32 best=im2col_gemm_fp32
+[tuning] lat_b1_c512_7_k3 fp16 best=im2col_gemm_fp16
+[tuning] lat_b1_stem_224_k7s2 fp32 best=implicit_gemm_fp32_64x64x8_t4x4
+[tuning] lat_b1_stem_224_k7s2 fp16 best=tensor_core_fp16_64x64x32_w2x2
+[tuning] thr_b32_c64_56_k3 fp32 best=implicit_gemm_fp32_64x64x8_t4x4
+[tuning] thr_b32_c64_56_k3 fp16 best=tcmma_fp16_64x128x32_s3_w2x4_sk1
+[tuning] thr_b32_c64_56_k1_expand fp32 best=implicit_gemm_fp32_64x64x8_t4x4
+[tuning] thr_b32_c64_56_k1_expand fp16 best=tensor_core_fp16_128x64x32_w4x2
+[tuning] thr_b32_c128_28_k3 fp32 best=implicit_gemm_fp32_64x64x8_t4x4
+[tuning] thr_b32_c128_28_k3 fp16 best=tcmma_fp16_128x128x32_s3_w2x4_sk1
+[tuning] thr_b32_c256_14_k3 fp32 best=implicit_gemm_fp32_64x64x8_t4x4
+[tuning] thr_b32_c256_14_k3 fp16 best=tcmma_fp16_128x128x32_s2_w2x4_sk1
+[tuning] thr_b32_c512_7_k3 fp32 best=implicit_gemm_fp32_128x32x8_t4x4
+[tuning] thr_b32_c512_7_k3 fp16 best=tcmma_fp16_64x128x32_s3_w2x4_sk1
+[tuning] thr_b16_c128_56_k3 fp32 best=implicit_gemm_fp32_64x64x8_t4x4
+[tuning] thr_b16_c128_56_k3 fp16 best=tcmma_fp16_128x128x32_s3_w2x4_sk1
+[tuning] thr_b32_stem_224_k7s2 fp32 best=implicit_gemm_fp32_64x64x8_t4x4
+[tuning] thr_b32_stem_224_k7s2 fp16 best=tensor_core_fp16_64x64x32_w2x2
+[tuning] thr_b16_c64_28_k5 fp32 best=implicit_gemm_fp32_64x64x8_t4x4
+[tuning] thr_b16_c64_28_k5 fp16 best=tcmma_fp16_128x128x32_s2_w2x4_sk1
+[tuning] thr_b16_c64_112_k3 fp32 best=implicit_gemm_fp32_64x64x8_t4x4
+[tuning] thr_b16_c64_112_k3 fp16 best=tcmma_fp16_64x128x32_s4_w2x4_sk1
+[tuning] thr_b8_c256_56_k1 fp32 best=implicit_gemm_fp32_64x64x8_t4x4
+[tuning] thr_b8_c256_56_k1 fp16 best=tensor_core_fp16_64x64x32_w2x2
+[tuning] adv_b2_c3_o5_57x59_k3 fp32 best=direct_fp32
+[tuning] adv_b2_c3_o5_57x59_k3 fp16 best=tensor_core_fp16_128x64x32_w4x2
+[tuning] adv_b4_c7_o9_33x31_k5s2 fp32 best=im2col_gemm_fp32
+[tuning] adv_b4_c7_o9_33x31_k5s2 fp16 best=im2col_gemm_fp16
+[tuning] adv_b1_c1_o8_512_k3 fp32 best=implicit_gemm_fp32_32x128x8_t4x4
+[tuning] adv_b1_c1_o8_512_k3 fp16 best=implicit_gemm_fp16_32x128x8_t4x4
+[tuning] adv_b8_c96_o255_27_k3 fp32 best=implicit_gemm_fp32_64x64x8_t4x4
+[tuning] adv_b8_c96_o255_27_k3 fp16 best=tcmma_fp16_128x128x32_s2_w2x4_sk1
+[tuning] adv_b1_c16_10_k5_pad4 fp32 best=im2col_gemm_fp32
+[tuning] adv_b1_c16_10_k5_pad4 fp16 best=im2col_gemm_fp16
+[tuning] adv_b8_c32_28_k7_unroll49x fp32 best=simt_tiled_fp32_tc32_t4x32_r4x4_cc8
+[tuning] adv_b8_c32_28_k7_unroll49x fp16 best=tcmma_fp16_64x64x32_s4_w2x2_sk1
+[tuning] adv_b16_c32_56_k5_unroll25x fp32 best=implicit_gemm_fp32_32x128x8_t4x4
+[tuning] adv_b16_c32_56_k5_unroll25x fp16 best=tcmma_fp16_64x128x32_s3_w2x4_sk1
+[tuning] adv_b4_c130_o130_15_k3 fp32 best=implicit_gemm_fp32_128x32x8_t4x4
+[tuning] adv_b4_c130_o130_15_k3 fp16 best=im2col_gemm_fp16
+[tuning] adv_b32_c8_o8_112_k1_membound fp32 best=implicit_gemm_fp32_32x128x8_t4x4
+[tuning] adv_b32_c8_o8_112_k1_membound fp16 best=implicit_gemm_fp16_32x128x8_t4x4
+fitted calibration (tuning set only): {"direct":1.3887352001998958,"im2col_gemm":1.6633409439043156,"implicit_gemm":1.4997304822716206,"simt_tiled":1.7404949118031134,"tensor_core":1.5987674816049566}
+[heldout] ho_lat_b1_c24_20_k3 fp32
+[heldout] ho_lat_b1_c24_20_k3 fp16
+[heldout] ho_lat_b1_c48_10_k3 fp32
+[heldout] ho_lat_b1_c48_10_k3 fp16
+[heldout] ho_lat_b1_c96_14_k1 fp32
+[heldout] ho_lat_b1_c96_14_k1 fp16
+[heldout] ho_lat_b2_c64_16_k3 fp32
+[heldout] ho_lat_b2_c64_16_k3 fp16
+[heldout] ho_lat_b1_c3_96_k5s2 fp32
+[heldout] ho_lat_b1_c3_96_k5s2 fp16
+[heldout] ho_thr_b32_c96_40_k3 fp32
+[heldout] ho_thr_b32_c96_40_k3 fp16
+[heldout] ho_thr_b16_c192_20_k3 fp32
+[heldout] ho_thr_b16_c192_20_k3 fp16
+[heldout] ho_thr_b32_c128_14_k1 fp32
+[heldout] ho_thr_b32_c128_14_k1 fp16
+[heldout] ho_thr_b24_c80_48_k3 fp32
+[heldout] ho_thr_b24_c80_48_k3 fp16
+[heldout] ho_thr_b8_c256_32_k3s2 fp32
+[heldout] ho_thr_b8_c256_32_k3s2 fp16
+[heldout] ho_thr_b32_c32_64_k5 fp32
+[heldout] ho_thr_b32_c32_64_k5 fp16
+[heldout] ho_adv_b3_c5_o11_45x47_k3 fp32
+[heldout] ho_adv_b3_c5_o11_45x47_k3 fp16
+[heldout] ho_adv_b2_c2_o6_128_k7s2 fp32
+[heldout] ho_adv_b2_c2_o6_128_k7s2 fp16
+[heldout] ho_adv_b6_c100_o250_19_k3 fp32
+[heldout] ho_adv_b6_c100_o250_19_k3 fp16
+[heldout] ho_adv_b1_c48_12_k3_pad3 fp32
+[heldout] ho_adv_b1_c48_12_k3_pad3 fp16
+[heldout] ho_adv_b10_c20_o20_30_k7 fp32
+[heldout] ho_adv_b10_c20_o20_30_k7 fp16
+[heldout] ho_adv_b16_c4_o4_96_k3_lowC fp32
+[heldout] ho_adv_b16_c4_o4_96_k3_lowC fp16
+=== [18:27:12] Experiment D sweeps
+[gie_bench] NVIDIA A40 (sm_86, 84 SMs, 45488 MiB, L2 6144 KiB, smem/block 48/99 KiB (default/opt-in), driver 13.0, runtime 12.8)
+[gie_bench] 31 workloads -> /scratch/arjunc4/cuda-inference-work/campaign_v3_a40/sweeps
+[1/31] sweep_batch_b1_c64_28_k3 fp32 B1_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1
+[1/31] sweep_batch_b1_c64_28_k3 fp16 B1_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1
+[2/31] sweep_batch_b2_c64_28_k3 fp32 B2_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1
+[2/31] sweep_batch_b2_c64_28_k3 fp16 B2_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1
+[3/31] sweep_batch_b4_c64_28_k3 fp32 B4_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1
+[3/31] sweep_batch_b4_c64_28_k3 fp16 B4_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1
+[4/31] sweep_batch_b8_c64_28_k3 fp32 B8_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1
+[4/31] sweep_batch_b8_c64_28_k3 fp16 B8_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1
+[5/31] sweep_batch_b16_c64_28_k3 fp32 B16_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1
+[5/31] sweep_batch_b16_c64_28_k3 fp16 B16_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1
+[6/31] sweep_batch_b32_c64_28_k3 fp32 B32_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1
+[6/31] sweep_batch_b32_c64_28_k3 fp16 B32_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1
+[7/31] sweep_batch_b64_c64_28_k3 fp32 B64_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1
+[7/31] sweep_batch_b64_c64_28_k3 fp16 B64_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1
+[8/31] sweep_kernel_k1_b16_c64_28 fp32 B16_C64_28x28_O64_K1x1_s1x1_p0x0_d1x1_g1
+[8/31] sweep_kernel_k1_b16_c64_28 fp16 B16_C64_28x28_O64_K1x1_s1x1_p0x0_d1x1_g1
+[9/31] sweep_kernel_k3_b16_c64_28 fp32 B16_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1
+[9/31] sweep_kernel_k3_b16_c64_28 fp16 B16_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1
+[10/31] sweep_kernel_k5_b16_c64_28 fp32 B16_C64_28x28_O64_K5x5_s1x1_p2x2_d1x1_g1
+[10/31] sweep_kernel_k5_b16_c64_28 fp16 B16_C64_28x28_O64_K5x5_s1x1_p2x2_d1x1_g1
+[11/31] sweep_kernel_k7_b16_c64_28 fp32 B16_C64_28x28_O64_K7x7_s1x1_p3x3_d1x1_g1
+[11/31] sweep_kernel_k7_b16_c64_28 fp16 B16_C64_28x28_O64_K7x7_s1x1_p3x3_d1x1_g1
+[12/31] sweep_channels_c3_b16_28_k3 fp32 B16_C3_28x28_O8_K3x3_s1x1_p1x1_d1x1_g1
+[12/31] sweep_channels_c3_b16_28_k3 fp16 B16_C3_28x28_O8_K3x3_s1x1_p1x1_d1x1_g1
+[13/31] sweep_channels_c8_b16_28_k3 fp32 B16_C8_28x28_O8_K3x3_s1x1_p1x1_d1x1_g1
+[13/31] sweep_channels_c8_b16_28_k3 fp16 B16_C8_28x28_O8_K3x3_s1x1_p1x1_d1x1_g1
+[14/31] sweep_channels_c16_b16_28_k3 fp32 B16_C16_28x28_O16_K3x3_s1x1_p1x1_d1x1_g1
+[14/31] sweep_channels_c16_b16_28_k3 fp16 B16_C16_28x28_O16_K3x3_s1x1_p1x1_d1x1_g1
+[15/31] sweep_channels_c32_b16_28_k3 fp32 B16_C32_28x28_O32_K3x3_s1x1_p1x1_d1x1_g1
+[15/31] sweep_channels_c32_b16_28_k3 fp16 B16_C32_28x28_O32_K3x3_s1x1_p1x1_d1x1_g1
+[16/31] sweep_channels_c64_b16_28_k3 fp32 B16_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1
+[16/31] sweep_channels_c64_b16_28_k3 fp16 B16_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1
+[17/31] sweep_channels_c128_b16_28_k3 fp32 B16_C128_28x28_O128_K3x3_s1x1_p1x1_d1x1_g1
+[17/31] sweep_channels_c128_b16_28_k3 fp16 B16_C128_28x28_O128_K3x3_s1x1_p1x1_d1x1_g1
+[18/31] sweep_channels_c256_b16_28_k3 fp32 B16_C256_28x28_O256_K3x3_s1x1_p1x1_d1x1_g1
+[18/31] sweep_channels_c256_b16_28_k3 fp16 B16_C256_28x28_O256_K3x3_s1x1_p1x1_d1x1_g1
+[19/31] sweep_channels_c512_b16_28_k3 fp32 B16_C512_28x28_O512_K3x3_s1x1_p1x1_d1x1_g1
+[19/31] sweep_channels_c512_b16_28_k3 fp16 B16_C512_28x28_O512_K3x3_s1x1_p1x1_d1x1_g1
+[20/31] sweep_spatial_h7_b16_c64_k3 fp32 B16_C64_7x7_O64_K3x3_s1x1_p1x1_d1x1_g1
+[20/31] sweep_spatial_h7_b16_c64_k3 fp16 B16_C64_7x7_O64_K3x3_s1x1_p1x1_d1x1_g1
+[21/31] sweep_spatial_h14_b16_c64_k3 fp32 B16_C64_14x14_O64_K3x3_s1x1_p1x1_d1x1_g1
+[21/31] sweep_spatial_h14_b16_c64_k3 fp16 B16_C64_14x14_O64_K3x3_s1x1_p1x1_d1x1_g1
+[22/31] sweep_spatial_h28_b16_c64_k3 fp32 B16_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1
+[22/31] sweep_spatial_h28_b16_c64_k3 fp16 B16_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1
+[23/31] sweep_spatial_h56_b16_c64_k3 fp32 B16_C64_56x56_O64_K3x3_s1x1_p1x1_d1x1_g1
+[23/31] sweep_spatial_h56_b16_c64_k3 fp16 B16_C64_56x56_O64_K3x3_s1x1_p1x1_d1x1_g1
+[24/31] sweep_spatial_h112_b16_c64_k3 fp32 B16_C64_112x112_O64_K3x3_s1x1_p1x1_d1x1_g1
+[24/31] sweep_spatial_h112_b16_c64_k3 fp16 B16_C64_112x112_O64_K3x3_s1x1_p1x1_d1x1_g1
+[25/31] sweep_irregular_h13_b8_c60_o100_k3 fp32 B8_C60_13x13_O100_K3x3_s1x1_p1x1_d1x1_g1
+[25/31] sweep_irregular_h13_b8_c60_o100_k3 fp16 B8_C60_13x13_O100_K3x3_s1x1_p1x1_d1x1_g1
+[26/31] sweep_irregular_h27_b8_c60_o100_k3 fp32 B8_C60_27x27_O100_K3x3_s1x1_p1x1_d1x1_g1
+[26/31] sweep_irregular_h27_b8_c60_o100_k3 fp16 B8_C60_27x27_O100_K3x3_s1x1_p1x1_d1x1_g1
+[27/31] sweep_irregular_h29_b8_c60_o100_k3 fp32 B8_C60_29x29_O100_K3x3_s1x1_p1x1_d1x1_g1
+[27/31] sweep_irregular_h29_b8_c60_o100_k3 fp16 B8_C60_29x29_O100_K3x3_s1x1_p1x1_d1x1_g1
+[28/31] sweep_irregular_h31_b8_c60_o100_k3 fp32 B8_C60_31x31_O100_K3x3_s1x1_p1x1_d1x1_g1
+[28/31] sweep_irregular_h31_b8_c60_o100_k3 fp16 B8_C60_31x31_O100_K3x3_s1x1_p1x1_d1x1_g1
+[29/31] sweep_irregular_h33_b8_c60_o100_k3 fp32 B8_C60_33x33_O100_K3x3_s1x1_p1x1_d1x1_g1
+[29/31] sweep_irregular_h33_b8_c60_o100_k3 fp16 B8_C60_33x33_O100_K3x3_s1x1_p1x1_d1x1_g1
+[30/31] sweep_irregular_h55_b8_c60_o100_k3 fp32 B8_C60_55x55_O100_K3x3_s1x1_p1x1_d1x1_g1
+[30/31] sweep_irregular_h55_b8_c60_o100_k3 fp16 B8_C60_55x55_O100_K3x3_s1x1_p1x1_d1x1_g1
+[31/31] sweep_irregular_h57_b8_c60_o100_k3 fp32 B8_C60_57x57_O100_K3x3_s1x1_p1x1_d1x1_g1
+[31/31] sweep_irregular_h57_b8_c60_o100_k3 fp16 B8_C60_57x57_O100_K3x3_s1x1_p1x1_d1x1_g1
+[gie_bench] done
+=== [18:31:00] Experiment F: CUDA Graphs / streams
+b1_c32_14x14_k3 L=1 eager 10.089 us, graph 8.69431 us (x1.16042), host launch 9.46235 -> 1.7369 us, identical=1, capture 92.719 + instantiate 36.636 us
+b1_c32_14x14_k3 L=4 eager 40.32 us, graph 31.7277 us (x1.27081), host launch 37.5018 -> 1.85798 us, identical=1, capture 26.424 + instantiate 28.667 us
+b1_c32_14x14_k3 L=16 eager 161.319 us, graph 124.8 us (x1.29262), host launch 150.224 -> 1.91701 us, identical=1, capture 84.515 + instantiate 145.77 us
+b1_c32_14x14_k3 L=48 eager 483.738 us, graph 372.736 us (x1.2978), host launch 464.877 -> 2.1529 us, identical=1, capture 242.784 + instantiate 475.695 us
+b1_c32_14x14_k3 2 independent convs: 1 stream 20.1027 us, 2 streams 21.7242 us (x0.925362)
+b1_c32_14x14_k3 4 independent convs: 1 stream 40.1678 us, 4 streams 43.0059 us (x0.934008)
+b1_c32_14x14_k3 8 independent convs: 1 stream 80.4 us, 8 streams 84.5913 us (x0.950452)
+b1_c64_7x7_k1 L=1 eager 12.5525 us, graph 12.3662 us (x1.01507), host launch 2.22615 -> 1.73148 us, identical=1, capture 5.134 + instantiate 14.251 us
+b1_c64_7x7_k1 L=4 eager 49.8944 us, graph 47.9573 us (x1.04039), host launch 8.87392 -> 1.72147 us, identical=1, capture 7.998 + instantiate 23.523 us
+b1_c64_7x7_k1 L=16 eager 199.574 us, graph 188.788 us (x1.05713), host launch 135.651 -> 1.84729 us, identical=1, capture 16.999 + instantiate 46.815 us
+b1_c64_7x7_k1 L=48 eager 598.528 us, graph 564.828 us (x1.05966), host launch 534.146 -> 1.92162 us, identical=1, capture 40.588 + instantiate 110.868 us
+b1_c64_7x7_k1 2 independent convs: 1 stream 24.913 us, 2 streams 14.4962 us (x1.71858)
+b1_c64_7x7_k1 4 independent convs: 1 stream 49.822 us, 4 streams 15.0177 us (x3.31755)
+b1_c64_7x7_k1 8 independent convs: 1 stream 99.7872 us, 8 streams 27.5782 us (x3.61834)
+b1_c64_28x28_k3 L=1 eager 14.7574 us, graph 13.206 us (x1.11748), host launch 11.7459 -> 1.75724 us, identical=1, capture 22.447 + instantiate 22.203 us
+b1_c64_28x28_k3 L=4 eager 59.1793 us, graph 49.8944 us (x1.18609), host launch 47.122 -> 1.87931 us, identical=1, capture 35.015 + instantiate 25.782 us
+b1_c64_28x28_k3 L=16 eager 236.203 us, graph 198.563 us (x1.18956), host launch 211.102 -> 1.95979 us, identical=1, capture 117.589 + instantiate 63.825 us
+b1_c64_28x28_k3 L=48 eager 709.632 us, graph 594.432 us (x1.1938), host launch 683.831 -> 2.16216 us, identical=1, capture 352.165 + instantiate 360.531 us
+b1_c64_28x28_k3 2 independent convs: 1 stream 29.589 us, 2 streams 26.8316 us (x1.10277)
+b1_c64_28x28_k3 4 independent convs: 1 stream 59.1464 us, 4 streams 53.1096 us (x1.11367)
+b1_c64_28x28_k3 8 independent convs: 1 stream 121.856 us, 8 streams 106.701 us (x1.14203)
+b4_c128_14x14_k3 L=1 eager 32.0248 us, graph 30.6634 us (x1.0444), host launch 9.40789 -> 1.74104 us, identical=1, capture 11.454 + instantiate 22.816 us
+b4_c128_14x14_k3 L=4 eager 128 us, graph 119.627 us (x1.06999), host launch 73.4104 -> 1.8898 us, identical=1, capture 27.098 + instantiate 41.205 us
+b4_c128_14x14_k3 L=16 eager 512 us, graph 476.774 us (x1.07388), host launch 456.637 -> 1.95726 us, identical=1, capture 85.075 + instantiate 110.43 us
+b4_c128_14x14_k3 L=48 eager 1534.98 us, graph 1428.99 us (x1.07417), host launch 1478.63 -> 2.15622 us, identical=1, capture 243.012 + instantiate 306.32 us
+b4_c128_14x14_k3 2 independent convs: 1 stream 64.122 us, 2 streams 57.6951 us (x1.11139)
+b4_c128_14x14_k3 4 independent convs: 1 stream 131.511 us, 4 streams 103.187 us (x1.27449)
+b4_c128_14x14_k3 8 independent convs: 1 stream 263.026 us, 8 streams 194.839 us (x1.34996)
+b1_c32_14x14_k3 L=1 eager 13.3339 us, graph 11.9331 us (x1.1174), host launch 9.10218 -> 1.85437 us, identical=1, capture 55.241 + instantiate 39.464 us
+b1_c32_14x14_k3 L=4 eager 53.331 us, graph 44.7374 us (x1.19209), host launch 36.1183 -> 1.87388 us, identical=1, capture 23.966 + instantiate 39.564 us
+b1_c32_14x14_k3 L=16 eager 213.443 us, graph 176.981 us (x1.20602), host launch 189.412 -> 1.92705 us, identical=1, capture 87.54 + instantiate 154.452 us
+b1_c32_14x14_k3 L=48 eager 639.208 us, graph 529.92 us (x1.20623), host launch 613.393 -> 2.14487 us, identical=1, capture 216.112 + instantiate 413.552 us
+b1_c32_14x14_k3 2 independent convs: 1 stream 26.7149 us, 2 streams 20.4504 us (x1.30633)
+b1_c32_14x14_k3 4 independent convs: 1 stream 53.4417 us, 4 streams 40.7133 us (x1.31263)
+b1_c32_14x14_k3 8 independent convs: 1 stream 106.819 us, 8 streams 80.638 us (x1.32468)
+b1_c64_7x7_k1 L=1 eager 10.293 us, graph 8.84022 us (x1.16433), host launch 8.95117 -> 1.76371 us, identical=1, capture 11.094 + instantiate 21.397 us
+b1_c64_7x7_k1 L=4 eager 41.191 us, graph 32.4212 us (x1.2705), host launch 35.3912 -> 1.85497 us, identical=1, capture 21.991 + instantiate 44.2 us
+b1_c64_7x7_k1 L=16 eager 164.706 us, graph 127.68 us (x1.28999), host launch 146.505 -> 1.92739 us, identical=1, capture 77.08 + instantiate 115.122 us
+b1_c64_7x7_k1 L=48 eager 493.978 us, graph 381.752 us (x1.29398), host launch 474.17 -> 2.12696 us, identical=1, capture 207.124 + instantiate 334.131 us
+b1_c64_7x7_k1 2 independent convs: 1 stream 20.6024 us, 2 streams 20.0606 us (x1.02701)
+b1_c64_7x7_k1 4 independent convs: 1 stream 41.1947 us, 4 streams 39.2006 us (x1.05087)
+b1_c64_7x7_k1 8 independent convs: 1 stream 82.3467 us, 8 streams 77.9904 us (x1.05586)
+b1_c64_28x28_k3 L=1 eager 23.5573 us, graph 22.0274 us (x1.06946), host launch 12.2074 -> 2.32087 us, identical=1, capture 5446.14 + instantiate 27.783 us
+b1_c64_28x28_k3 L=4 eager 94.1615 us, graph 83.2393 us (x1.13121), host launch 64.1349 -> 2.38166 us, identical=1, capture 40.191 + instantiate 33.784 us
+b1_c64_28x28_k3 L=16 eager 376.491 us, graph 329.874 us (x1.14132), host launch 347.172 -> 2.64967 us, identical=1, capture 116.889 + instantiate 109.28 us
+b1_c64_28x28_k3 L=48 eager 1131.52 us, graph 987.477 us (x1.14587), host launch 1101.69 -> 2.83864 us, identical=1, capture 334.779 + instantiate 724.499 us
+b1_c64_28x28_k3 2 independent convs: 1 stream 47.9337 us, 2 streams 40.2621 us (x1.19054)
+b1_c64_28x28_k3 4 independent convs: 1 stream 98.5874 us, 4 streams 64.1365 us (x1.53715)
+b1_c64_28x28_k3 8 independent convs: 1 stream 196.979 us, 8 streams 120.834 us (x1.63016)
+b4_c128_14x14_k3 L=1 eager 155.727 us, graph 154.309 us (x1.00919), host launch 8.79899 -> 1.7668 us, identical=1, capture 11.325 + instantiate 21.976 us
+b4_c128_14x14_k3 L=4 eager 622.848 us, graph 614.4 us (x1.01375), host launch 357.161 -> 1.90382 us, identical=1, capture 22.043 + instantiate 29.536 us
+b4_c128_14x14_k3 L=16 eager 2491.39 us, graph 2456.42 us (x1.01424), host launch 2224.12 -> 1.98088 us, identical=1, capture 79.861 + instantiate 81.598 us
+b4_c128_14x14_k3 L=48 eager 7470.08 us, graph 7363.98 us (x1.01441), host launch 7202.83 -> 2.18037 us, identical=1, capture 213.602 + instantiate 358.097 us
+b4_c128_14x14_k3 2 independent convs: 1 stream 313.929 us, 2 streams 298.13 us (x1.05299)
+b4_c128_14x14_k3 4 independent convs: 1 stream 627.712 us, 4 streams 325.429 us (x1.92888)
+b4_c128_14x14_k3 8 independent convs: 1 stream 1255.42 us, 8 streams 379.821 us (x3.3053)
+=== [18:32:01] RMSNorm extension
+fp32 rows=1 hidden=768 add=0: fused 2.42461 us (3.80103 GB/s), unfused 4.34951 us
+fp32 rows=1 hidden=768 add=1: fused 2.52836 us (6.07509 GB/s), unfused 6.18193 us
+fp32 rows=1 hidden=2048 add=0: fused 2.68231 us (9.16226 GB/s), unfused 5.19175 us
+fp32 rows=1 hidden=2048 add=1: fused 2.87809 us (14.2317 GB/s), unfused 7.0273 us
+fp32 rows=1 hidden=4096 add=0: fused 3.13417 us (15.6826 GB/s), unfused 6.53241 us
+fp32 rows=1 hidden=4096 add=1: fused 3.48578 us (23.5012 GB/s), unfused 8.32914 us
+fp32 rows=1 hidden=5120 add=0: fused 3.5174 us (17.4675 GB/s), unfused 7.17545 us
+fp32 rows=1 hidden=5120 add=1: fused 4.10943 us (24.9183 GB/s), unfused 9.00347 us
+fp32 rows=1 hidden=8192 add=0: fused 3.80661 us (25.8246 GB/s), unfused 9.16629 us
+fp32 rows=1 hidden=8192 add=1: fused 4.45934 us (36.7409 GB/s), unfused 10.958 us
+fp32 rows=1 hidden=4097 add=0: fused 3.96202 us (12.4088 GB/s), unfused 6.69013 us
+fp32 rows=1 hidden=4097 add=1: fused 4.25623 us (19.2518 GB/s), unfused 8.49371 us
+fp32 rows=32 hidden=768 add=0: fused 2.69422 us (74.1142 GB/s), unfused 4.67645 us
+fp32 rows=32 hidden=768 add=1: fused 2.75221 us (143.989 GB/s), unfused 6.62217 us
+fp32 rows=32 hidden=2048 add=0: fused 2.93263 us (181.571 GB/s), unfused 5.63514 us
+fp32 rows=32 hidden=2048 add=1: fused 3.17074 us (333.287 GB/s), unfused 7.71746 us
+fp32 rows=32 hidden=4096 add=0: fused 3.48567 us (305.525 GB/s), unfused 7.31652 us
+fp32 rows=32 hidden=4096 add=1: fused 3.87353 us (545.636 GB/s), unfused 9.71755 us
+fp32 rows=32 hidden=5120 add=0: fused 3.87156 us (343.841 GB/s), unfused 8.23652 us
+fp32 rows=32 hidden=5120 add=1: fused 4.33957 us (608.797 GB/s), unfused 10.7808 us
+fp32 rows=32 hidden=8192 add=0: fused 4.15207 us (512.977 GB/s), unfused 10.6335 us
+fp32 rows=32 hidden=8192 add=1: fused 4.86811 us (868.319 GB/s), unfused 13.4969 us
+fp32 rows=32 hidden=4097 add=0: fused 4.27615 us (249.107 GB/s), unfused 7.46154 us
+fp32 rows=32 hidden=4097 add=1: fused 4.58981 us (460.597 GB/s), unfused 9.81333 us
+fp32 rows=512 hidden=768 add=0: fused 3.93127 us (800.963 GB/s), unfused 7.83402 us
+fp32 rows=512 hidden=768 add=1: fused 6.62483 us (950.142 GB/s), unfused 13.5492 us
+fp32 rows=512 hidden=2048 add=0: fused 14.6264 us (574.086 GB/s), unfused 19.7738 us
+fp32 rows=512 hidden=2048 add=1: fused 32.2421 us (520.606 GB/s), unfused 40.3706 us
+fp32 rows=512 hidden=4096 add=0: fused 32.3716 us (518.776 GB/s), unfused 43.4532 us
+fp32 rows=512 hidden=4096 add=1: fused 61.5605 us (545.331 GB/s), unfused 87.2107 us
+fp32 rows=512 hidden=5120 add=0: fused 39.6928 us (528.862 GB/s), unfused 55.7811 us
+fp32 rows=512 hidden=5120 add=1: fused 76.7966 us (546.424 GB/s), unfused 110.012 us
+fp32 rows=512 hidden=8192 add=0: fused 62.976 us (533.333 GB/s), unfused 92.8116 us
+fp32 rows=512 hidden=8192 add=1: fused 124.066 us (541.178 GB/s), unfused 175.787 us
+fp32 rows=512 hidden=4097 add=0: fused 36.9434 us (454.687 GB/s), unfused 45.1896 us
+fp32 rows=512 hidden=4097 add=1: fused 63.55 us (528.387 GB/s), unfused 88.1827 us
+fp32 rows=4096 hidden=768 add=0: fused 46.9178 us (536.446 GB/s), unfused 69.5637 us
+fp32 rows=4096 hidden=768 add=1: fused 91.0429 us (552.868 GB/s), unfused 137.344 us
+fp32 rows=4096 hidden=2048 add=0: fused 123.449 us (543.683 GB/s), unfused 175.411 us
+fp32 rows=4096 hidden=2048 add=1: fused 239.69 us (559.999 GB/s), unfused 351.744 us
+fp32 rows=4096 hidden=4096 add=0: fused 237.158 us (566.01 GB/s), unfused 346.453 us
+fp32 rows=4096 hidden=4096 add=1: fused 472.747 us (567.856 GB/s), unfused 696.832 us
+fp32 rows=4096 hidden=5120 add=0: fused 295.168 us (568.465 GB/s), unfused 435.701 us
+fp32 rows=4096 hidden=5120 add=1: fused 592.896 us (565.976 GB/s), unfused 873.216 us
+fp32 rows=4096 hidden=8192 add=0: fused 479.061 us (560.405 GB/s), unfused 697.344 us
+fp32 rows=4096 hidden=8192 add=1: fused 980.48 us (547.593 GB/s), unfused 1396.74 us
+fp32 rows=4096 hidden=4097 add=0: fused 262.4 us (511.688 GB/s), unfused 354.645 us
+fp32 rows=4096 hidden=4097 add=1: fused 482.645 us (556.345 GB/s), unfused 706.048 us
+fp16 rows=1 hidden=768 add=0: fused 2.39509 us (1.92393 GB/s), unfused 4.52847 us
+fp16 rows=1 hidden=768 add=1: fused 2.44378 us (3.14267 GB/s), unfused 6.31349 us
+fp16 rows=1 hidden=2048 add=0: fused 2.51534 us (4.88523 GB/s), unfused 5.3156 us
+fp16 rows=1 hidden=2048 add=1: fused 2.64675 us (7.73779 GB/s), unfused 7.13499 us
+fp16 rows=1 hidden=4096 add=0: fused 2.72159 us (9.03 GB/s), unfused 6.68526 us
+fp16 rows=1 hidden=4096 add=1: fused 2.98406 us (13.7263 GB/s), unfused 8.47383 us
+fp16 rows=1 hidden=5120 add=0: fused 2.96876 us (10.3477 GB/s), unfused 7.32926 us
+fp16 rows=1 hidden=5120 add=1: fused 3.31624 us (15.4392 GB/s), unfused 9.11658 us
+fp16 rows=1 hidden=8192 add=0: fused 3.16155 us (15.5468 GB/s), unfused 9.3353 us
+fp16 rows=1 hidden=8192 add=1: fused 3.61476 us (22.6626 GB/s), unfused 11.1315 us
+fp16 rows=1 hidden=4097 add=0: fused 4.07721 us (6.02912 GB/s), unfused 6.82176 us
+fp16 rows=1 hidden=4097 add=1: fused 4.38154 us (9.3506 GB/s), unfused 8.60668 us
+fp16 rows=32 hidden=768 add=0: fused 2.64335 us (37.7703 GB/s), unfused 4.81335 us
+fp16 rows=32 hidden=768 add=1: fused 2.70055 us (73.3717 GB/s), unfused 6.71451 us
+fp16 rows=32 hidden=2048 add=0: fused 2.76869 us (96.161 GB/s), unfused 5.78018 us
+fp16 rows=32 hidden=2048 add=1: fused 2.92157 us (180.856 GB/s), unfused 7.76323 us
+fp16 rows=32 hidden=4096 add=0: fused 3.00641 us (177.115 GB/s), unfused 7.45827 us
+fp16 rows=32 hidden=4096 add=1: fused 3.30311 us (319.931 GB/s), unfused 9.69665 us
+fp16 rows=32 hidden=5120 add=0: fused 3.3811 us (196.859 GB/s), unfused 8.40057 us
+fp16 rows=32 hidden=5120 add=1: fused 3.70866 us (356.182 GB/s), unfused 10.8167 us
+fp16 rows=32 hidden=8192 add=0: fused 3.51863 us (302.663 GB/s), unfused 10.9533 us
+fp16 rows=32 hidden=8192 add=1: fused 3.96448 us (533.118 GB/s), unfused 13.6876 us
+fp16 rows=32 hidden=4097 add=0: fused 4.22892 us (125.945 GB/s), unfused 7.62589 us
+fp16 rows=32 hidden=4097 add=1: fused 4.54819 us (232.406 GB/s), unfused 9.81159 us
+fp16 rows=512 hidden=768 add=0: fused 3.37802 us (466.071 GB/s), unfused 8.03711 us
+fp16 rows=512 hidden=768 add=1: fused 3.53496 us (890.326 GB/s), unfused 11.2617 us
+fp16 rows=512 hidden=2048 add=0: fused 4.50588 us (931.761 GB/s), unfused 13.0755 us
+fp16 rows=512 hidden=2048 add=1: fused 14.792 us (567.381 GB/s), unfused 25.4425 us
+fp16 rows=512 hidden=4096 add=0: fused 14.6794 us (572.012 GB/s), unfused 26.1928 us
+fp16 rows=512 hidden=4096 add=1: fused 32.2905 us (519.825 GB/s), unfused 49.0537 us
+fp16 rows=512 hidden=5120 add=0: fused 19.9993 us (524.817 GB/s), unfused 34.6019 us
+fp16 rows=512 hidden=5120 add=1: fused 39.6422 us (529.278 GB/s), unfused 61.0814 us
+fp16 rows=512 hidden=8192 add=0: fused 32.4707 us (517.192 GB/s), unfused 60.5111 us
+fp16 rows=512 hidden=8192 add=1: fused 61.5605 us (545.331 GB/s), unfused 101.56 us
+fp16 rows=512 hidden=4097 add=0: fused 26.5162 us (316.744 GB/s), unfused 26.6223 us
+fp16 rows=512 hidden=4097 add=1: fused 36.8261 us (455.914 GB/s), unfused 49.6914 us
+fp16 rows=4096 hidden=768 add=0: fused 24.6528 us (510.467 GB/s), unfused 50.176 us
+fp16 rows=4096 hidden=768 add=1: fused 47.0065 us (535.402 GB/s), unfused 83.3707 us
+fp16 rows=4096 hidden=2048 add=0: fused 63.936 us (524.877 GB/s), unfused 120.889 us
+fp16 rows=4096 hidden=2048 add=1: fused 121.401 us (552.821 GB/s), unfused 207.146 us
+fp16 rows=4096 hidden=4096 add=0: fused 123.449 us (543.683 GB/s), unfused 232.448 us
+fp16 rows=4096 hidden=4096 add=1: fused 240.026 us (559.215 GB/s), unfused 401.067 us
+fp16 rows=4096 hidden=5120 add=0: fused 147.602 us (568.394 GB/s), unfused 270.568 us
+fp16 rows=4096 hidden=5120 add=1: fused 296.192 us (566.465 GB/s), unfused 480.939 us
+fp16 rows=4096 hidden=8192 add=0: fused 237.363 us (565.522 GB/s), unfused 460.411 us
+fp16 rows=4096 hidden=8192 add=1: fused 473.072 us (567.465 GB/s), unfused 803.288 us
+fp16 rows=4096 hidden=4097 add=0: fused 173.397 us (387.165 GB/s), unfused 236.954 us
+fp16 rows=4096 hidden=4097 add=1: fused 254.72 us (527.083 GB/s), unfused 404.475 us
+bf16 rows=1 hidden=768 add=0: fused 2.4028 us (1.91776 GB/s), unfused 4.50351 us
+bf16 rows=1 hidden=768 add=1: fused 2.46886 us (3.11075 GB/s), unfused 6.2923 us
+bf16 rows=1 hidden=2048 add=0: fused 2.51984 us (4.87649 GB/s), unfused 5.31275 us
+bf16 rows=1 hidden=2048 add=1: fused 2.67056 us (7.66879 GB/s), unfused 7.1211 us
+bf16 rows=1 hidden=4096 add=0: fused 2.725 us (9.01873 GB/s), unfused 6.67726 us
+bf16 rows=1 hidden=4096 add=1: fused 3.0312 us (13.5128 GB/s), unfused 8.45714 us
+bf16 rows=1 hidden=5120 add=0: fused 2.98312 us (10.2979 GB/s), unfused 7.31981 us
+bf16 rows=1 hidden=5120 add=1: fused 3.33487 us (15.3529 GB/s), unfused 9.102 us
+bf16 rows=1 hidden=8192 add=0: fused 3.18578 us (15.4286 GB/s), unfused 9.32752 us
+bf16 rows=1 hidden=8192 add=1: fused 3.68103 us (22.2546 GB/s), unfused 11.1211 us
+bf16 rows=1 hidden=4097 add=0: fused 3.96932 us (6.193 GB/s), unfused 6.8096 us
+bf16 rows=1 hidden=4097 add=1: fused 4.39883 us (9.31383 GB/s), unfused 8.59429 us
+bf16 rows=32 hidden=768 add=0: fused 2.64956 us (37.6818 GB/s), unfused 4.79144 us
+bf16 rows=32 hidden=768 add=1: fused 2.71479 us (72.9868 GB/s), unfused 6.69257 us
+bf16 rows=32 hidden=2048 add=0: fused 2.78578 us (95.5712 GB/s), unfused 5.73566 us
+bf16 rows=32 hidden=2048 add=1: fused 2.9696 us (177.931 GB/s), unfused 7.72733 us
+bf16 rows=32 hidden=4096 add=0: fused 3.00394 us (177.26 GB/s), unfused 7.43408 us
+bf16 rows=32 hidden=4096 add=1: fused 3.31917 us (318.383 GB/s), unfused 9.65486 us
+bf16 rows=32 hidden=5120 add=0: fused 3.36457 us (197.826 GB/s), unfused 8.30776 us
+bf16 rows=32 hidden=5120 add=1: fused 3.74873 us (352.375 GB/s), unfused 10.7462 us
+bf16 rows=32 hidden=8192 add=0: fused 3.54011 us (300.826 GB/s), unfused 10.8153 us
+bf16 rows=32 hidden=8192 add=1: fused 4.03494 us (523.809 GB/s), unfused 13.5231 us
+bf16 rows=32 hidden=4097 add=0: fused 4.13358 us (128.85 GB/s), unfused 7.60387 us
+bf16 rows=32 hidden=4097 add=1: fused 4.52737 us (233.474 GB/s), unfused 9.77517 us
+bf16 rows=512 hidden=768 add=0: fused 3.36233 us (468.247 GB/s), unfused 8.0285 us
+bf16 rows=512 hidden=768 add=1: fused 3.53545 us (890.202 GB/s), unfused 11.2279 us
+bf16 rows=512 hidden=2048 add=0: fused 4.43037 us (947.642 GB/s), unfused 13.0752 us
+bf16 rows=512 hidden=2048 add=1: fused 14.6773 us (571.814 GB/s), unfused 25.3637 us
+bf16 rows=512 hidden=4096 add=0: fused 14.6861 us (571.752 GB/s), unfused 26.1928 us
+bf16 rows=512 hidden=4096 add=1: fused 32.2999 us (519.674 GB/s), unfused 48.957 us
+bf16 rows=512 hidden=5120 add=0: fused 20.0297 us (524.021 GB/s), unfused 34.5821 us
+bf16 rows=512 hidden=5120 add=1: fused 39.6357 us (529.365 GB/s), unfused 60.9628 us
+bf16 rows=512 hidden=8192 add=0: fused 32.4377 us (517.719 GB/s), unfused 60.6955 us
+bf16 rows=512 hidden=8192 add=1: fused 61.6744 us (544.324 GB/s), unfused 101.478 us
+bf16 rows=512 hidden=4097 add=0: fused 26.4084 us (318.037 GB/s), unfused 26.6236 us
+bf16 rows=512 hidden=4097 add=1: fused 36.899 us (455.013 GB/s), unfused 49.5909 us
+bf16 rows=4096 hidden=768 add=0: fused 24.6384 us (510.765 GB/s), unfused 50.1504 us
+bf16 rows=4096 hidden=768 add=1: fused 47.0342 us (535.087 GB/s), unfused 83.3707 us
+bf16 rows=4096 hidden=2048 add=0: fused 63.968 us (524.614 GB/s), unfused 120.944 us
+bf16 rows=4096 hidden=2048 add=1: fused 121.515 us (552.303 GB/s), unfused 207.258 us
+bf16 rows=4096 hidden=4096 add=0: fused 123.348 us (544.13 GB/s), unfused 232.448 us
+bf16 rows=4096 hidden=4096 add=1: fused 240.026 us (559.215 GB/s), unfused 401.067 us
+bf16 rows=4096 hidden=5120 add=0: fused 147.454 us (568.967 GB/s), unfused 270.356 us
+bf16 rows=4096 hidden=5120 add=1: fused 296.448 us (565.976 GB/s), unfused 481.28 us
+bf16 rows=4096 hidden=8192 add=0: fused 237.526 us (565.133 GB/s), unfused 460.8 us
+bf16 rows=4096 hidden=8192 add=1: fused 473.088 us (567.446 GB/s), unfused 804.864 us
+bf16 rows=4096 hidden=4097 add=0: fused 172.96 us (388.144 GB/s), unfused 236.851 us
+bf16 rows=4096 hidden=4097 add=1: fused 254.976 us (526.554 GB/s), unfused 404.48 us
+=== [18:32:11] Experiment C: bf16 / tf32 on throughput workloads
+[gie_bench] NVIDIA A40 (sm_86, 84 SMs, 45488 MiB, L2 6144 KiB, smem/block 48/99 KiB (default/opt-in), driver 13.0, runtime 12.8)
+[gie_bench] 10 workloads -> /scratch/arjunc4/cuda-inference-work/campaign_v3_a40/precision_bf16_tf32
+[1/10] thr_b32_c64_56_k3 bf16 B32_C64_56x56_O64_K3x3_s1x1_p1x1_d1x1_g1
+[1/10] thr_b32_c64_56_k3 tf32 B32_C64_56x56_O64_K3x3_s1x1_p1x1_d1x1_g1
+[2/10] thr_b32_c64_56_k1_expand bf16 B32_C64_56x56_O256_K1x1_s1x1_p0x0_d1x1_g1
+[2/10] thr_b32_c64_56_k1_expand tf32 B32_C64_56x56_O256_K1x1_s1x1_p0x0_d1x1_g1
+[3/10] thr_b32_c128_28_k3 bf16 B32_C128_28x28_O128_K3x3_s1x1_p1x1_d1x1_g1
+[3/10] thr_b32_c128_28_k3 tf32 B32_C128_28x28_O128_K3x3_s1x1_p1x1_d1x1_g1
+[4/10] thr_b32_c256_14_k3 bf16 B32_C256_14x14_O256_K3x3_s1x1_p1x1_d1x1_g1
+[4/10] thr_b32_c256_14_k3 tf32 B32_C256_14x14_O256_K3x3_s1x1_p1x1_d1x1_g1
+[5/10] thr_b32_c512_7_k3 bf16 B32_C512_7x7_O512_K3x3_s1x1_p1x1_d1x1_g1
+[5/10] thr_b32_c512_7_k3 tf32 B32_C512_7x7_O512_K3x3_s1x1_p1x1_d1x1_g1
+[6/10] thr_b16_c128_56_k3 bf16 B16_C128_56x56_O128_K3x3_s1x1_p1x1_d1x1_g1
+[6/10] thr_b16_c128_56_k3 tf32 B16_C128_56x56_O128_K3x3_s1x1_p1x1_d1x1_g1
+[7/10] thr_b32_stem_224_k7s2 bf16 B32_C3_224x224_O64_K7x7_s2x2_p3x3_d1x1_g1
+[7/10] thr_b32_stem_224_k7s2 tf32 B32_C3_224x224_O64_K7x7_s2x2_p3x3_d1x1_g1
+[8/10] thr_b16_c64_28_k5 bf16 B16_C64_28x28_O96_K5x5_s1x1_p2x2_d1x1_g1
+[8/10] thr_b16_c64_28_k5 tf32 B16_C64_28x28_O96_K5x5_s1x1_p2x2_d1x1_g1
+[9/10] thr_b16_c64_112_k3 bf16 B16_C64_112x112_O64_K3x3_s1x1_p1x1_d1x1_g1
+[9/10] thr_b16_c64_112_k3 tf32 B16_C64_112x112_O64_K3x3_s1x1_p1x1_d1x1_g1
+[10/10] thr_b8_c256_56_k1 bf16 B8_C256_56x56_O64_K1x1_s1x1_p0x0_d1x1_g1
+[10/10] thr_b8_c256_56_k1 tf32 B8_C256_56x56_O64_K1x1_s1x1_p0x0_d1x1_g1
+[gie_bench] done
+=== [18:34:03] cold-L2 protocol, tuning set
+[gie_bench] NVIDIA A40 (sm_86, 84 SMs, 45488 MiB, L2 6144 KiB, smem/block 48/99 KiB (default/opt-in), driver 13.0, runtime 12.8)
+[gie_bench] 27 workloads -> /scratch/arjunc4/cuda-inference-work/campaign_v3_a40/cold_l2
+[1/27] lat_b1_c16_28_k3 fp32 B1_C16_28x28_O16_K3x3_s1x1_p1x1_d1x1_g1
+[1/27] lat_b1_c16_28_k3 fp16 B1_C16_28x28_O16_K3x3_s1x1_p1x1_d1x1_g1
+[2/27] lat_b1_c32_14_k3 fp32 B1_C32_14x14_O32_K3x3_s1x1_p1x1_d1x1_g1
+[2/27] lat_b1_c32_14_k3 fp16 B1_C32_14x14_O32_K3x3_s1x1_p1x1_d1x1_g1
+[3/27] lat_b1_c64_7_k1 fp32 B1_C64_7x7_O64_K1x1_s1x1_p0x0_d1x1_g1
+[3/27] lat_b1_c64_7_k1 fp16 B1_C64_7x7_O64_K1x1_s1x1_p0x0_d1x1_g1
+[4/27] lat_b1_c64_14_k3 fp32 B1_C64_14x14_O64_K3x3_s1x1_p1x1_d1x1_g1
+[4/27] lat_b1_c64_14_k3 fp16 B1_C64_14x14_O64_K3x3_s1x1_p1x1_d1x1_g1
+[5/27] lat_b1_c128_28_k1 fp32 B1_C128_28x28_O128_K1x1_s1x1_p0x0_d1x1_g1
+[5/27] lat_b1_c128_28_k1 fp16 B1_C128_28x28_O128_K1x1_s1x1_p0x0_d1x1_g1
+[6/27] lat_b1_c256_14_k3 fp32 B1_C256_14x14_O256_K3x3_s1x1_p1x1_d1x1_g1
+[6/27] lat_b1_c256_14_k3 fp16 B1_C256_14x14_O256_K3x3_s1x1_p1x1_d1x1_g1
+[7/27] lat_b1_c512_7_k3 fp32 B1_C512_7x7_O512_K3x3_s1x1_p1x1_d1x1_g1
+[7/27] lat_b1_c512_7_k3 fp16 B1_C512_7x7_O512_K3x3_s1x1_p1x1_d1x1_g1
+[8/27] lat_b1_stem_224_k7s2 fp32 B1_C3_224x224_O64_K7x7_s2x2_p3x3_d1x1_g1
+[8/27] lat_b1_stem_224_k7s2 fp16 B1_C3_224x224_O64_K7x7_s2x2_p3x3_d1x1_g1
+[9/27] thr_b32_c64_56_k3 fp32 B32_C64_56x56_O64_K3x3_s1x1_p1x1_d1x1_g1
+[9/27] thr_b32_c64_56_k3 fp16 B32_C64_56x56_O64_K3x3_s1x1_p1x1_d1x1_g1
+[10/27] thr_b32_c64_56_k1_expand fp32 B32_C64_56x56_O256_K1x1_s1x1_p0x0_d1x1_g1
+[10/27] thr_b32_c64_56_k1_expand fp16 B32_C64_56x56_O256_K1x1_s1x1_p0x0_d1x1_g1
+[11/27] thr_b32_c128_28_k3 fp32 B32_C128_28x28_O128_K3x3_s1x1_p1x1_d1x1_g1
+[11/27] thr_b32_c128_28_k3 fp16 B32_C128_28x28_O128_K3x3_s1x1_p1x1_d1x1_g1
+[12/27] thr_b32_c256_14_k3 fp32 B32_C256_14x14_O256_K3x3_s1x1_p1x1_d1x1_g1
+[12/27] thr_b32_c256_14_k3 fp16 B32_C256_14x14_O256_K3x3_s1x1_p1x1_d1x1_g1
+[13/27] thr_b32_c512_7_k3 fp32 B32_C512_7x7_O512_K3x3_s1x1_p1x1_d1x1_g1
+[13/27] thr_b32_c512_7_k3 fp16 B32_C512_7x7_O512_K3x3_s1x1_p1x1_d1x1_g1
+[14/27] thr_b16_c128_56_k3 fp32 B16_C128_56x56_O128_K3x3_s1x1_p1x1_d1x1_g1
+[14/27] thr_b16_c128_56_k3 fp16 B16_C128_56x56_O128_K3x3_s1x1_p1x1_d1x1_g1
+[15/27] thr_b32_stem_224_k7s2 fp32 B32_C3_224x224_O64_K7x7_s2x2_p3x3_d1x1_g1
+[15/27] thr_b32_stem_224_k7s2 fp16 B32_C3_224x224_O64_K7x7_s2x2_p3x3_d1x1_g1
+[16/27] thr_b16_c64_28_k5 fp32 B16_C64_28x28_O96_K5x5_s1x1_p2x2_d1x1_g1
+[16/27] thr_b16_c64_28_k5 fp16 B16_C64_28x28_O96_K5x5_s1x1_p2x2_d1x1_g1
+[17/27] thr_b16_c64_112_k3 fp32 B16_C64_112x112_O64_K3x3_s1x1_p1x1_d1x1_g1
+[17/27] thr_b16_c64_112_k3 fp16 B16_C64_112x112_O64_K3x3_s1x1_p1x1_d1x1_g1
+[18/27] thr_b8_c256_56_k1 fp32 B8_C256_56x56_O64_K1x1_s1x1_p0x0_d1x1_g1
+[18/27] thr_b8_c256_56_k1 fp16 B8_C256_56x56_O64_K1x1_s1x1_p0x0_d1x1_g1
+[19/27] adv_b2_c3_o5_57x59_k3 fp32 B2_C3_57x59_O5_K3x3_s1x1_p1x1_d1x1_g1
+[19/27] adv_b2_c3_o5_57x59_k3 fp16 B2_C3_57x59_O5_K3x3_s1x1_p1x1_d1x1_g1
+[20/27] adv_b4_c7_o9_33x31_k5s2 fp32 B4_C7_33x31_O9_K5x5_s2x2_p2x2_d1x1_g1
+[20/27] adv_b4_c7_o9_33x31_k5s2 fp16 B4_C7_33x31_O9_K5x5_s2x2_p2x2_d1x1_g1
+[21/27] adv_b1_c1_o8_512_k3 fp32 B1_C1_512x512_O8_K3x3_s1x1_p1x1_d1x1_g1
+[21/27] adv_b1_c1_o8_512_k3 fp16 B1_C1_512x512_O8_K3x3_s1x1_p1x1_d1x1_g1
+[22/27] adv_b8_c96_o255_27_k3 fp32 B8_C96_27x27_O255_K3x3_s1x1_p1x1_d1x1_g1
+[22/27] adv_b8_c96_o255_27_k3 fp16 B8_C96_27x27_O255_K3x3_s1x1_p1x1_d1x1_g1
+[23/27] adv_b1_c16_10_k5_pad4 fp32 B1_C16_10x10_O16_K5x5_s1x1_p4x4_d1x1_g1
+[23/27] adv_b1_c16_10_k5_pad4 fp16 B1_C16_10x10_O16_K5x5_s1x1_p4x4_d1x1_g1
+[24/27] adv_b8_c32_28_k7_unroll49x fp32 B8_C32_28x28_O32_K7x7_s1x1_p3x3_d1x1_g1
+[24/27] adv_b8_c32_28_k7_unroll49x fp16 B8_C32_28x28_O32_K7x7_s1x1_p3x3_d1x1_g1
+[25/27] adv_b16_c32_56_k5_unroll25x fp32 B16_C32_56x56_O32_K5x5_s1x1_p2x2_d1x1_g1
+[25/27] adv_b16_c32_56_k5_unroll25x fp16 B16_C32_56x56_O32_K5x5_s1x1_p2x2_d1x1_g1
+[26/27] adv_b4_c130_o130_15_k3 fp32 B4_C130_15x15_O130_K3x3_s1x1_p1x1_d1x1_g1
+[26/27] adv_b4_c130_o130_15_k3 fp16 B4_C130_15x15_O130_K3x3_s1x1_p1x1_d1x1_g1
+[27/27] adv_b32_c8_o8_112_k1_membound fp32 B32_C8_112x112_O8_K1x1_s1x1_p0x0_d1x1_g1
+[27/27] adv_b32_c8_o8_112_k1_membound fp16 B32_C8_112x112_O8_K1x1_s1x1_p0x0_d1x1_g1
+[gie_bench] done
+=== [18:35:21] CAMPAIGN_DONE
