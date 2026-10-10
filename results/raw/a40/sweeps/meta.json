@@ -1,0 +1,39 @@
+{
+  "tag": "NVIDIA_A40_sweeps",
+  "gpu": "NVIDIA A40",
+  "compute_capability": 86,
+  "sm_count": 84,
+  "gpu_memory_bytes": 47697690624,
+  "l2_bytes": 6291456,
+  "cuda_runtime": 12080,
+  "cuda_driver": 13000,
+  "est_peak_fp32_tflops": 37.416960000000003,
+  "est_peak_fp16_tc_tflops": 149.66784000000001,
+  "est_peak_bw_gbs": 696.096,
+  "measured_fp32_tflops": 31.311903315533336,
+  "measured_fp16_tc_tflops": 149.47880063636623,
+  "measured_bw_gbs": 553.72176491763582,
+  "measured_launch_overhead_us": 2.0193281173706055,
+  "ceilings_source": "microbenchmark (/scratch/arjunc4/cuda-inference-work/ceilings/ceilings_NVIDIA_A40_sm86.json)",
+  "cudnn": "9.5.1 (runtime 90501)",
+  "cutlass": "3.9.2",
+  "library_version": 2,
+  "hostname": "ccc0333.campuscluster.illinois.edu",
+  "slurm_job_id": "11728199",
+  "slurm_partition": "secondary",
+  "git_rev": "unknown",
+  "seed": 305441741,
+  "warmup": 5,
+  "samples": 30,
+  "min_sample_ms": 1,
+  "flush_l2": false,
+  "precisions": [
+    "fp32",
+    "fp16"
+  ],
+  "backends": [
+    "cutlass"
+  ],
+  "command": "/scratch/arjunc4/cuda-inference-work/build_all/benchmarks/gie_bench --workloads /u/arjunc4/cuda-inference/benchmarks/sweeps.json --backends cutlass --precisions fp32,fp16 --mode tuned --fusion fused --samples 30 --out /u/arjunc4/cuda-inference/results/raw/a40/sweeps --tag NVIDIA_A40_sweeps",
+  "tolerance_policy": "tol_i = 8*2^-24*sqrt(K)*scale_i + c_out*u_out*|ref_i| + floor; see reference.h"
+}
