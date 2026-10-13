@@ -1,0 +1,5 @@
+CUDA devices: 1
+[0] NVIDIA H100 NVL (sm_90, 132 SMs, 95319 MiB, L2 61440 KiB, smem/block 48/227 KiB (default/opt-in), driver 13.0, runtime 12.8)
+    theoretical (spec-derived, NOT measured): fp32 60.3187 TFLOP/s, fp16-TC 965.1 TFLOP/s, bandwidth 3938.98 GB/s
+    measured ceilings: fp32 50.7346 TFLOP/s, fp16-TC 565.912 TFLOP/s, copy bandwidth 3339.77 GB/s, launch 1.8809 us
+    registered kernels: 93 (direct 3, im2col_gemm 4, simt_tiled 20, implicit_gemm 16, tensor_core 50)
