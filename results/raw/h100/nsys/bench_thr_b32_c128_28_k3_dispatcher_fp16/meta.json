@@ -1,0 +1,38 @@
+{
+  "tag": "run",
+  "gpu": "NVIDIA H100 NVL",
+  "compute_capability": 90,
+  "sm_count": 132,
+  "gpu_memory_bytes": 99949674496,
+  "l2_bytes": 62914560,
+  "cuda_runtime": 12080,
+  "cuda_driver": 13000,
+  "est_peak_fp32_tflops": 60.318719999999999,
+  "est_peak_fp16_tc_tflops": 965.09951999999998,
+  "est_peak_bw_gbs": 3938.9760000000001,
+  "measured_fp32_tflops": 50.734641936106797,
+  "measured_fp16_tc_tflops": 565.91248653173648,
+  "measured_bw_gbs": 3339.7686322637987,
+  "measured_launch_overhead_us": 1.8808959722518921,
+  "ceilings_source": "microbenchmark (/scratch/arjunc4/cuda-inference-work/ceilings/ceilings_NVIDIA_H100_NVL_sm90.json)",
+  "cudnn": "9.5.1 (runtime 90501)",
+  "cutlass": "3.9.2",
+  "library_version": 2,
+  "hostname": "ccc0456.campuscluster.illinois.edu",
+  "slurm_job_id": "11728931",
+  "slurm_partition": "secondary",
+  "git_rev": "unknown",
+  "seed": 305441741,
+  "warmup": 3,
+  "samples": 5,
+  "min_sample_ms": 1,
+  "flush_l2": false,
+  "precisions": [
+    "fp16"
+  ],
+  "backends": [
+    "dispatcher"
+  ],
+  "command": "/scratch/arjunc4/cuda-inference-work/build_all/benchmarks/gie_bench --workloads /u/arjunc4/cuda-inference/benchmarks/workloads.json --filter thr_b32_c128_28_k3 --backends dispatcher --precisions fp16 --mode tuned --warmup 3 --samples 5 --e2e --no-validate --out /u/arjunc4/cuda-inference/results/raw/h100/nsys/bench_thr_b32_c128_28_k3_dispatcher_fp16",
+  "tolerance_policy": "tol_i = 8*2^-24*sqrt(K)*scale_i + c_out*u_out*|ref_i| + floor; see reference.h"
+}

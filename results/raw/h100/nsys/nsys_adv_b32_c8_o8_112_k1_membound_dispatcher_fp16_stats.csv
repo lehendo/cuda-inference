@@ -1,0 +1,32 @@
+Generating SQLite file /u/arjunc4/cuda-inference/results/raw/h100/nsys/nsys_adv_b32_c8_o8_112_k1_membound_dispatcher_fp16.sqlite from /u/arjunc4/cuda-inference/results/raw/h100/nsys/nsys_adv_b32_c8_o8_112_k1_membound_dispatcher_fp16.nsys-rep
+Processing [/u/arjunc4/cuda-inference/results/raw/h100/nsys/nsys_adv_b32_c8_o8_112_k1_membound_dispatcher_fp16.sqlite] with [/sw/apps/cuda/12.8/nsight-systems-2024.6.2/host-linux-x64/reports/cuda_gpu_kern_sum.py]... 
+Time (%),Total Time (ns),Instances,Avg (ns),Med (ns),Min (ns),Max (ns),StdDev (ns),Name
+100.0,106378888,3923,27116.7,27105.0,26912,28768,90.1,"void gie::kernels::<unnamed>::implicit_gemm_kernel<__half, (int)32, (int)128, (int)8, (int)4, (int)4>(const T1 *, const T1 *, const T1 *, T1 *, const gie::LutEntry *, gie::kernels::ConvArgs)"
+
+Processing [/u/arjunc4/cuda-inference/results/raw/h100/nsys/nsys_adv_b32_c8_o8_112_k1_membound_dispatcher_fp16.sqlite] with [/sw/apps/cuda/12.8/nsight-systems-2024.6.2/host-linux-x64/reports/cuda_api_sum.py]... 
+Time (%),Total Time (ns),Num Calls,Avg (ns),Med (ns),Min (ns),Max (ns),StdDev (ns),Name
+79.5,92103320,74,1244639.5,30863.0,28896,5081271,2070871.5,cudaStreamSynchronize
+9.3,10813689,3923,2756.5,2617.0,2429,12993,469.9,cudaLaunchKernel
+4.7,5451546,16,340721.6,120919.5,104598,831867,341033.5,cudaEventSynchronize
+3.1,3611187,2,1805593.5,1805593.5,1787554,1823633,25511.7,cudaMallocHost
+1.0,1124460,2,562230.0,562230.0,527749,596711,48763.5,cudaFreeHost
+0.9,1051584,1,1051584.0,1051584.0,1051584,1051584,0.0,cudaGetDeviceProperties_v2_v12000
+0.4,478119,6,79686.5,11206.5,3212,430997,172183.8,cudaMemcpy
+0.4,473796,10,47379.6,46558.0,3363,118145,40130.1,cudaMalloc
+0.4,411210,10,41121.0,47976.0,2910,103830,35664.5,cudaFree
+0.1,115271,1,115271.0,115271.0,115271,115271,0.0,cudaStreamCreateWithFlags
+0.1,109876,32,3433.6,2976.5,2545,13161,1976.6,cudaEventRecord
+0.0,54715,16,3419.7,2393.5,2218,13987,2927.8,cudaMemcpyAsync
+0.0,30202,1,30202.0,30202.0,30202,30202,0.0,cudaMemset
+0.0,25017,5,5003.4,4888.0,1434,9570,2938.7,cudaDeviceSynchronize
+0.0,22120,1,22120.0,22120.0,22120,22120,0.0,cudaMemsetAsync
+0.0,7736,6,1289.3,519.0,374,3271,1295.4,cudaEventCreate
+0.0,5192,6,865.3,363.5,293,2783,981.3,cudaEventDestroy
+0.0,1290,1,1290.0,1290.0,1290,1290,0.0,cuModuleGetLoadingMode
+
+Processing [/u/arjunc4/cuda-inference/results/raw/h100/nsys/nsys_adv_b32_c8_o8_112_k1_membound_dispatcher_fp16.sqlite] with [/sw/apps/cuda/12.8/nsight-systems-2024.6.2/host-linux-x64/reports/cuda_gpu_mem_time_sum.py]... 
+Time (%),Total Time (ns),Count,Avg (ns),Med (ns),Min (ns),Max (ns),StdDev (ns),Operation
+58.1,1284653,14,91760.9,117825.0,768,334499,90208.9,[CUDA memcpy Host-to-Device]
+41.7,922090,8,115261.3,114593.0,114497,120066,1942.0,[CUDA memcpy Device-to-Host]
+0.3,5696,2,2848.0,2848.0,2784,2912,90.5,[CUDA memset]
+
