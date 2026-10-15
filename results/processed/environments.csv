@@ -1,0 +1,3 @@
+gpu,cc,hostname,slurm_job_id,cuda_runtime,cuda_driver,cudnn,cutlass,git_rev
+NVIDIA A40,86,ccc0333.campuscluster.illinois.edu,11728199,12080,13000,9.5.1 (runtime 90501),3.9.2,unknown
+NVIDIA H100 NVL,90,ccc0456.campuscluster.illinois.edu,11728931,12080,13000,9.5.1 (runtime 90501),3.9.2,unknown

@@ -1,0 +1,625 @@
+gpu,workload,precision,fusion,split,winner,winner_kernel,winner_us
+NVIDIA A40,adv_b16_c32_56_k5_unroll25x,fp16,fused,tune,cudnn:library,cudnn,78.84799937407176
+NVIDIA A40,adv_b16_c32_56_k5_unroll25x,fp16,n/a,tune,memcpy,cudaMemcpyAsync,258.7039992213249
+NVIDIA A40,adv_b16_c32_56_k5_unroll25x,fp16,unfused,tune,tensor_core:tuned,tcmma_fp16_64x128x32_s3_w2x4_sk1+bias+relu(unfused),133.56199860572815
+NVIDIA A40,adv_b16_c32_56_k5_unroll25x,fp32,fused,tune,cudnn:library,cudnn,156.24228545597623
+NVIDIA A40,adv_b16_c32_56_k5_unroll25x,fp32,n/a,tune,memcpy,cudaMemcpyAsync,511.0879987478256
+NVIDIA A40,adv_b16_c32_56_k5_unroll25x,fp32,unfused,tune,implicit_gemm:tuned,implicit_gemm_fp32_32x128x8_t4x4+bias+relu(unfused),295.89200019836426
+NVIDIA A40,adv_b1_c16_10_k5_pad4,fp16,fused,tune,im2col_gemm,im2col_gemm_fp16,10.721882651833926
+NVIDIA A40,adv_b1_c16_10_k5_pad4,fp16,n/a,tune,memcpy,cudaMemcpyAsync,6.783999968320131
+NVIDIA A40,adv_b1_c16_10_k5_pad4,fp16,unfused,tune,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),12.638684821455445
+NVIDIA A40,adv_b1_c16_10_k5_pad4,fp32,fused,tune,im2col_gemm,im2col_gemm_fp32,12.022026173480146
+NVIDIA A40,adv_b1_c16_10_k5_pad4,fp32,n/a,tune,memcpy,cudaMemcpyAsync,7.663999916985631
+NVIDIA A40,adv_b1_c16_10_k5_pad4,fp32,unfused,tune,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),13.970626823937716
+NVIDIA A40,adv_b1_c1_o8_512_k3,fp16,fused,tune,dispatcher:auto,implicit_gemm_fp16_32x128x8_t4x4,34.92303346765452
+NVIDIA A40,adv_b1_c1_o8_512_k3,fp16,n/a,tune,memcpy,cudaMemcpyAsync,187.74400278925896
+NVIDIA A40,adv_b1_c1_o8_512_k3,fp16,unfused,tune,implicit_gemm:tuned,implicit_gemm_fp16_32x128x8_t4x4+bias+relu(unfused),56.54755565855238
+NVIDIA A40,adv_b1_c1_o8_512_k3,fp32,fused,tune,dispatcher:auto,implicit_gemm_fp32_32x128x8_t4x4,34.81820739548782
+NVIDIA A40,adv_b1_c1_o8_512_k3,fp32,n/a,tune,memcpy,cudaMemcpyAsync,369.02398616075516
+NVIDIA A40,adv_b1_c1_o8_512_k3,fp32,unfused,tune,implicit_gemm:tuned,implicit_gemm_fp32_32x128x8_t4x4+bias+relu(unfused),91.87345613132824
+NVIDIA A40,adv_b2_c3_o5_57x59_k3,fp16,fused,tune,tensor_core:tuned,tensor_core_fp16_128x64x32_w4x2,6.2993653889360095
+NVIDIA A40,adv_b2_c3_o5_57x59_k3,fp16,n/a,tune,memcpy,cudaMemcpyAsync,10.06399979814887
+NVIDIA A40,adv_b2_c3_o5_57x59_k3,fp16,unfused,tune,tensor_core:tuned,tensor_core_fp16_128x64x32_w4x2+bias+relu(unfused),10.329043735628543
+NVIDIA A40,adv_b2_c3_o5_57x59_k3,fp32,fused,tune,direct,direct_fp32,6.87743530018639
+NVIDIA A40,adv_b2_c3_o5_57x59_k3,fp32,n/a,tune,memcpy,cudaMemcpyAsync,14.14399966597557
+NVIDIA A40,adv_b2_c3_o5_57x59_k3,fp32,unfused,tune,direct,direct_fp32+bias+relu(unfused),11.227428913116455
+NVIDIA A40,adv_b32_c8_o8_112_k1_membound,fp16,fused,tune,dispatcher:auto,implicit_gemm_fp16_32x128x8_t4x4,49.97119903564453
+NVIDIA A40,adv_b32_c8_o8_112_k1_membound,fp16,n/a,tune,memcpy,cudaMemcpyAsync,506.9440007209778
+NVIDIA A40,adv_b32_c8_o8_112_k1_membound,fp16,unfused,tune,implicit_gemm:tuned,implicit_gemm_fp16_32x128x8_t4x4+bias+relu(unfused),94.67344934290105
+NVIDIA A40,adv_b32_c8_o8_112_k1_membound,fp32,fused,tune,implicit_gemm:tuned,implicit_gemm_fp32_32x128x8_t4x4,51.046401262283325
+NVIDIA A40,adv_b32_c8_o8_112_k1_membound,fp32,n/a,tune,memcpy,cudaMemcpyAsync,1007.488027215004
+NVIDIA A40,adv_b32_c8_o8_112_k1_membound,fp32,unfused,tune,implicit_gemm:tuned,implicit_gemm_fp32_32x128x8_t4x4+bias+relu(unfused),145.17942496708463
+NVIDIA A40,adv_b4_c130_o130_15_k3,fp16,fused,tune,im2col_gemm,im2col_gemm_fp16,39.976959228515625
+NVIDIA A40,adv_b4_c130_o130_15_k3,fp16,n/a,tune,memcpy,cudaMemcpyAsync,36.11200116574764
+NVIDIA A40,adv_b4_c130_o130_15_k3,fp16,unfused,tune,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),42.28266576925913
+NVIDIA A40,adv_b4_c130_o130_15_k3,fp32,fused,tune,cudnn:library,cudnn,39.81818123297258
+NVIDIA A40,adv_b4_c130_o130_15_k3,fp32,n/a,tune,memcpy,cudaMemcpyAsync,66.60799868404865
+NVIDIA A40,adv_b4_c130_o130_15_k3,fp32,unfused,tune,implicit_gemm:tuned,implicit_gemm_fp32_128x32x8_t4x4+bias+relu(unfused),131.20000064373016
+NVIDIA A40,adv_b4_c7_o9_33x31_k5s2,fp16,fused,tune,im2col_gemm,im2col_gemm_fp16,11.903999745845795
+NVIDIA A40,adv_b4_c7_o9_33x31_k5s2,fp16,n/a,tune,memcpy,cudaMemcpyAsync,8.944000001065433
+NVIDIA A40,adv_b4_c7_o9_33x31_k5s2,fp16,unfused,tune,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),13.815314429146904
+NVIDIA A40,adv_b4_c7_o9_33x31_k5s2,fp32,fused,tune,dispatcher:auto,im2col_gemm_fp32,12.18430377260039
+NVIDIA A40,adv_b4_c7_o9_33x31_k5s2,fp32,n/a,tune,memcpy,cudaMemcpyAsync,12.127999681979418
+NVIDIA A40,adv_b4_c7_o9_33x31_k5s2,fp32,unfused,tune,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),14.155294088756337
+NVIDIA A40,adv_b8_c32_28_k7_unroll49x,fp16,fused,tune,cutlass:library,cutlass,41.55733436346054
+NVIDIA A40,adv_b8_c32_28_k7_unroll49x,fp16,n/a,tune,memcpy,cudaMemcpyAsync,41.00799933075905
+NVIDIA A40,adv_b8_c32_28_k7_unroll49x,fp16,unfused,tune,tensor_core:tuned,tcmma_fp16_64x64x32_s4_w2x2_sk1+bias+relu(unfused),49.4592010974884
+NVIDIA A40,adv_b8_c32_28_k7_unroll49x,fp32,fused,tune,cudnn:library,cudnn,100.35200119018555
+NVIDIA A40,adv_b8_c32_28_k7_unroll49x,fp32,n/a,tune,memcpy,cudaMemcpyAsync,76.28799974918365
+NVIDIA A40,adv_b8_c32_28_k7_unroll49x,fp32,unfused,tune,simt_tiled:tuned,simt_tiled_fp32_tc32_t4x32_r4x4_cc8+bias+relu(unfused),174.93333419164023
+NVIDIA A40,adv_b8_c96_o255_27_k3,fp16,fused,tune,dispatcher:auto,tcmma_fp16_128x128x32_s2_w2x4_sk1,66.90133412679036
+NVIDIA A40,adv_b8_c96_o255_27_k3,fp16,n/a,tune,memcpy,cudaMemcpyAsync,182.0960007607937
+NVIDIA A40,adv_b8_c96_o255_27_k3,fp16,unfused,tune,tensor_core:tuned,tcmma_fp16_128x128x32_s2_w2x4_sk1+bias+relu(unfused),83.88266960779826
+NVIDIA A40,adv_b8_c96_o255_27_k3,fp32,fused,tune,cudnn:library,cudnn,147.73485490253995
+NVIDIA A40,adv_b8_c96_o255_27_k3,fp32,n/a,tune,memcpy,cudaMemcpyAsync,357.9840064048767
+NVIDIA A40,adv_b8_c96_o255_27_k3,fp32,unfused,tune,implicit_gemm:tuned,implicit_gemm_fp32_64x64x8_t4x4+bias+relu(unfused),281.45599365234375
+NVIDIA A40,ho_adv_b10_c20_o20_30_k7,fp16,fused,heldout,cudnn:library,cudnn,74.03815480378958
+NVIDIA A40,ho_adv_b10_c20_o20_30_k7,fp16,unfused,heldout,tensor_core:tuned,tensor_core_fp16_128x64x32_w4x2+bias+relu(unfused),90.11200070381165
+NVIDIA A40,ho_adv_b10_c20_o20_30_k7,fp32,fused,heldout,cudnn:library,cudnn,65.32586614290874
+NVIDIA A40,ho_adv_b10_c20_o20_30_k7,fp32,unfused,heldout,simt_tiled:tuned,simt_tiled_fp32_tc32_t4x32_r4x4_cc4+bias+relu(unfused),115.3706709543864
+NVIDIA A40,ho_adv_b16_c4_o4_96_k3_lowC,fp16,fused,heldout,dispatcher:auto,implicit_gemm_fp16_32x128x8_t4x4,40.422401428222656
+NVIDIA A40,ho_adv_b16_c4_o4_96_k3_lowC,fp16,unfused,heldout,implicit_gemm:tuned,implicit_gemm_fp16_32x128x8_t4x4+bias+relu(unfused),48.85942595345633
+NVIDIA A40,ho_adv_b16_c4_o4_96_k3_lowC,fp32,fused,heldout,dispatcher:auto,implicit_gemm_fp32_32x128x8_t4x4,38.55753861940824
+NVIDIA A40,ho_adv_b16_c4_o4_96_k3_lowC,fp32,unfused,heldout,implicit_gemm:tuned,implicit_gemm_fp32_32x128x8_t4x4+bias+relu(unfused),50.380802154541016
+NVIDIA A40,ho_adv_b1_c48_12_k3_pad3,fp16,fused,heldout,cutlass:library,cutlass,7.810169357364461
+NVIDIA A40,ho_adv_b1_c48_12_k3_pad3,fp16,unfused,heldout,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),11.802256107330322
+NVIDIA A40,ho_adv_b1_c48_12_k3_pad3,fp32,fused,heldout,im2col_gemm,im2col_gemm_fp32,13.839059016283821
+NVIDIA A40,ho_adv_b1_c48_12_k3_pad3,fp32,unfused,heldout,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),15.871999661127726
+NVIDIA A40,ho_adv_b2_c2_o6_128_k7s2,fp16,fused,heldout,dispatcher:auto,tensor_core_fp16_128x64x32_w4x2,12.853894578783136
+NVIDIA A40,ho_adv_b2_c2_o6_128_k7s2,fp16,unfused,heldout,tensor_core:tuned,tensor_core_fp16_128x64x32_w4x2+bias+relu(unfused),17.0725522370174
+NVIDIA A40,ho_adv_b2_c2_o6_128_k7s2,fp32,fused,heldout,dispatcher:auto,direct_fp32,14.610149077515103
+NVIDIA A40,ho_adv_b2_c2_o6_128_k7s2,fp32,unfused,heldout,direct,direct_fp32+bias+relu(unfused),19.21631425034766
+NVIDIA A40,ho_adv_b3_c5_o11_45x47_k3,fp16,fused,heldout,tensor_core:tuned,tensor_core_fp16_128x64x32_w4x2,8.56777998285556
+NVIDIA A40,ho_adv_b3_c5_o11_45x47_k3,fp16,unfused,heldout,tensor_core:tuned,tensor_core_fp16_128x64x32_w4x2+bias+relu(unfused),12.834346691767374
+NVIDIA A40,ho_adv_b3_c5_o11_45x47_k3,fp32,fused,heldout,implicit_gemm:tuned,implicit_gemm_fp32_64x64x16_t4x4,10.307516370500837
+NVIDIA A40,ho_adv_b3_c5_o11_45x47_k3,fp32,unfused,heldout,implicit_gemm:tuned,implicit_gemm_fp32_64x64x16_t4x4+bias+relu(unfused),14.808615354391245
+NVIDIA A40,ho_adv_b6_c100_o250_19_k3,fp16,fused,heldout,im2col_gemm,im2col_gemm_fp16,82.47138903691219
+NVIDIA A40,ho_adv_b6_c100_o250_19_k3,fp16,unfused,heldout,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),86.01599931716919
+NVIDIA A40,ho_adv_b6_c100_o250_19_k3,fp32,fused,heldout,cudnn:library,cudnn,86.6239992055026
+NVIDIA A40,ho_adv_b6_c100_o250_19_k3,fp32,unfused,heldout,implicit_gemm:tuned,implicit_gemm_fp32_128x32x8_t4x4+bias+relu(unfused),137.31800019741058
+NVIDIA A40,ho_lat_b1_c24_20_k3,fp16,fused,heldout,cutlass:library,cutlass,8.848905563354492
+NVIDIA A40,ho_lat_b1_c24_20_k3,fp16,unfused,heldout,tensor_core:tuned,tcmma_fp16_64x64x64_s3_w2x2_sk1+bias+relu(unfused),16.280266642570496
+NVIDIA A40,ho_lat_b1_c24_20_k3,fp32,fused,heldout,im2col_gemm,im2col_gemm_fp32,12.596603125742037
+NVIDIA A40,ho_lat_b1_c24_20_k3,fp32,unfused,heldout,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),14.603323202866774
+NVIDIA A40,ho_lat_b1_c3_96_k5s2,fp16,fused,heldout,dispatcher:auto,tensor_core_fp16_128x64x32_w4x2,10.757573200075814
+NVIDIA A40,ho_lat_b1_c3_96_k5s2,fp16,unfused,heldout,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),12.94728746152904
+NVIDIA A40,ho_lat_b1_c3_96_k5s2,fp32,fused,heldout,implicit_gemm:tuned,implicit_gemm_fp32_128x32x8_t4x4,11.476292842771949
+NVIDIA A40,ho_lat_b1_c3_96_k5s2,fp32,unfused,heldout,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),15.167499892413616
+NVIDIA A40,ho_lat_b1_c48_10_k3,fp16,fused,heldout,cutlass:library,cutlass,7.700813010456116
+NVIDIA A40,ho_lat_b1_c48_10_k3,fp16,unfused,heldout,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),12.90240032332284
+NVIDIA A40,ho_lat_b1_c48_10_k3,fp32,fused,heldout,im2col_gemm,im2col_gemm_fp32,13.151085376739502
+NVIDIA A40,ho_lat_b1_c48_10_k3,fp32,unfused,heldout,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),15.135999768972397
+NVIDIA A40,ho_lat_b1_c96_14_k1,fp16,fused,heldout,cutlass:library,cutlass,4.670973130088439
+NVIDIA A40,ho_lat_b1_c96_14_k1,fp16,unfused,heldout,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),11.7294548393844
+NVIDIA A40,ho_lat_b1_c96_14_k1,fp32,fused,heldout,dispatcher:auto,im2col_gemm_fp32,10.140545666217804
+NVIDIA A40,ho_lat_b1_c96_14_k1,fp32,unfused,heldout,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),12.329513156736219
+NVIDIA A40,ho_lat_b2_c64_16_k3,fp16,fused,heldout,cutlass:library,cutlass,7.295244087384441
+NVIDIA A40,ho_lat_b2_c64_16_k3,fp16,unfused,heldout,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),15.623999699469536
+NVIDIA A40,ho_lat_b2_c64_16_k3,fp32,fused,heldout,cudnn:library,cudnn,26.76550019532442
+NVIDIA A40,ho_lat_b2_c64_16_k3,fp32,unfused,heldout,simt_tiled:tuned,simt_tiled_fp32_tc16_t8x8_r2x2_cc8+bias+relu(unfused),61.86164827907787
+NVIDIA A40,ho_thr_b16_c192_20_k3,fp16,fused,heldout,cutlass:library,cutlass,42.70260878231214
+NVIDIA A40,ho_thr_b16_c192_20_k3,fp16,unfused,heldout,tensor_core:tuned,tcmma_fp16_64x128x32_s3_w2x4_sk1+bias+relu(unfused),113.4364472495185
+NVIDIA A40,ho_thr_b16_c192_20_k3,fp32,fused,heldout,cudnn:library,cudnn,258.03200900554657
+NVIDIA A40,ho_thr_b16_c192_20_k3,fp32,unfused,heldout,implicit_gemm:tuned,implicit_gemm_fp32_64x64x16_t4x4+bias+relu(unfused),403.06667486826575
+NVIDIA A40,ho_thr_b24_c80_48_k3,fp16,fused,heldout,cutlass:library,cutlass,266.7520046234131
+NVIDIA A40,ho_thr_b24_c80_48_k3,fp16,unfused,heldout,tensor_core:tuned,tcmma_fp16_64x128x32_s3_w2x4_sk1+bias+relu(unfused),489.47733640670776
+NVIDIA A40,ho_thr_b24_c80_48_k3,fp32,fused,heldout,cudnn:library,cudnn,445.09867827097577
+NVIDIA A40,ho_thr_b24_c80_48_k3,fp32,unfused,heldout,implicit_gemm:tuned,implicit_gemm_fp32_64x64x8_t4x4+bias+relu(unfused),1430.4960370063782
+NVIDIA A40,ho_thr_b32_c128_14_k1,fp16,fused,heldout,cutlass:library,cutlass,25.869473030692653
+NVIDIA A40,ho_thr_b32_c128_14_k1,fp16,unfused,heldout,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),82.31384937579816
+NVIDIA A40,ho_thr_b32_c128_14_k1,fp32,fused,heldout,cutlass:library,cutlass,75.99542822156634
+NVIDIA A40,ho_thr_b32_c128_14_k1,fp32,unfused,heldout,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),189.95199600855508
+NVIDIA A40,ho_thr_b32_c32_64_k5,fp16,fused,heldout,cutlass:library,cutlass,247.00160026550293
+NVIDIA A40,ho_thr_b32_c32_64_k5,fp16,unfused,heldout,tensor_core:tuned,tcmma_fp16_64x128x32_s3_w2x4_sk1+bias+relu(unfused),447.9840000470479
+NVIDIA A40,ho_thr_b32_c32_64_k5,fp32,fused,heldout,cudnn:library,cudnn,775.4240036010742
+NVIDIA A40,ho_thr_b32_c32_64_k5,fp32,unfused,heldout,implicit_gemm:tuned,implicit_gemm_fp32_64x64x8_t4x4+bias+relu(unfused),1300.4800081253052
+NVIDIA A40,ho_thr_b32_c96_40_k3,fp16,fused,heldout,cutlass:library,cutlass,146.28343071256364
+NVIDIA A40,ho_thr_b32_c96_40_k3,fp16,unfused,heldout,tensor_core:tuned,tcmma_fp16_128x128x32_s3_w2x4_sk1+bias+relu(unfused),297.7080047130585
+NVIDIA A40,ho_thr_b32_c96_40_k3,fp32,fused,heldout,cudnn:library,cudnn,356.6933472951253
+NVIDIA A40,ho_thr_b32_c96_40_k3,fp32,unfused,heldout,implicit_gemm:tuned,implicit_gemm_fp32_32x128x8_t4x4+bias+relu(unfused),969.215989112854
+NVIDIA A40,ho_thr_b8_c256_32_k3s2,fp16,fused,heldout,cutlass:library,cutlass,29.485176591312182
+NVIDIA A40,ho_thr_b8_c256_32_k3s2,fp16,unfused,heldout,tensor_core:tuned,tcmma_fp16_64x64x32_s4_w2x2_sk1+bias+relu(unfused),98.39709238572554
+NVIDIA A40,ho_thr_b8_c256_32_k3s2,fp32,fused,heldout,cudnn:library,cudnn,249.08800423145294
+NVIDIA A40,ho_thr_b8_c256_32_k3s2,fp32,unfused,heldout,implicit_gemm:tuned,implicit_gemm_fp32_128x32x8_t4x4+bias+relu(unfused),315.13598561286926
+NVIDIA A40,lat_b1_c128_28_k1,fp16,fused,tune,cutlass:library,cutlass,4.660021493779147
+NVIDIA A40,lat_b1_c128_28_k1,fp16,n/a,tune,memcpy,cudaMemcpyAsync,22.752000484615564
+NVIDIA A40,lat_b1_c128_28_k1,fp16,unfused,tune,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),12.219220786899715
+NVIDIA A40,lat_b1_c128_28_k1,fp32,fused,tune,im2col_gemm,im2col_gemm_fp32,12.99470411220067
+NVIDIA A40,lat_b1_c128_28_k1,fp32,n/a,tune,memcpy,cudaMemcpyAsync,39.56799954175949
+NVIDIA A40,lat_b1_c128_28_k1,fp32,unfused,tune,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),15.441270101638068
+NVIDIA A40,lat_b1_c16_28_k3,fp16,fused,tune,cutlass:library,cutlass,9.08675703030188
+NVIDIA A40,lat_b1_c16_28_k3,fp16,n/a,tune,memcpy,cudaMemcpyAsync,8.000000147148967
+NVIDIA A40,lat_b1_c16_28_k3,fp16,unfused,tune,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),11.513599753379822
+NVIDIA A40,lat_b1_c16_28_k3,fp32,fused,tune,im2col_gemm,im2col_gemm_fp32,10.082461676754795
+NVIDIA A40,lat_b1_c16_28_k3,fp32,n/a,tune,memcpy,cudaMemcpyAsync,10.28799987398088
+NVIDIA A40,lat_b1_c16_28_k3,fp32,unfused,tune,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),12.128415819886444
+NVIDIA A40,lat_b1_c256_14_k3,fp16,fused,tune,cutlass:library,cutlass,16.712677680839928
+NVIDIA A40,lat_b1_c256_14_k3,fp16,n/a,tune,memcpy,cudaMemcpyAsync,60.60799956321716
+NVIDIA A40,lat_b1_c256_14_k3,fp16,unfused,tune,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),26.417297285956305
+NVIDIA A40,lat_b1_c256_14_k3,fp32,fused,tune,im2col_gemm,im2col_gemm_fp32,40.38656234741211
+NVIDIA A40,lat_b1_c256_14_k3,fp32,n/a,tune,memcpy,cudaMemcpyAsync,115.04000052809715
+NVIDIA A40,lat_b1_c256_14_k3,fp32,unfused,tune,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),43.31895709037781
+NVIDIA A40,lat_b1_c32_14_k3,fp16,fused,tune,cutlass:library,cutlass,8.412623897604986
+NVIDIA A40,lat_b1_c32_14_k3,fp16,n/a,tune,memcpy,cudaMemcpyAsync,7.520000217482448
+NVIDIA A40,lat_b1_c32_14_k3,fp16,unfused,tune,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),11.97810549485056
+NVIDIA A40,lat_b1_c32_14_k3,fp32,fused,tune,dispatcher:auto,im2col_gemm_fp32,13.386202895123025
+NVIDIA A40,lat_b1_c32_14_k3,fp32,n/a,tune,memcpy,cudaMemcpyAsync,9.24799987114966
+NVIDIA A40,lat_b1_c32_14_k3,fp32,unfused,tune,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),15.443934768926901
+NVIDIA A40,lat_b1_c512_7_k3,fp16,fused,tune,cutlass:library,cutlass,29.243764631888446
+NVIDIA A40,lat_b1_c512_7_k3,fp16,n/a,tune,memcpy,cudaMemcpyAsync,196.9599979929626
+NVIDIA A40,lat_b1_c512_7_k3,fp16,unfused,tune,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),34.962285842214314
+NVIDIA A40,lat_b1_c512_7_k3,fp32,fused,tune,im2col_gemm,im2col_gemm_fp32,44.210086698117465
+NVIDIA A40,lat_b1_c512_7_k3,fp32,n/a,tune,memcpy,cudaMemcpyAsync,387.87199929356575
+NVIDIA A40,lat_b1_c512_7_k3,fp32,unfused,tune,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),46.452365138313986
+NVIDIA A40,lat_b1_c64_14_k3,fp16,fused,tune,cutlass:library,cutlass,7.230534353329025
+NVIDIA A40,lat_b1_c64_14_k3,fp16,n/a,tune,memcpy,cudaMemcpyAsync,10.655999882146716
+NVIDIA A40,lat_b1_c64_14_k3,fp16,unfused,tune,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),14.745600406940166
+NVIDIA A40,lat_b1_c64_14_k3,fp32,fused,tune,im2col_gemm,im2col_gemm_fp32,13.97458858349744
+NVIDIA A40,lat_b1_c64_14_k3,fp32,n/a,tune,memcpy,cudaMemcpyAsync,15.615999698638916
+NVIDIA A40,lat_b1_c64_14_k3,fp32,unfused,tune,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),16.043389752759772
+NVIDIA A40,lat_b1_c64_7_k1,fp16,fused,tune,cutlass:library,cutlass,4.160155370397475
+NVIDIA A40,lat_b1_c64_7_k1,fp16,n/a,tune,memcpy,cudaMemcpyAsync,6.784000201150775
+NVIDIA A40,lat_b1_c64_7_k1,fp16,unfused,tune,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),11.584000289440155
+NVIDIA A40,lat_b1_c64_7_k1,fp32,fused,tune,dispatcher:auto,implicit_gemm_fp32_128x32x8_t4x4,10.12016991351513
+NVIDIA A40,lat_b1_c64_7_k1,fp32,n/a,tune,memcpy,cudaMemcpyAsync,7.5040002120658755
+NVIDIA A40,lat_b1_c64_7_k1,fp32,unfused,tune,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),12.30140553938376
+NVIDIA A40,lat_b1_stem_224_k7s2,fp16,fused,tune,tensor_core:tuned,tensor_core_fp16_64x64x32_w2x2,26.32547365991693
+NVIDIA A40,lat_b1_stem_224_k7s2,fp16,n/a,tune,memcpy,cudaMemcpyAsync,80.38399927318096
+NVIDIA A40,lat_b1_stem_224_k7s2,fp16,unfused,tune,tensor_core:tuned,tensor_core_fp16_64x64x32_w2x2+bias+relu(unfused),36.74844459251121
+NVIDIA A40,lat_b1_stem_224_k7s2,fp32,fused,tune,cudnn:library,cudnn,27.747096553925545
+NVIDIA A40,lat_b1_stem_224_k7s2,fp32,n/a,tune,memcpy,cudaMemcpyAsync,154.14399467408657
+NVIDIA A40,lat_b1_stem_224_k7s2,fp32,unfused,tune,implicit_gemm:tuned,implicit_gemm_fp32_64x64x8_t4x4+bias+relu(unfused),47.15054685419256
+NVIDIA A40,sweep_batch_b16_c64_28_k3,fp16,fused,sweep,cutlass:library,cutlass,19.569279551506042
+NVIDIA A40,sweep_batch_b16_c64_28_k3,fp32,fused,sweep,cudnn:library,cudnn,59.4559982419014
+NVIDIA A40,sweep_batch_b1_c64_28_k3,fp16,fused,sweep,cutlass:library,cutlass,7.272818895775502
+NVIDIA A40,sweep_batch_b1_c64_28_k3,fp32,fused,sweep,im2col_gemm,im2col_gemm_fp32,23.363721925158835
+NVIDIA A40,sweep_batch_b2_c64_28_k3,fp16,fused,sweep,cutlass:library,cutlass,7.312252061573539
+NVIDIA A40,sweep_batch_b2_c64_28_k3,fp32,fused,sweep,cudnn:library,cudnn,29.16634493860705
+NVIDIA A40,sweep_batch_b32_c64_28_k3,fp16,fused,sweep,cutlass:library,cutlass,28.792470693588257
+NVIDIA A40,sweep_batch_b32_c64_28_k3,fp32,fused,sweep,cudnn:library,cudnn,106.82488812340631
+NVIDIA A40,sweep_batch_b4_c64_28_k3,fp16,fused,sweep,cutlass:library,cutlass,7.559284446685295
+NVIDIA A40,sweep_batch_b4_c64_28_k3,fp32,fused,sweep,cudnn:library,cudnn,38.890667259693146
+NVIDIA A40,sweep_batch_b64_c64_28_k3,fp16,fused,sweep,cutlass:library,cutlass,52.3856846909774
+NVIDIA A40,sweep_batch_b64_c64_28_k3,fp32,fused,sweep,cudnn:library,cudnn,199.55520033836365
+NVIDIA A40,sweep_batch_b8_c64_28_k3,fp16,fused,sweep,cutlass:library,cutlass,10.608179515667176
+NVIDIA A40,sweep_batch_b8_c64_28_k3,fp32,fused,sweep,cudnn:library,cudnn,39.56145454536785
+NVIDIA A40,sweep_channels_c128_b16_28_k3,fp16,fused,sweep,cutlass:library,cutlass,46.165092424912885
+NVIDIA A40,sweep_channels_c128_b16_28_k3,fp32,fused,sweep,cudnn:library,cudnn,183.46667289733887
+NVIDIA A40,sweep_channels_c16_b16_28_k3,fp16,fused,sweep,dispatcher:auto,tcmma_fp16_64x128x32_s3_w2x4_sk1,17.316571303776332
+NVIDIA A40,sweep_channels_c16_b16_28_k3,fp32,fused,sweep,cudnn:library,cudnn,24.860000444783104
+NVIDIA A40,sweep_channels_c256_b16_28_k3,fp16,fused,sweep,cutlass:library,cutlass,148.49143368857247
+NVIDIA A40,sweep_channels_c256_b16_28_k3,fp32,fused,sweep,cudnn:library,cudnn,626.4159977436066
+NVIDIA A40,sweep_channels_c32_b16_28_k3,fp16,fused,sweep,cutlass:library,cutlass,21.731555461883545
+NVIDIA A40,sweep_channels_c32_b16_28_k3,fp32,fused,sweep,cudnn:library,cudnn,30.537143349647522
+NVIDIA A40,sweep_channels_c3_b16_28_k3,fp16,fused,sweep,dispatcher:auto,tensor_core_fp16_64x64x32_w2x2,7.3534489616634335
+NVIDIA A40,sweep_channels_c3_b16_28_k3,fp32,fused,sweep,implicit_gemm:tuned,implicit_gemm_fp32_32x128x8_t4x4,9.225941977454621
+NVIDIA A40,sweep_channels_c512_b16_28_k3,fp16,fused,sweep,cutlass:library,cutlass,478.37865352630615
+NVIDIA A40,sweep_channels_c512_b16_28_k3,fp32,fused,sweep,cudnn:library,cudnn,2419.2479848861694
+NVIDIA A40,sweep_channels_c64_b16_28_k3,fp16,fused,sweep,cutlass:library,cutlass,19.55639264162849
+NVIDIA A40,sweep_channels_c64_b16_28_k3,fp32,fused,sweep,cudnn:library,cudnn,59.328000992536545
+NVIDIA A40,sweep_channels_c8_b16_28_k3,fp16,fused,sweep,dispatcher:auto,tensor_core_fp16_64x64x32_w2x2,13.861333546431169
+NVIDIA A40,sweep_channels_c8_b16_28_k3,fp32,fused,sweep,dispatcher:auto,implicit_gemm_fp32_64x64x8_t4x4,16.418711613800568
+NVIDIA A40,sweep_irregular_h13_b8_c60_o100_k3,fp16,fused,sweep,im2col_gemm,im2col_gemm_fp16,33.58720143636068
+NVIDIA A40,sweep_irregular_h13_b8_c60_o100_k3,fp32,fused,sweep,cudnn:library,cudnn,38.13375949859619
+NVIDIA A40,sweep_irregular_h27_b8_c60_o100_k3,fp16,fused,sweep,dispatcher:auto,tensor_core_fp16_128x64x32_w4x2,56.83200226889716
+NVIDIA A40,sweep_irregular_h27_b8_c60_o100_k3,fp32,fused,sweep,cudnn:library,cudnn,57.79100023210049
+NVIDIA A40,sweep_irregular_h29_b8_c60_o100_k3,fp16,fused,sweep,dispatcher:auto,tensor_core_fp16_128x64x32_w4x2,56.80000119739108
+NVIDIA A40,sweep_irregular_h29_b8_c60_o100_k3,fp32,fused,sweep,cudnn:library,cudnn,57.792000472545624
+NVIDIA A40,sweep_irregular_h31_b8_c60_o100_k3,fp16,fused,sweep,dispatcher:auto,tensor_core_fp16_128x64x32_w4x2,56.421332889133026
+NVIDIA A40,sweep_irregular_h31_b8_c60_o100_k3,fp32,fused,sweep,cudnn:library,cudnn,58.715999126434326
+NVIDIA A40,sweep_irregular_h33_b8_c60_o100_k3,fp16,fused,sweep,dispatcher:auto,tensor_core_fp16_128x64x32_w4x2,56.49066633648343
+NVIDIA A40,sweep_irregular_h33_b8_c60_o100_k3,fp32,fused,sweep,cudnn:library,cudnn,85.08508855646306
+NVIDIA A40,sweep_irregular_h55_b8_c60_o100_k3,fp16,fused,sweep,tensor_core:tuned,tensor_core_fp16_128x64x32_w4x2,163.98629120418005
+NVIDIA A40,sweep_irregular_h55_b8_c60_o100_k3,fp32,fused,sweep,cudnn:library,cudnn,183.87999137242633
+NVIDIA A40,sweep_irregular_h57_b8_c60_o100_k3,fp16,fused,sweep,dispatcher:auto,tensor_core_fp16_128x64x32_w4x2,164.86399514334542
+NVIDIA A40,sweep_irregular_h57_b8_c60_o100_k3,fp32,fused,sweep,cudnn:library,cudnn,209.71519947052002
+NVIDIA A40,sweep_kernel_k1_b16_c64_28,fp16,fused,sweep,cutlass:library,cutlass,9.022792555251211
+NVIDIA A40,sweep_kernel_k1_b16_c64_28,fp32,fused,sweep,implicit_gemm:tuned,implicit_gemm_fp32_64x64x16_t4x4,21.868088510301376
+NVIDIA A40,sweep_kernel_k3_b16_c64_28,fp16,fused,sweep,cutlass:library,cutlass,19.55839991569519
+NVIDIA A40,sweep_kernel_k3_b16_c64_28,fp32,fused,sweep,cudnn:library,cudnn,59.61400084197521
+NVIDIA A40,sweep_kernel_k5_b16_c64_28,fp16,fused,sweep,cutlass:library,cutlass,40.673279762268066
+NVIDIA A40,sweep_kernel_k5_b16_c64_28,fp32,fused,sweep,cudnn:library,cudnn,129.78800386190414
+NVIDIA A40,sweep_kernel_k7_b16_c64_28,fp16,fused,sweep,cutlass:library,cutlass,71.31314277648926
+NVIDIA A40,sweep_kernel_k7_b16_c64_28,fp32,fused,sweep,cudnn:library,cudnn,345.7706769307455
+NVIDIA A40,sweep_spatial_h112_b16_c64_k3,fp16,fused,sweep,cutlass:library,cutlass,177.8266727924347
+NVIDIA A40,sweep_spatial_h112_b16_c64_k3,fp32,fused,sweep,cudnn:library,cudnn,606.2080264091492
+NVIDIA A40,sweep_spatial_h14_b16_c64_k3,fp16,fused,sweep,cutlass:library,cutlass,7.550439214318748
+NVIDIA A40,sweep_spatial_h14_b16_c64_k3,fp32,fused,sweep,cudnn:library,cudnn,38.78399978081385
+NVIDIA A40,sweep_spatial_h28_b16_c64_k3,fp16,fused,sweep,cutlass:library,cutlass,19.537919759750366
+NVIDIA A40,sweep_spatial_h28_b16_c64_k3,fp32,fused,sweep,cudnn:library,cudnn,59.67999994754791
+NVIDIA A40,sweep_spatial_h56_b16_c64_k3,fp16,fused,sweep,cutlass:library,cutlass,53.35242183584916
+NVIDIA A40,sweep_spatial_h56_b16_c64_k3,fp32,fused,sweep,cudnn:library,cudnn,173.3573277791341
+NVIDIA A40,sweep_spatial_h7_b16_c64_k3,fp16,fused,sweep,cutlass:library,cutlass,7.272818895775502
+NVIDIA A40,sweep_spatial_h7_b16_c64_k3,fp32,fused,sweep,cudnn:library,cudnn,26.70300006866455
+NVIDIA A40,thr_b16_c128_56_k3,bf16,fused,tune,cutlass:library,cutlass,144.6765661239624
+NVIDIA A40,thr_b16_c128_56_k3,fp16,fused,tune,cutlass:library,cutlass,144.82285295213973
+NVIDIA A40,thr_b16_c128_56_k3,fp16,n/a,tune,memcpy,cudaMemcpyAsync,1017.5999999046326
+NVIDIA A40,thr_b16_c128_56_k3,fp16,unfused,tune,tensor_core:tuned,tcmma_fp16_128x128x32_s3_w2x4_sk1+bias+relu(unfused),397.64799674352014
+NVIDIA A40,thr_b16_c128_56_k3,fp32,fused,tune,cudnn:library,cudnn,566.7840242385864
+NVIDIA A40,thr_b16_c128_56_k3,fp32,n/a,tune,memcpy,cudaMemcpyAsync,2028.9440155029297
+NVIDIA A40,thr_b16_c128_56_k3,fp32,unfused,tune,implicit_gemm:tuned,implicit_gemm_fp32_64x64x8_t4x4+bias+relu(unfused),1366.1119937896729
+NVIDIA A40,thr_b16_c128_56_k3,tf32,fused,tune,cudnn:library,cudnn,819.7119832038879
+NVIDIA A40,thr_b16_c64_112_k3,bf16,fused,tune,cutlass:library,cutlass,178.34667364756265
+NVIDIA A40,thr_b16_c64_112_k3,fp16,fused,tune,cutlass:library,cutlass,177.83466974894205
+NVIDIA A40,thr_b16_c64_112_k3,fp16,n/a,tune,memcpy,cudaMemcpyAsync,2010.3679895401
+NVIDIA A40,thr_b16_c64_112_k3,fp16,unfused,tune,tensor_core:tuned,tcmma_fp16_64x128x32_s4_w2x4_sk1+bias+relu(unfused),622.0800280570984
+NVIDIA A40,thr_b16_c64_112_k3,fp32,fused,tune,cudnn:library,cudnn,606.6719889640808
+NVIDIA A40,thr_b16_c64_112_k3,fp32,n/a,tune,memcpy,cudaMemcpyAsync,4012.7999782562256
+NVIDIA A40,thr_b16_c64_112_k3,fp32,unfused,tune,implicit_gemm:tuned,implicit_gemm_fp32_64x64x8_t4x4+bias+relu(unfused),1532.4159860610962
+NVIDIA A40,thr_b16_c64_112_k3,tf32,fused,tune,cudnn:library,cudnn,603.3920049667358
+NVIDIA A40,thr_b16_c64_28_k5,bf16,fused,tune,cutlass:library,cutlass,58.78964592428768
+NVIDIA A40,thr_b16_c64_28_k5,fp16,fused,tune,cutlass:library,cutlass,58.84800237767837
+NVIDIA A40,thr_b16_c64_28_k5,fp16,n/a,tune,memcpy,cudaMemcpyAsync,174.20800030231476
+NVIDIA A40,thr_b16_c64_28_k5,fp16,unfused,tune,tensor_core:tuned,tcmma_fp16_128x128x32_s2_w2x4_sk1+bias+relu(unfused),113.99466461605496
+NVIDIA A40,thr_b16_c64_28_k5,fp32,fused,tune,cudnn:library,cudnn,182.778666416804
+NVIDIA A40,thr_b16_c64_28_k5,fp32,n/a,tune,memcpy,cudaMemcpyAsync,341.93600714206696
+NVIDIA A40,thr_b16_c64_28_k5,fp32,unfused,tune,implicit_gemm:tuned,implicit_gemm_fp32_64x64x8_t4x4+bias+relu(unfused),469.96800104777014
+NVIDIA A40,thr_b16_c64_28_k5,tf32,fused,tune,cudnn:library,cudnn,188.31466635068256
+NVIDIA A40,thr_b32_c128_28_k3,bf16,fused,tune,cutlass:library,cutlass,87.12666730086008
+NVIDIA A40,thr_b32_c128_28_k3,fp16,fused,tune,cutlass:library,cutlass,86.61066989103954
+NVIDIA A40,thr_b32_c128_28_k3,fp16,n/a,tune,memcpy,cudaMemcpyAsync,518.0799961090088
+NVIDIA A40,thr_b32_c128_28_k3,fp16,unfused,tune,tensor_core:tuned,tcmma_fp16_128x128x32_s3_w2x4_sk1+bias+relu(unfused),223.64161014556885
+NVIDIA A40,thr_b32_c128_28_k3,fp32,fused,tune,cudnn:library,cudnn,338.20799986521405
+NVIDIA A40,thr_b32_c128_28_k3,fp32,n/a,tune,memcpy,cudaMemcpyAsync,1029.5040011405945
+NVIDIA A40,thr_b32_c128_28_k3,fp32,unfused,tune,implicit_gemm:tuned,implicit_gemm_fp32_64x64x8_t4x4+bias+relu(unfused),756.2239766120911
+NVIDIA A40,thr_b32_c128_28_k3,tf32,fused,tune,cudnn:library,cudnn,432.16532468795776
+NVIDIA A40,thr_b32_c256_14_k3,bf16,fused,tune,cutlass:library,cutlass,80.50215244293213
+NVIDIA A40,thr_b32_c256_14_k3,fp16,fused,tune,cutlass:library,cutlass,81.44738123967097
+NVIDIA A40,thr_b32_c256_14_k3,fp16,n/a,tune,memcpy,cudaMemcpyAsync,303.16799879074097
+NVIDIA A40,thr_b32_c256_14_k3,fp16,unfused,tune,tensor_core:tuned,tcmma_fp16_128x128x32_s2_w2x4_sk1+bias+relu(unfused),170.17332712809247
+NVIDIA A40,thr_b32_c256_14_k3,fp32,fused,tune,cudnn:library,cudnn,339.3119970957438
+NVIDIA A40,thr_b32_c256_14_k3,fp32,n/a,tune,memcpy,cudaMemcpyAsync,599.9839976429939
+NVIDIA A40,thr_b32_c256_14_k3,fp32,unfused,tune,implicit_gemm:tuned,implicit_gemm_fp32_64x64x8_t4x4+bias+relu(unfused),716.8079912662506
+NVIDIA A40,thr_b32_c256_14_k3,tf32,fused,tune,cudnn:library,cudnn,341.8346643447876
+NVIDIA A40,thr_b32_c512_7_k3,bf16,fused,tune,cutlass:library,cutlass,88.5226676861445
+NVIDIA A40,thr_b32_c512_7_k3,fp16,fused,tune,cutlass:library,cutlass,89.25867080688477
+NVIDIA A40,thr_b32_c512_7_k3,fp16,n/a,tune,memcpy,cudaMemcpyAsync,318.6719976365566
+NVIDIA A40,thr_b32_c512_7_k3,fp16,unfused,tune,tensor_core:tuned,tcmma_fp16_64x128x32_s3_w2x4_sk1+bias+relu(unfused),200.7040023803711
+NVIDIA A40,thr_b32_c512_7_k3,fp32,fused,tune,cudnn:library,cudnn,445.09867827097577
+NVIDIA A40,thr_b32_c512_7_k3,fp32,n/a,tune,memcpy,cudaMemcpyAsync,630.8000162243843
+NVIDIA A40,thr_b32_c512_7_k3,fp32,unfused,tune,implicit_gemm:tuned,implicit_gemm_fp32_128x32x8_t4x4+bias+relu(unfused),810.4400038719177
+NVIDIA A40,thr_b32_c512_7_k3,tf32,fused,tune,cudnn:library,cudnn,322.8040039539337
+NVIDIA A40,thr_b32_c64_56_k1_expand,bf16,fused,tune,cutlass:library,cutlass,143.50628852844238
+NVIDIA A40,thr_b32_c64_56_k1_expand,fp16,fused,tune,cutlass:library,cutlass,143.50628852844238
+NVIDIA A40,thr_b32_c64_56_k1_expand,fp16,n/a,tune,memcpy,cudaMemcpyAsync,2477.9679775238037
+NVIDIA A40,thr_b32_c64_56_k1_expand,fp16,unfused,tune,tensor_core:tuned,tensor_core_fp16_128x64x32_w4x2+bias+relu(unfused),579.584002494812
+NVIDIA A40,thr_b32_c64_56_k1_expand,fp32,fused,tune,cutlass:library,cutlass,304.639995098114
+NVIDIA A40,thr_b32_c64_56_k1_expand,fp32,n/a,tune,memcpy,cudaMemcpyAsync,4949.184060096741
+NVIDIA A40,thr_b32_c64_56_k1_expand,fp32,unfused,tune,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),1099.2319583892822
+NVIDIA A40,thr_b32_c64_56_k1_expand,tf32,fused,tune,cudnn:library,cudnn,342.5599932670593
+NVIDIA A40,thr_b32_c64_56_k3,bf16,fused,tune,cutlass:library,cutlass,99.7376024723053
+NVIDIA A40,thr_b32_c64_56_k3,fp16,fused,tune,cutlass:library,cutlass,96.34908762845126
+NVIDIA A40,thr_b32_c64_56_k3,fp16,n/a,tune,memcpy,cudaMemcpyAsync,1009.3280375003815
+NVIDIA A40,thr_b32_c64_56_k3,fp16,unfused,tune,tensor_core:tuned,tcmma_fp16_64x128x32_s3_w2x4_sk1+bias+relu(unfused),329.9719989299774
+NVIDIA A40,thr_b32_c64_56_k3,fp32,fused,tune,cudnn:library,cudnn,342.50132242838544
+NVIDIA A40,thr_b32_c64_56_k3,fp32,n/a,tune,memcpy,cudaMemcpyAsync,2010.8160078525543
+NVIDIA A40,thr_b32_c64_56_k3,fp32,unfused,tune,implicit_gemm:tuned,implicit_gemm_fp32_64x64x8_t4x4+bias+relu(unfused),781.823992729187
+NVIDIA A40,thr_b32_c64_56_k3,tf32,fused,tune,cudnn:library,cudnn,561.1519813537598
+NVIDIA A40,thr_b32_stem_224_k7s2,bf16,fused,tune,dispatcher:auto,tensor_core_bf16_64x64x32_w2x2,423.92534017562866
+NVIDIA A40,thr_b32_stem_224_k7s2,fp16,fused,tune,tensor_core:tuned,tensor_core_fp16_64x64x32_w2x2,393.8986857732137
+NVIDIA A40,thr_b32_stem_224_k7s2,fp16,n/a,tune,memcpy,cudaMemcpyAsync,2353.0080020427704
+NVIDIA A40,thr_b32_stem_224_k7s2,fp16,unfused,tune,tensor_core:tuned,tensor_core_fp16_64x64x32_w2x2+bias+relu(unfused),779.7759771347046
+NVIDIA A40,thr_b32_stem_224_k7s2,fp32,fused,tune,cudnn:library,cudnn,494.05866861343384
+NVIDIA A40,thr_b32_stem_224_k7s2,fp32,n/a,tune,memcpy,cudaMemcpyAsync,4698.288112878799
+NVIDIA A40,thr_b32_stem_224_k7s2,fp32,unfused,tune,implicit_gemm:tuned,implicit_gemm_fp32_64x64x8_t4x4+bias+relu(unfused),1361.9199991226196
+NVIDIA A40,thr_b32_stem_224_k7s2,tf32,fused,tune,cudnn:library,cudnn,495.1039950052897
+NVIDIA A40,thr_b8_c256_56_k1,bf16,fused,tune,cutlass:library,cutlass,35.73028530393328
+NVIDIA A40,thr_b8_c256_56_k1,fp16,fused,tune,cutlass:library,cutlass,35.657141889844624
+NVIDIA A40,thr_b8_c256_56_k1,fp16,n/a,tune,memcpy,cudaMemcpyAsync,639.6000236272812
+NVIDIA A40,thr_b8_c256_56_k1,fp16,unfused,tune,tensor_core:tuned,tensor_core_fp16_64x64x32_w2x2+bias+relu(unfused),80.93292438066922
+NVIDIA A40,thr_b8_c256_56_k1,fp32,fused,tune,dispatcher:auto,implicit_gemm_fp32_64x64x8_t4x4,90.28266867001851
+NVIDIA A40,thr_b8_c256_56_k1,fp32,n/a,tune,memcpy,cudaMemcpyAsync,1272.976003587246
+NVIDIA A40,thr_b8_c256_56_k1,fp32,unfused,tune,implicit_gemm:tuned,implicit_gemm_fp32_64x64x8_t4x4+bias+relu(unfused),118.78400378757053
+NVIDIA A40,thr_b8_c256_56_k1,tf32,fused,tune,cudnn:library,cudnn,106.09777768452962
+NVIDIA H100 NVL,adv_b16_c32_56_k5_unroll25x,fp16,fused,tune,cutlass:library,cutlass,44.548869132995605
+NVIDIA H100 NVL,adv_b16_c32_56_k5_unroll25x,fp16,n/a,tune,memcpy,cudaMemcpyAsync,123.26400354504585
+NVIDIA H100 NVL,adv_b16_c32_56_k5_unroll25x,fp16,unfused,tune,tensor_core:tuned,tcmma_fp16_64x128x32_s3_w2x4_sk1+bias+relu(unfused),65.64266681671143
+NVIDIA H100 NVL,adv_b16_c32_56_k5_unroll25x,fp32,fused,tune,cudnn:library,cudnn,70.73028598512923
+NVIDIA H100 NVL,adv_b16_c32_56_k5_unroll25x,fp32,n/a,tune,memcpy,cudaMemcpyAsync,238.11200261116028
+NVIDIA H100 NVL,adv_b16_c32_56_k5_unroll25x,fp32,unfused,tune,implicit_gemm:tuned,implicit_gemm_fp32_32x128x8_t4x4+bias+relu(unfused),204.93758916854858
+NVIDIA H100 NVL,adv_b1_c16_10_k5_pad4,fp16,fused,tune,cutlass:library,cutlass,12.685894966125488
+NVIDIA H100 NVL,adv_b1_c16_10_k5_pad4,fp16,n/a,tune,memcpy,cudaMemcpyAsync,7.7599999494850636
+NVIDIA H100 NVL,adv_b1_c16_10_k5_pad4,fp16,unfused,tune,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),15.61154058722199
+NVIDIA H100 NVL,adv_b1_c16_10_k5_pad4,fp32,fused,tune,im2col_gemm,im2col_gemm_fp32,15.732799967130026
+NVIDIA H100 NVL,adv_b1_c16_10_k5_pad4,fp32,n/a,tune,memcpy,cudaMemcpyAsync,8.1279999576509
+NVIDIA H100 NVL,adv_b1_c16_10_k5_pad4,fp32,unfused,tune,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),18.338461334888752
+NVIDIA H100 NVL,adv_b1_c1_o8_512_k3,fp16,fused,tune,tensor_core:tuned,tensor_core_fp16_32x64x32_w1x2,23.345904690878733
+NVIDIA H100 NVL,adv_b1_c1_o8_512_k3,fp16,n/a,tune,memcpy,cudaMemcpyAsync,90.68800043314695
+NVIDIA H100 NVL,adv_b1_c1_o8_512_k3,fp16,unfused,tune,tensor_core:tuned,tensor_core_fp16_32x64x32_w1x2+bias+relu(unfused),41.45600025852521
+NVIDIA H100 NVL,adv_b1_c1_o8_512_k3,fp32,fused,tune,implicit_gemm:tuned,implicit_gemm_fp32_32x128x8_t4x4,24.07519966363907
+NVIDIA H100 NVL,adv_b1_c1_o8_512_k3,fp32,n/a,tune,memcpy,cudaMemcpyAsync,173.77600260078907
+NVIDIA H100 NVL,adv_b1_c1_o8_512_k3,fp32,unfused,tune,implicit_gemm:tuned,implicit_gemm_fp32_32x128x8_t4x4+bias+relu(unfused),46.65745388377796
+NVIDIA H100 NVL,adv_b2_c3_o5_57x59_k3,fp16,fused,tune,tensor_core:tuned,tensor_core_fp16_128x64x32_w4x2,6.8409023876477
+NVIDIA H100 NVL,adv_b2_c3_o5_57x59_k3,fp16,n/a,tune,memcpy,cudaMemcpyAsync,9.375999914482236
+NVIDIA H100 NVL,adv_b2_c3_o5_57x59_k3,fp16,unfused,tune,simt_tiled:tuned,simt_tiled_fp16_tc16_t8x8_r2x2_cc4+bias+relu(unfused),12.46233768277354
+NVIDIA H100 NVL,adv_b2_c3_o5_57x59_k3,fp32,fused,tune,simt_tiled:tuned,simt_tiled_fp32_tc16_t8x8_r2x2_cc4,6.932061452132006
+NVIDIA H100 NVL,adv_b2_c3_o5_57x59_k3,fp32,n/a,tune,memcpy,cudaMemcpyAsync,11.264000087976456
+NVIDIA H100 NVL,adv_b2_c3_o5_57x59_k3,fp32,unfused,tune,simt_tiled:tuned,simt_tiled_fp32_tc16_t8x8_r2x2_cc4+bias+relu(unfused),12.437052632633009
+NVIDIA H100 NVL,adv_b32_c8_o8_112_k1_membound,fp16,fused,tune,implicit_gemm:tuned,implicit_gemm_fp16_32x128x8_t4x4,28.0434284891401
+NVIDIA H100 NVL,adv_b32_c8_o8_112_k1_membound,fp16,n/a,tune,memcpy,cudaMemcpyAsync,236.1760027706623
+NVIDIA H100 NVL,adv_b32_c8_o8_112_k1_membound,fp16,unfused,tune,implicit_gemm:tuned,implicit_gemm_fp16_32x128x8_t4x4+bias+relu(unfused),52.277894396530954
+NVIDIA H100 NVL,adv_b32_c8_o8_112_k1_membound,fp32,fused,tune,implicit_gemm:tuned,implicit_gemm_fp32_32x128x8_t4x4,26.674594428088213
+NVIDIA H100 NVL,adv_b32_c8_o8_112_k1_membound,fp32,n/a,tune,memcpy,cudaMemcpyAsync,463.77599984407425
+NVIDIA H100 NVL,adv_b32_c8_o8_112_k1_membound,fp32,unfused,tune,implicit_gemm:tuned,implicit_gemm_fp32_32x128x8_t4x4+bias+relu(unfused),59.319527710185326
+NVIDIA H100 NVL,adv_b4_c130_o130_15_k3,fp16,fused,tune,dispatcher:auto,im2col_gemm_fp16,37.69244308824892
+NVIDIA H100 NVL,adv_b4_c130_o130_15_k3,fp16,n/a,tune,memcpy,cudaMemcpyAsync,21.120000164955854
+NVIDIA H100 NVL,adv_b4_c130_o130_15_k3,fp16,unfused,tune,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),40.84415912628174
+NVIDIA H100 NVL,adv_b4_c130_o130_15_k3,fp32,fused,tune,cudnn:library,cudnn,43.45280081033707
+NVIDIA H100 NVL,adv_b4_c130_o130_15_k3,fp32,n/a,tune,memcpy,cudaMemcpyAsync,35.40800046175718
+NVIDIA H100 NVL,adv_b4_c130_o130_15_k3,fp32,unfused,tune,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),51.74880027770996
+NVIDIA H100 NVL,adv_b4_c7_o9_33x31_k5s2,fp16,fused,tune,dispatcher:auto,im2col_gemm_fp16,13.684637304665387
+NVIDIA H100 NVL,adv_b4_c7_o9_33x31_k5s2,fp16,n/a,tune,memcpy,cudaMemcpyAsync,8.911999757401645
+NVIDIA H100 NVL,adv_b4_c7_o9_33x31_k5s2,fp16,unfused,tune,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),16.25146667162577
+NVIDIA H100 NVL,adv_b4_c7_o9_33x31_k5s2,fp32,fused,tune,dispatcher:auto,im2col_gemm_fp32,16.49207033609089
+NVIDIA H100 NVL,adv_b4_c7_o9_33x31_k5s2,fp32,n/a,tune,memcpy,cudaMemcpyAsync,10.112000163644552
+NVIDIA H100 NVL,adv_b4_c7_o9_33x31_k5s2,fp32,unfused,tune,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),19.238719940185547
+NVIDIA H100 NVL,adv_b8_c32_28_k7_unroll49x,fp16,fused,tune,cutlass:library,cutlass,21.15478269431902
+NVIDIA H100 NVL,adv_b8_c32_28_k7_unroll49x,fp16,n/a,tune,memcpy,cudaMemcpyAsync,23.552000056952238
+NVIDIA H100 NVL,adv_b8_c32_28_k7_unroll49x,fp16,unfused,tune,tensor_core:tuned,tcmma_fp16_64x64x32_s4_w2x2_sk4+bias+relu(unfused),32.584000627199806
+NVIDIA H100 NVL,adv_b8_c32_28_k7_unroll49x,fp32,fused,tune,cudnn:library,cudnn,45.682285513196675
+NVIDIA H100 NVL,adv_b8_c32_28_k7_unroll49x,fp32,n/a,tune,memcpy,cudaMemcpyAsync,40.00000096857548
+NVIDIA H100 NVL,adv_b8_c32_28_k7_unroll49x,fp32,unfused,tune,simt_tiled:fixed,simt_tiled_fp32_tc32_t8x8_r4x2_cc8+bias+relu(unfused),140.91599732637405
+NVIDIA H100 NVL,adv_b8_c96_o255_27_k3,fp16,fused,tune,dispatcher:auto,tcmma_fp16_64x64x64_s3_w2x2_sk1,35.929713930402485
+NVIDIA H100 NVL,adv_b8_c96_o255_27_k3,fp16,n/a,tune,memcpy,cudaMemcpyAsync,88.46400119364262
+NVIDIA H100 NVL,adv_b8_c96_o255_27_k3,fp16,unfused,tune,tensor_core:tuned,tcmma_fp16_64x64x64_s3_w2x2_sk1+bias+relu(unfused),50.26159882545471
+NVIDIA H100 NVL,adv_b8_c96_o255_27_k3,fp32,fused,tune,cudnn:library,cudnn,114.61332771513197
+NVIDIA H100 NVL,adv_b8_c96_o255_27_k3,fp32,n/a,tune,memcpy,cudaMemcpyAsync,168.14400255680084
+NVIDIA H100 NVL,adv_b8_c96_o255_27_k3,fp32,unfused,tune,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),136.39000058174133
+NVIDIA H100 NVL,ho_adv_b10_c20_o20_30_k7,fp16,fused,heldout,dispatcher:auto,im2col_gemm_fp16,90.66763791170987
+NVIDIA H100 NVL,ho_adv_b10_c20_o20_30_k7,fp16,unfused,heldout,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),93.61599792133677
+NVIDIA H100 NVL,ho_adv_b10_c20_o20_30_k7,fp32,fused,heldout,cudnn:library,cudnn,68.89371361051286
+NVIDIA H100 NVL,ho_adv_b10_c20_o20_30_k7,fp32,unfused,heldout,simt_tiled:tuned,simt_tiled_fp32_tc32_t4x32_r4x4_cc4+bias+relu(unfused),108.33119750022888
+NVIDIA H100 NVL,ho_adv_b16_c4_o4_96_k3_lowC,fp16,fused,heldout,implicit_gemm:tuned,implicit_gemm_fp16_32x128x8_t4x4,28.360686131886077
+NVIDIA H100 NVL,ho_adv_b16_c4_o4_96_k3_lowC,fp16,unfused,heldout,tensor_core:tuned,tensor_core_fp16_32x64x32_w1x2+bias+relu(unfused),37.6989620703238
+NVIDIA H100 NVL,ho_adv_b16_c4_o4_96_k3_lowC,fp32,fused,heldout,implicit_gemm:tuned,implicit_gemm_fp32_32x128x8_t4x4,26.64691934714446
+NVIDIA H100 NVL,ho_adv_b16_c4_o4_96_k3_lowC,fp32,unfused,heldout,implicit_gemm:tuned,implicit_gemm_fp32_32x128x8_t4x4+bias+relu(unfused),36.71940719639814
+NVIDIA H100 NVL,ho_adv_b1_c48_12_k3_pad3,fp16,fused,heldout,cutlass:library,cutlass,7.403354971639572
+NVIDIA H100 NVL,ho_adv_b1_c48_12_k3_pad3,fp16,unfused,heldout,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),13.243657350540161
+NVIDIA H100 NVL,ho_adv_b1_c48_12_k3_pad3,fp32,fused,heldout,im2col_gemm,im2col_gemm_fp32,16.835649285400123
+NVIDIA H100 NVL,ho_adv_b1_c48_12_k3_pad3,fp32,unfused,heldout,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),19.550693886620657
+NVIDIA H100 NVL,ho_adv_b2_c2_o6_128_k7s2,fp16,fused,heldout,tensor_core:tuned,tensor_core_fp16_128x64x32_w4x2,12.7567568340817
+NVIDIA H100 NVL,ho_adv_b2_c2_o6_128_k7s2,fp16,unfused,heldout,tensor_core:tuned,tensor_core_fp16_128x64x32_w4x2+bias+relu(unfused),18.18505660542902
+NVIDIA H100 NVL,ho_adv_b2_c2_o6_128_k7s2,fp32,fused,heldout,direct,direct_fp32,13.792695774548296
+NVIDIA H100 NVL,ho_adv_b2_c2_o6_128_k7s2,fp32,unfused,heldout,direct,direct_fp32+bias+relu(unfused),19.407359957695007
+NVIDIA H100 NVL,ho_adv_b3_c5_o11_45x47_k3,fp16,fused,heldout,tensor_core:tuned,tensor_core_fp16_128x64x32_w4x2,8.756419022878012
+NVIDIA H100 NVL,ho_adv_b3_c5_o11_45x47_k3,fp16,unfused,heldout,tensor_core:tuned,tensor_core_fp16_128x64x32_w4x2+bias+relu(unfused),14.127761125564575
+NVIDIA H100 NVL,ho_adv_b3_c5_o11_45x47_k3,fp32,fused,heldout,implicit_gemm:tuned,implicit_gemm_fp32_64x64x16_t4x4,8.895378668331405
+NVIDIA H100 NVL,ho_adv_b3_c5_o11_45x47_k3,fp32,unfused,heldout,implicit_gemm:tuned,implicit_gemm_fp32_64x64x16_t4x4+bias+relu(unfused),14.405411832472858
+NVIDIA H100 NVL,ho_adv_b6_c100_o250_19_k3,fp16,fused,heldout,cudnn:library,cudnn,50.78133443991344
+NVIDIA H100 NVL,ho_adv_b6_c100_o250_19_k3,fp16,unfused,heldout,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),68.57920090357462
+NVIDIA H100 NVL,ho_adv_b6_c100_o250_19_k3,fp32,fused,heldout,cudnn:library,cudnn,67.38971386637007
+NVIDIA H100 NVL,ho_adv_b6_c100_o250_19_k3,fp32,unfused,heldout,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),83.1186647216479
+NVIDIA H100 NVL,ho_lat_b1_c24_20_k3,fp16,fused,heldout,cutlass:library,cutlass,7.34552386261168
+NVIDIA H100 NVL,ho_lat_b1_c24_20_k3,fp16,unfused,heldout,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),12.918222281667921
+NVIDIA H100 NVL,ho_lat_b1_c24_20_k3,fp32,fused,heldout,im2col_gemm,im2col_gemm_fp32,14.746250119060278
+NVIDIA H100 NVL,ho_lat_b1_c24_20_k3,fp32,unfused,heldout,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),18.042962860178065
+NVIDIA H100 NVL,ho_lat_b1_c3_96_k5s2,fp16,fused,heldout,dispatcher:auto,im2col_gemm_fp16,11.554341490675764
+NVIDIA H100 NVL,ho_lat_b1_c3_96_k5s2,fp16,unfused,heldout,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),14.13182091357103
+NVIDIA H100 NVL,ho_lat_b1_c3_96_k5s2,fp32,fused,heldout,implicit_gemm:tuned,implicit_gemm_fp32_128x32x8_t4x4,11.510939483182977
+NVIDIA H100 NVL,ho_lat_b1_c3_96_k5s2,fp32,unfused,heldout,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),15.679729186882406
+NVIDIA H100 NVL,ho_lat_b1_c48_10_k3,fp16,fused,heldout,cutlass:library,cutlass,7.397714351850842
+NVIDIA H100 NVL,ho_lat_b1_c48_10_k3,fp16,unfused,heldout,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),14.946793753003316
+NVIDIA H100 NVL,ho_lat_b1_c48_10_k3,fp32,fused,heldout,dispatcher:auto,im2col_gemm_fp32,16.670035165652894
+NVIDIA H100 NVL,ho_lat_b1_c48_10_k3,fp32,unfused,heldout,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),19.371840357780457
+NVIDIA H100 NVL,ho_lat_b1_c96_14_k1,fp16,fused,heldout,cutlass:library,cutlass,5.055190974406981
+NVIDIA H100 NVL,ho_lat_b1_c96_14_k1,fp16,unfused,heldout,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),12.702666636970308
+NVIDIA H100 NVL,ho_lat_b1_c96_14_k1,fp32,fused,heldout,im2col_gemm,im2col_gemm_fp32,11.703999811097194
+NVIDIA H100 NVL,ho_lat_b1_c96_14_k1,fp32,unfused,heldout,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),14.469841169932533
+NVIDIA H100 NVL,ho_lat_b2_c64_16_k3,fp16,fused,heldout,cutlass:library,cutlass,7.308825377434019
+NVIDIA H100 NVL,ho_lat_b2_c64_16_k3,fp16,unfused,heldout,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),14.56945457241752
+NVIDIA H100 NVL,ho_lat_b2_c64_16_k3,fp32,fused,heldout,im2col_gemm,im2col_gemm_fp32,25.593684692131845
+NVIDIA H100 NVL,ho_lat_b2_c64_16_k3,fp32,unfused,heldout,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),28.320913655417307
+NVIDIA H100 NVL,ho_thr_b16_c192_20_k3,fp16,fused,heldout,cutlass:library,cutlass,22.903999402409507
+NVIDIA H100 NVL,ho_thr_b16_c192_20_k3,fp16,unfused,heldout,tensor_core:tuned,tcmma_fp16_64x64x64_s3_w2x2_sk1+bias+relu(unfused),62.176939319161804
+NVIDIA H100 NVL,ho_thr_b16_c192_20_k3,fp32,fused,heldout,cudnn:library,cudnn,212.4735951423645
+NVIDIA H100 NVL,ho_thr_b16_c192_20_k3,fp32,unfused,heldout,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),271.6360092163086
+NVIDIA H100 NVL,ho_thr_b24_c80_48_k3,fp16,fused,heldout,cutlass:library,cutlass,95.70036151192406
+NVIDIA H100 NVL,ho_thr_b24_c80_48_k3,fp16,unfused,heldout,tensor_core:tuned,tcmma_fp16_64x128x32_s3_w2x4_sk1+bias+relu(unfused),209.98399257659912
+NVIDIA H100 NVL,ho_thr_b24_c80_48_k3,fp32,fused,heldout,cudnn:library,cudnn,351.3333400090536
+NVIDIA H100 NVL,ho_thr_b24_c80_48_k3,fp32,unfused,heldout,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),749.6560215950012
+NVIDIA H100 NVL,ho_thr_b32_c128_14_k1,fp16,fused,heldout,cutlass:library,cutlass,10.318202249119791
+NVIDIA H100 NVL,ho_thr_b32_c128_14_k1,fp16,unfused,heldout,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),50.8760005235672
+NVIDIA H100 NVL,ho_thr_b32_c128_14_k1,fp32,fused,heldout,cutlass:library,cutlass,44.80765176855999
+NVIDIA H100 NVL,ho_thr_b32_c128_14_k1,fp32,unfused,heldout,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),75.77599797930036
+NVIDIA H100 NVL,ho_thr_b32_c32_64_k5,fp16,fused,heldout,cudnn:library,cudnn,99.88319873809814
+NVIDIA H100 NVL,ho_thr_b32_c32_64_k5,fp16,unfused,heldout,tensor_core:tuned,tcmma_fp16_64x128x32_s4_w2x4_sk1+bias+relu(unfused),188.13066681226093
+NVIDIA H100 NVL,ho_thr_b32_c32_64_k5,fp32,fused,heldout,cudnn:library,cudnn,223.46240282058716
+NVIDIA H100 NVL,ho_thr_b32_c32_64_k5,fp32,unfused,heldout,implicit_gemm:tuned,implicit_gemm_fp32_64x64x8_t4x4+bias+relu(unfused),731.5600216388702
+NVIDIA H100 NVL,ho_thr_b32_c96_40_k3,fp16,fused,heldout,cutlass:library,cutlass,56.50311046176486
+NVIDIA H100 NVL,ho_thr_b32_c96_40_k3,fp16,unfused,heldout,tensor_core:tuned,tcmma_fp16_128x128x32_s3_w2x4_sk1+bias+relu(unfused),132.11800158023834
+NVIDIA H100 NVL,ho_thr_b32_c96_40_k3,fp32,fused,heldout,cudnn:library,cudnn,275.6599932909012
+NVIDIA H100 NVL,ho_thr_b32_c96_40_k3,fp32,unfused,heldout,implicit_gemm:tuned,implicit_gemm_fp32_32x128x8_t4x4+bias+relu(unfused),548.007994890213
+NVIDIA H100 NVL,ho_thr_b8_c256_32_k3s2,fp16,fused,heldout,cutlass:library,cutlass,16.178169492947852
+NVIDIA H100 NVL,ho_thr_b8_c256_32_k3s2,fp16,unfused,heldout,tensor_core:tuned,tcmma_fp16_64x64x64_s3_w2x2_sk1+bias+relu(unfused),50.756800174713135
+NVIDIA H100 NVL,ho_thr_b8_c256_32_k3s2,fp32,fused,heldout,dispatcher:auto,im2col_gemm_fp32,129.3559968471527
+NVIDIA H100 NVL,ho_thr_b8_c256_32_k3s2,fp32,unfused,heldout,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),130.12199848890305
+NVIDIA H100 NVL,lat_b1_c128_28_k1,fp16,fused,tune,cutlass:library,cutlass,5.180799961090088
+NVIDIA H100 NVL,lat_b1_c128_28_k1,fp16,n/a,tune,memcpy,cudaMemcpyAsync,15.264000045135617
+NVIDIA H100 NVL,lat_b1_c128_28_k1,fp16,unfused,tune,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),13.752000296817107
+NVIDIA H100 NVL,lat_b1_c128_28_k1,fp32,fused,tune,dispatcher:auto,im2col_gemm_fp32,13.976969953739282
+NVIDIA H100 NVL,lat_b1_c128_28_k1,fp32,n/a,tune,memcpy,cudaMemcpyAsync,22.79999991878867
+NVIDIA H100 NVL,lat_b1_c128_28_k1,fp32,unfused,tune,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),17.027781768278643
+NVIDIA H100 NVL,lat_b1_c16_28_k3,fp16,fused,tune,cutlass:library,cutlass,7.4474241733551025
+NVIDIA H100 NVL,lat_b1_c16_28_k3,fp16,n/a,tune,memcpy,cudaMemcpyAsync,8.44799994956702
+NVIDIA H100 NVL,lat_b1_c16_28_k3,fp16,unfused,tune,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),13.530588325332193
+NVIDIA H100 NVL,lat_b1_c16_28_k3,fp32,fused,tune,dispatcher:auto,implicit_gemm_fp32_128x32x8_t4x4,17.434286219733103
+NVIDIA H100 NVL,lat_b1_c16_28_k3,fp32,n/a,tune,memcpy,cudaMemcpyAsync,9.503999724984169
+NVIDIA H100 NVL,lat_b1_c16_28_k3,fp32,unfused,tune,implicit_gemm:tuned,implicit_gemm_fp32_128x32x8_t4x4+bias+relu(unfused),22.600727325136013
+NVIDIA H100 NVL,lat_b1_c256_14_k3,fp16,fused,tune,cutlass:library,cutlass,15.582451897282755
+NVIDIA H100 NVL,lat_b1_c256_14_k3,fp16,n/a,tune,memcpy,cudaMemcpyAsync,32.55999949760735
+NVIDIA H100 NVL,lat_b1_c256_14_k3,fp16,unfused,tune,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),24.494799971580505
+NVIDIA H100 NVL,lat_b1_c256_14_k3,fp32,fused,tune,dispatcher:auto,im2col_gemm_fp32,29.35388246003319
+NVIDIA H100 NVL,lat_b1_c256_14_k3,fp32,n/a,tune,memcpy,cudaMemcpyAsync,57.37599963322282
+NVIDIA H100 NVL,lat_b1_c256_14_k3,fp32,unfused,tune,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),32.248774843831214
+NVIDIA H100 NVL,lat_b1_c32_14_k3,fp16,fused,tune,cutlass:library,cutlass,7.443809556582617
+NVIDIA H100 NVL,lat_b1_c32_14_k3,fp16,n/a,tune,memcpy,cudaMemcpyAsync,8.128000190481544
+NVIDIA H100 NVL,lat_b1_c32_14_k3,fp16,unfused,tune,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),14.742892063581028
+NVIDIA H100 NVL,lat_b1_c32_14_k3,fp32,fused,tune,im2col_gemm,im2col_gemm_fp32,17.33323660763827
+NVIDIA H100 NVL,lat_b1_c32_14_k3,fp32,n/a,tune,memcpy,cudaMemcpyAsync,9.056000038981438
+NVIDIA H100 NVL,lat_b1_c32_14_k3,fp32,unfused,tune,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),20.078333715597786
+NVIDIA H100 NVL,lat_b1_c512_7_k3,fp16,fused,tune,dispatcher:auto,im2col_gemm_fp16,25.66357898084741
+NVIDIA H100 NVL,lat_b1_c512_7_k3,fp16,n/a,tune,memcpy,cudaMemcpyAsync,94.38400040380657
+NVIDIA H100 NVL,lat_b1_c512_7_k3,fp16,unfused,tune,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),28.462627955845424
+NVIDIA H100 NVL,lat_b1_c512_7_k3,fp32,fused,tune,dispatcher:auto,im2col_gemm_fp32,32.86933402220408
+NVIDIA H100 NVL,lat_b1_c512_7_k3,fp32,n/a,tune,memcpy,cudaMemcpyAsync,181.2159987166524
+NVIDIA H100 NVL,lat_b1_c512_7_k3,fp32,unfused,tune,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),35.67657087530409
+NVIDIA H100 NVL,lat_b1_c64_14_k3,fp16,fused,tune,cutlass:library,cutlass,7.34097633774825
+NVIDIA H100 NVL,lat_b1_c64_14_k3,fp16,n/a,tune,memcpy,cudaMemcpyAsync,9.599999757483602
+NVIDIA H100 NVL,lat_b1_c64_14_k3,fp16,unfused,tune,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),17.483636465939608
+NVIDIA H100 NVL,lat_b1_c64_14_k3,fp32,fused,tune,dispatcher:auto,im2col_gemm_fp32,17.25265437906439
+NVIDIA H100 NVL,lat_b1_c64_14_k3,fp32,n/a,tune,memcpy,cudaMemcpyAsync,11.760000139474869
+NVIDIA H100 NVL,lat_b1_c64_14_k3,fp32,unfused,tune,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),20.153333743413288
+NVIDIA H100 NVL,lat_b1_c64_7_k1,fp16,fused,tune,cutlass:library,cutlass,4.553224511292516
+NVIDIA H100 NVL,lat_b1_c64_7_k1,fp16,n/a,tune,memcpy,cudaMemcpyAsync,7.7439999440684915
+NVIDIA H100 NVL,lat_b1_c64_7_k1,fp16,unfused,tune,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),12.302919014080151
+NVIDIA H100 NVL,lat_b1_c64_7_k1,fp32,fused,tune,dispatcher:auto,implicit_gemm_fp32_128x32x8_t4x4,10.322989015788822
+NVIDIA H100 NVL,lat_b1_c64_7_k1,fp32,n/a,tune,memcpy,cudaMemcpyAsync,8.11200006864965
+NVIDIA H100 NVL,lat_b1_c64_7_k1,fp32,unfused,tune,implicit_gemm:tuned,implicit_gemm_fp32_128x32x8_t4x4+bias+relu(unfused),15.342644210589134
+NVIDIA H100 NVL,lat_b1_stem_224_k7s2,fp16,fused,tune,tensor_core:tuned,tensor_core_fp16_128x64x32_w4x2,20.726808208100337
+NVIDIA H100 NVL,lat_b1_stem_224_k7s2,fp16,n/a,tune,memcpy,cudaMemcpyAsync,41.56800080090761
+NVIDIA H100 NVL,lat_b1_stem_224_k7s2,fp16,unfused,tune,tensor_core:tuned,tensor_core_fp16_128x64x32_w4x2+bias+relu(unfused),30.291393850788925
+NVIDIA H100 NVL,lat_b1_stem_224_k7s2,fp32,fused,tune,cudnn:library,cudnn,20.942000299692154
+NVIDIA H100 NVL,lat_b1_stem_224_k7s2,fp32,n/a,tune,memcpy,cudaMemcpyAsync,75.42399875819683
+NVIDIA H100 NVL,lat_b1_stem_224_k7s2,fp32,unfused,tune,implicit_gemm:tuned,implicit_gemm_fp32_64x64x16_t4x4+bias+relu(unfused),38.26092412838569
+NVIDIA H100 NVL,sweep_batch_b16_c64_28_k3,fp16,fused,sweep,cutlass:library,cutlass,9.95336187646744
+NVIDIA H100 NVL,sweep_batch_b16_c64_28_k3,fp32,fused,sweep,cudnn:library,cudnn,47.70800024271011
+NVIDIA H100 NVL,sweep_batch_b1_c64_28_k3,fp16,fused,sweep,cutlass:library,cutlass,7.476292489989986
+NVIDIA H100 NVL,sweep_batch_b1_c64_28_k3,fp32,fused,sweep,im2col_gemm,im2col_gemm_fp32,22.676093633784806
+NVIDIA H100 NVL,sweep_batch_b2_c64_28_k3,fp16,fused,sweep,cutlass:library,cutlass,7.527414618468866
+NVIDIA H100 NVL,sweep_batch_b2_c64_28_k3,fp32,fused,sweep,im2col_gemm,im2col_gemm_fp32,31.240999698638916
+NVIDIA H100 NVL,sweep_batch_b32_c64_28_k3,fp16,fused,sweep,cutlass:library,cutlass,13.98519393223435
+NVIDIA H100 NVL,sweep_batch_b32_c64_28_k3,fp32,fused,sweep,cudnn:library,cudnn,52.04177730613284
+NVIDIA H100 NVL,sweep_batch_b4_c64_28_k3,fp16,fused,sweep,cutlass:library,cutlass,7.644327937579546
+NVIDIA H100 NVL,sweep_batch_b4_c64_28_k3,fp32,fused,sweep,cudnn:library,cudnn,34.974154371481674
+NVIDIA H100 NVL,sweep_batch_b64_c64_28_k3,fp16,fused,sweep,cutlass:library,cutlass,23.87629267646045
+NVIDIA H100 NVL,sweep_batch_b64_c64_28_k3,fp32,fused,sweep,cudnn:library,cudnn,79.70953904665433
+NVIDIA H100 NVL,sweep_batch_b8_c64_28_k3,fp16,fused,sweep,cutlass:library,cutlass,7.715092486694079
+NVIDIA H100 NVL,sweep_batch_b8_c64_28_k3,fp32,fused,sweep,cudnn:library,cudnn,43.8140957128434
+NVIDIA H100 NVL,sweep_channels_c128_b16_28_k3,fp16,fused,sweep,cutlass:library,cutlass,17.842074235280357
+NVIDIA H100 NVL,sweep_channels_c128_b16_28_k3,fp32,fused,sweep,cudnn:library,cudnn,136.9660049676895
+NVIDIA H100 NVL,sweep_channels_c16_b16_28_k3,fp16,fused,sweep,cutlass:library,cutlass,9.941499990721544
+NVIDIA H100 NVL,sweep_channels_c16_b16_28_k3,fp32,fused,sweep,cudnn:library,cudnn,20.205022983772807
+NVIDIA H100 NVL,sweep_channels_c256_b16_28_k3,fp16,fused,sweep,cutlass:library,cutlass,51.32159888744354
+NVIDIA H100 NVL,sweep_channels_c256_b16_28_k3,fp32,fused,sweep,cudnn:library,cudnn,412.26667165756226
+NVIDIA H100 NVL,sweep_channels_c32_b16_28_k3,fp16,fused,sweep,cutlass:library,cutlass,10.020173762155617
+NVIDIA H100 NVL,sweep_channels_c32_b16_28_k3,fp32,fused,sweep,cudnn:library,cudnn,24.56502914428711
+NVIDIA H100 NVL,sweep_channels_c3_b16_28_k3,fp16,fused,sweep,tensor_core:tuned,tensor_core_fp16_128x64x32_w4x2,7.291225896727655
+NVIDIA H100 NVL,sweep_channels_c3_b16_28_k3,fp32,fused,sweep,dispatcher:auto,simt_tiled_fp32_tc16_t8x8_r2x2_cc4,7.739310120714122
+NVIDIA H100 NVL,sweep_channels_c512_b16_28_k3,fp16,fused,sweep,cutlass:library,cutlass,162.31314625058855
+NVIDIA H100 NVL,sweep_channels_c512_b16_28_k3,fp32,fused,sweep,cutlass:library,cutlass,1946.4799761772156
+NVIDIA H100 NVL,sweep_channels_c64_b16_28_k3,fp16,fused,sweep,cutlass:library,cutlass,9.929290381810999
+NVIDIA H100 NVL,sweep_channels_c64_b16_28_k3,fp32,fused,sweep,cudnn:library,cudnn,48.08960109949112
+NVIDIA H100 NVL,sweep_channels_c8_b16_28_k3,fp16,fused,sweep,cutlass:library,cutlass,9.899711485990544
+NVIDIA H100 NVL,sweep_channels_c8_b16_28_k3,fp32,fused,sweep,dispatcher:auto,simt_tiled_fp32_tc16_t8x8_r2x2_cc8,11.685800179839134
+NVIDIA H100 NVL,sweep_irregular_h13_b8_c60_o100_k3,fp16,fused,sweep,im2col_gemm,im2col_gemm_fp16,25.22543531197768
+NVIDIA H100 NVL,sweep_irregular_h13_b8_c60_o100_k3,fp32,fused,sweep,dispatcher:auto,im2col_gemm_fp32,29.842908635283962
+NVIDIA H100 NVL,sweep_irregular_h27_b8_c60_o100_k3,fp16,fused,sweep,cudnn:library,cudnn,55.24423543144675
+NVIDIA H100 NVL,sweep_irregular_h27_b8_c60_o100_k3,fp32,fused,sweep,cudnn:library,cudnn,55.62823484925663
+NVIDIA H100 NVL,sweep_irregular_h29_b8_c60_o100_k3,fp16,fused,sweep,im2col_gemm,im2col_gemm_fp16,55.68444397714403
+NVIDIA H100 NVL,sweep_irregular_h29_b8_c60_o100_k3,fp32,fused,sweep,cudnn:library,cudnn,68.90628593308585
+NVIDIA H100 NVL,sweep_irregular_h31_b8_c60_o100_k3,fp16,fused,sweep,tensor_core:tuned,tensor_core_fp16_128x64x32_w4x2,56.57600031958686
+NVIDIA H100 NVL,sweep_irregular_h31_b8_c60_o100_k3,fp32,fused,sweep,cudnn:library,cudnn,69.70171417508806
+NVIDIA H100 NVL,sweep_irregular_h33_b8_c60_o100_k3,fp16,fused,sweep,dispatcher:auto,tensor_core_fp16_128x64x32_w4x2,63.70200216770172
+NVIDIA H100 NVL,sweep_irregular_h33_b8_c60_o100_k3,fp32,fused,sweep,cutlass:library,cutlass,84.02400215466817
+NVIDIA H100 NVL,sweep_irregular_h55_b8_c60_o100_k3,fp16,fused,sweep,cudnn:library,cudnn,75.13476793582623
+NVIDIA H100 NVL,sweep_irregular_h55_b8_c60_o100_k3,fp32,fused,sweep,cudnn:library,cudnn,133.63199681043625
+NVIDIA H100 NVL,sweep_irregular_h57_b8_c60_o100_k3,fp16,fused,sweep,cudnn:library,cudnn,75.39815398362967
+NVIDIA H100 NVL,sweep_irregular_h57_b8_c60_o100_k3,fp32,fused,sweep,cudnn:library,cudnn,133.7219998240471
+NVIDIA H100 NVL,sweep_kernel_k1_b16_c64_28,fp16,fused,sweep,cutlass:library,cutlass,5.882026751836141
+NVIDIA H100 NVL,sweep_kernel_k1_b16_c64_28,fp32,fused,sweep,implicit_gemm:tuned,implicit_gemm_fp32_64x64x16_t4x4,15.120507705779303
+NVIDIA H100 NVL,sweep_kernel_k3_b16_c64_28,fp16,fused,sweep,cutlass:library,cutlass,9.934127647826013
+NVIDIA H100 NVL,sweep_kernel_k3_b16_c64_28,fp32,fused,sweep,cudnn:library,cudnn,47.96240031719208
+NVIDIA H100 NVL,sweep_kernel_k5_b16_c64_28,fp16,fused,sweep,cutlass:library,cutlass,17.57003610784357
+NVIDIA H100 NVL,sweep_kernel_k5_b16_c64_28,fp32,fused,sweep,cudnn:library,cudnn,46.51919901371002
+NVIDIA H100 NVL,sweep_kernel_k7_b16_c64_28,fp16,fused,sweep,cutlass:library,cutlass,28.874353450887345
+NVIDIA H100 NVL,sweep_kernel_k7_b16_c64_28,fp32,fused,sweep,cudnn:library,cudnn,123.16399812698364
+NVIDIA H100 NVL,sweep_spatial_h112_b16_c64_k3,fp16,fused,sweep,cutlass:library,cutlass,76.07885769435337
+NVIDIA H100 NVL,sweep_spatial_h112_b16_c64_k3,fp32,fused,sweep,cudnn:library,cudnn,465.92533588409424
+NVIDIA H100 NVL,sweep_spatial_h14_b16_c64_k3,fp16,fused,sweep,cutlass:library,cutlass,7.648000073048376
+NVIDIA H100 NVL,sweep_spatial_h14_b16_c64_k3,fp32,fused,sweep,cudnn:library,cudnn,35.1052307165586
+NVIDIA H100 NVL,sweep_spatial_h28_b16_c64_k3,fp16,fused,sweep,cutlass:library,cutlass,9.9363439185645
+NVIDIA H100 NVL,sweep_spatial_h28_b16_c64_k3,fp32,fused,sweep,cudnn:library,cudnn,48.16159904003143
+NVIDIA H100 NVL,sweep_spatial_h56_b16_c64_k3,fp16,fused,sweep,cutlass:library,cutlass,24.004292924229695
+NVIDIA H100 NVL,sweep_spatial_h56_b16_c64_k3,fp32,fused,sweep,cudnn:library,cudnn,124.93599951267242
+NVIDIA H100 NVL,sweep_spatial_h7_b16_c64_k3,fp16,fused,sweep,cutlass:library,cutlass,7.640739448932039
+NVIDIA H100 NVL,sweep_spatial_h7_b16_c64_k3,fp32,fused,sweep,dispatcher:auto,im2col_gemm_fp32,30.390302340189617
+NVIDIA H100 NVL,thr_b16_c128_56_k3,bf16,fused,tune,cutlass:library,cutlass,45.18052287723707
+NVIDIA H100 NVL,thr_b16_c128_56_k3,fp16,fused,tune,cutlass:library,cutlass,46.09599980441007
+NVIDIA H100 NVL,thr_b16_c128_56_k3,fp16,n/a,tune,memcpy,cudaMemcpyAsync,468.9120054244995
+NVIDIA H100 NVL,thr_b16_c128_56_k3,fp16,unfused,tune,tensor_core:tuned,tcmma_fp16_128x128x64_s3_w2x4_sk1+bias+relu(unfused),161.4765695163182
+NVIDIA H100 NVL,thr_b16_c128_56_k3,fp32,fused,tune,cudnn:library,cudnn,362.0586593945821
+NVIDIA H100 NVL,thr_b16_c128_56_k3,fp32,n/a,tune,memcpy,cudaMemcpyAsync,929.7600090503693
+NVIDIA H100 NVL,thr_b16_c128_56_k3,fp32,unfused,tune,implicit_gemm:tuned,implicit_gemm_fp32_64x64x8_t4x4+bias+relu(unfused),774.97598528862
+NVIDIA H100 NVL,thr_b16_c128_56_k3,tf32,fused,tune,cudnn:library,cudnn,131.49800151586533
+NVIDIA H100 NVL,thr_b16_c64_112_k3,bf16,fused,tune,cutlass:library,cutlass,73.47542898995536
+NVIDIA H100 NVL,thr_b16_c64_112_k3,fp16,fused,tune,cutlass:library,cutlass,75.35085933549064
+NVIDIA H100 NVL,thr_b16_c64_112_k3,fp16,n/a,tune,memcpy,cudaMemcpyAsync,920.527994632721
+NVIDIA H100 NVL,thr_b16_c64_112_k3,fp16,unfused,tune,tensor_core:tuned,tcmma_fp16_64x128x32_s4_w2x4_sk1+bias+relu(unfused),256.8040043115616
+NVIDIA H100 NVL,thr_b16_c64_112_k3,fp32,fused,tune,cudnn:library,cudnn,469.38133239746094
+NVIDIA H100 NVL,thr_b16_c64_112_k3,fp32,n/a,tune,memcpy,cudaMemcpyAsync,1832.7199816703796
+NVIDIA H100 NVL,thr_b16_c64_112_k3,fp32,unfused,tune,implicit_gemm:tuned,implicit_gemm_fp32_64x64x8_t4x4+bias+relu(unfused),847.1200168132782
+NVIDIA H100 NVL,thr_b16_c64_112_k3,tf32,fused,tune,cudnn:library,cudnn,214.82560634613037
+NVIDIA H100 NVL,thr_b16_c64_28_k5,bf16,fused,tune,cutlass:library,cutlass,22.375813750333563
+NVIDIA H100 NVL,thr_b16_c64_28_k5,fp16,fused,tune,cutlass:library,cutlass,22.129818119786
+NVIDIA H100 NVL,thr_b16_c64_28_k5,fp16,n/a,tune,memcpy,cudaMemcpyAsync,84.96000245213509
+NVIDIA H100 NVL,thr_b16_c64_28_k5,fp16,unfused,tune,tensor_core:tuned,tcmma_fp16_128x128x64_s3_w2x4_sk1+bias+relu(unfused),59.313882799709546
+NVIDIA H100 NVL,thr_b16_c64_28_k5,fp32,fused,tune,cudnn:library,cudnn,60.7329998165369
+NVIDIA H100 NVL,thr_b16_c64_28_k5,fp32,n/a,tune,memcpy,cudaMemcpyAsync,161.29599884152412
+NVIDIA H100 NVL,thr_b16_c64_28_k5,fp32,unfused,tune,implicit_gemm:tuned,implicit_gemm_fp32_128x32x8_t4x4+bias+relu(unfused),283.6039960384369
+NVIDIA H100 NVL,thr_b16_c64_28_k5,tf32,fused,tune,cudnn:library,cudnn,56.3379991799593
+NVIDIA H100 NVL,thr_b32_c128_28_k3,bf16,fused,tune,cutlass:library,cutlass,30.48550058156252
+NVIDIA H100 NVL,thr_b32_c128_28_k3,fp16,fused,tune,cutlass:library,cutlass,30.129939317703247
+NVIDIA H100 NVL,thr_b32_c128_28_k3,fp16,n/a,tune,memcpy,cudaMemcpyAsync,241.15199595689774
+NVIDIA H100 NVL,thr_b32_c128_28_k3,fp16,unfused,tune,tensor_core:tuned,tcmma_fp16_128x128x32_s2_w2x4_sk1+bias+relu(unfused),91.63344990123402
+NVIDIA H100 NVL,thr_b32_c128_28_k3,fp32,fused,tune,cudnn:library,cudnn,139.59771394729614
+NVIDIA H100 NVL,thr_b32_c128_28_k3,fp32,n/a,tune,memcpy,cudaMemcpyAsync,474.2559939622879
+NVIDIA H100 NVL,thr_b32_c128_28_k3,fp32,unfused,tune,implicit_gemm:tuned,implicit_gemm_fp32_64x64x16_t4x4+bias+relu(unfused),424.9173402786255
+NVIDIA H100 NVL,thr_b32_c128_28_k3,tf32,fused,tune,cudnn:library,cudnn,71.8449239547436
+NVIDIA H100 NVL,thr_b32_c256_14_k3,bf16,fused,tune,cutlass:library,cutlass,29.058823690694922
+NVIDIA H100 NVL,thr_b32_c256_14_k3,fp16,fused,tune,cutlass:library,cutlass,28.43341143692241
+NVIDIA H100 NVL,thr_b32_c256_14_k3,fp16,n/a,tune,memcpy,cudaMemcpyAsync,143.2799994945526
+NVIDIA H100 NVL,thr_b32_c256_14_k3,fp16,unfused,tune,tensor_core:tuned,tcmma_fp16_128x128x64_s3_w2x4_sk1+bias+relu(unfused),81.41292058504544
+NVIDIA H100 NVL,thr_b32_c256_14_k3,fp32,fused,tune,cudnn:library,cudnn,203.97119522094727
+NVIDIA H100 NVL,thr_b32_c256_14_k3,fp32,n/a,tune,memcpy,cudaMemcpyAsync,278.4320041537285
+NVIDIA H100 NVL,thr_b32_c256_14_k3,fp32,unfused,tune,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),377.02401479085285
+NVIDIA H100 NVL,thr_b32_c256_14_k3,tf32,fused,tune,cudnn:library,cudnn,58.38826696077983
+NVIDIA H100 NVL,thr_b32_c512_7_k3,bf16,fused,tune,cutlass:library,cutlass,35.922857267516
+NVIDIA H100 NVL,thr_b32_c512_7_k3,fp16,fused,tune,cutlass:library,cutlass,39.44307565689087
+NVIDIA H100 NVL,thr_b32_c512_7_k3,fp16,n/a,tune,memcpy,cudaMemcpyAsync,150.01599863171577
+NVIDIA H100 NVL,thr_b32_c512_7_k3,fp16,unfused,tune,tensor_core:tuned,tcmma_fp16_64x64x64_s3_w2x2_sk1+bias+relu(unfused),102.28800177574158
+NVIDIA H100 NVL,thr_b32_c512_7_k3,fp32,fused,tune,cudnn:library,cudnn,394.7306474049886
+NVIDIA H100 NVL,thr_b32_c512_7_k3,fp32,n/a,tune,memcpy,cudaMemcpyAsync,292.09600016474724
+NVIDIA H100 NVL,thr_b32_c512_7_k3,fp32,unfused,tune,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),404.13866440455115
+NVIDIA H100 NVL,thr_b32_c512_7_k3,tf32,fused,tune,cudnn:library,cudnn,65.44000123228346
+NVIDIA H100 NVL,thr_b32_c64_56_k1_expand,bf16,fused,tune,cutlass:library,cutlass,43.51513022961824
+NVIDIA H100 NVL,thr_b32_c64_56_k1_expand,fp16,fused,tune,cutlass:library,cutlass,40.6879997253418
+NVIDIA H100 NVL,thr_b32_c64_56_k1_expand,fp16,n/a,tune,memcpy,cudaMemcpyAsync,1137.4399960041046
+NVIDIA H100 NVL,thr_b32_c64_56_k1_expand,fp16,unfused,tune,im2col_gemm,im2col_gemm_fp16+bias+relu(unfused),269.78799700737
+NVIDIA H100 NVL,thr_b32_c64_56_k1_expand,fp32,fused,tune,cutlass:library,cutlass,162.82285962785994
+NVIDIA H100 NVL,thr_b32_c64_56_k1_expand,fp32,n/a,tune,memcpy,cudaMemcpyAsync,2276.207998394966
+NVIDIA H100 NVL,thr_b32_c64_56_k1_expand,fp32,unfused,tune,im2col_gemm,im2col_gemm_fp32+bias+relu(unfused),436.3306562105815
+NVIDIA H100 NVL,thr_b32_c64_56_k1_expand,tf32,fused,tune,cudnn:library,cudnn,98.24000000953674
+NVIDIA H100 NVL,thr_b32_c64_56_k3,bf16,fused,tune,cutlass:library,cutlass,36.36266677467911
+NVIDIA H100 NVL,thr_b32_c64_56_k3,fp16,fused,tune,cutlass:library,cutlass,36.979554979889485
+NVIDIA H100 NVL,thr_b32_c64_56_k3,fp16,n/a,tune,memcpy,cudaMemcpyAsync,464.87999707460403
+NVIDIA H100 NVL,thr_b32_c64_56_k3,fp16,unfused,tune,tensor_core:tuned,tcmma_fp16_64x128x32_s3_w2x4_sk1+bias+relu(unfused),137.95199990272522
+NVIDIA H100 NVL,thr_b32_c64_56_k3,fp32,fused,tune,cudnn:library,cudnn,151.97257484708513
+NVIDIA H100 NVL,thr_b32_c64_56_k3,fp32,n/a,tune,memcpy,cudaMemcpyAsync,921.5839803218842
+NVIDIA H100 NVL,thr_b32_c64_56_k3,fp32,unfused,tune,implicit_gemm:tuned,implicit_gemm_fp32_64x64x8_t4x4+bias+relu(unfused),424.0266680717468
+NVIDIA H100 NVL,thr_b32_c64_56_k3,tf32,fused,tune,cudnn:library,cudnn,114.72533146540323
+NVIDIA H100 NVL,thr_b32_stem_224_k7s2,bf16,fused,tune,dispatcher:auto,tensor_core_bf16_64x64x32_w2x2,241.23200178146362
+NVIDIA H100 NVL,thr_b32_stem_224_k7s2,fp16,fused,tune,tensor_core:tuned,tensor_core_fp16_64x64x32_w2x2,236.1184000968933
+NVIDIA H100 NVL,thr_b32_stem_224_k7s2,fp16,n/a,tune,memcpy,cudaMemcpyAsync,1079.247996211052
+NVIDIA H100 NVL,thr_b32_stem_224_k7s2,fp16,unfused,tune,tensor_core:tuned,tensor_core_fp16_64x128x32_w2x4+bias+relu(unfused),435.97865104675293
+NVIDIA H100 NVL,thr_b32_stem_224_k7s2,fp32,fused,tune,implicit_gemm:tuned,implicit_gemm_fp32_64x64x8_t4x4,379.33868169784546
+NVIDIA H100 NVL,thr_b32_stem_224_k7s2,fp32,n/a,tune,memcpy,cudaMemcpyAsync,2160.047948360443
+NVIDIA H100 NVL,thr_b32_stem_224_k7s2,fp32,unfused,tune,implicit_gemm:tuned,implicit_gemm_fp32_64x64x8_t4x4+bias+relu(unfused),632.3600113391876
+NVIDIA H100 NVL,thr_b32_stem_224_k7s2,tf32,fused,tune,cudnn:library,cudnn,427.4400075276693
+NVIDIA H100 NVL,thr_b8_c256_56_k1,bf16,fused,tune,cutlass:library,cutlass,10.01406600187113
+NVIDIA H100 NVL,thr_b8_c256_56_k1,fp16,fused,tune,cutlass:library,cutlass,9.869419118409516
+NVIDIA H100 NVL,thr_b8_c256_56_k1,fp16,n/a,tune,memcpy,cudaMemcpyAsync,296.1279973387718
+NVIDIA H100 NVL,thr_b8_c256_56_k1,fp16,unfused,tune,tensor_core:tuned,tcmma_fp16_64x64x64_s3_w2x2_sk1+bias+relu(unfused),53.89557700408132
+NVIDIA H100 NVL,thr_b8_c256_56_k1,fp32,fused,tune,cudnn:library,cudnn,49.74568360730221
+NVIDIA H100 NVL,thr_b8_c256_56_k1,fp32,n/a,tune,memcpy,cudaMemcpyAsync,583.7280005216599
+NVIDIA H100 NVL,thr_b8_c256_56_k1,fp32,unfused,tune,implicit_gemm:tuned,implicit_gemm_fp32_64x64x16_t4x4+bias+relu(unfused),68.89280080795288
+NVIDIA H100 NVL,thr_b8_c256_56_k1,tf32,fused,tune,cudnn:library,cudnn,41.82018978255135

@@ -1,0 +1,25 @@
+gpu,variant,median,max
+NVIDIA A40,cudnn:library,741712.0,64225296.0
+NVIDIA A40,cutlass:library,0.0,0.0
+NVIDIA A40,direct,0.0,0.0
+NVIDIA A40,dispatcher:auto,0.0,462422016.0
+NVIDIA A40,im2col_gemm,12845056.0,462422016.0
+NVIDIA A40,implicit_gemm:fixed,0.0,0.0
+NVIDIA A40,implicit_gemm:tuned,0.0,0.0
+NVIDIA A40,memcpy,,
+NVIDIA A40,simt_tiled:fixed,0.0,0.0
+NVIDIA A40,simt_tiled:tuned,0.0,0.0
+NVIDIA A40,tensor_core:fixed,0.0,0.0
+NVIDIA A40,tensor_core:tuned,406016.0,25763840.0
+NVIDIA H100 NVL,cudnn:library,2542128.0,320864256.0
+NVIDIA H100 NVL,cutlass:library,0.0,0.0
+NVIDIA H100 NVL,direct,0.0,0.0
+NVIDIA H100 NVL,dispatcher:auto,848896.0,462422016.0
+NVIDIA H100 NVL,im2col_gemm,12845056.0,462422016.0
+NVIDIA H100 NVL,implicit_gemm:fixed,0.0,0.0
+NVIDIA H100 NVL,implicit_gemm:tuned,0.0,0.0
+NVIDIA H100 NVL,memcpy,,
+NVIDIA H100 NVL,simt_tiled:fixed,0.0,0.0
+NVIDIA H100 NVL,simt_tiled:tuned,0.0,0.0
+NVIDIA H100 NVL,tensor_core:fixed,0.0,0.0
+NVIDIA H100 NVL,tensor_core:tuned,876544.0,25763840.0

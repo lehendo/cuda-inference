@@ -1,0 +1,147 @@
+gpu,category,variant,geomean_speedup_vs_cudnn_library
+NVIDIA A40,adversarial,cudnn:library,1.0
+NVIDIA A40,adversarial,cutlass:library,0.5065388805887857
+NVIDIA A40,adversarial,direct,0.4070728412155579
+NVIDIA A40,adversarial,dispatcher:auto,1.3102296843392116
+NVIDIA A40,adversarial,im2col_gemm,0.7892582267541456
+NVIDIA A40,adversarial,implicit_gemm:fixed,0.3354548911687429
+NVIDIA A40,adversarial,implicit_gemm:tuned,0.7898252642961908
+NVIDIA A40,adversarial,simt_tiled:fixed,0.4267112773252542
+NVIDIA A40,adversarial,simt_tiled:tuned,0.6659726084862906
+NVIDIA A40,adversarial,tensor_core:fixed,0.6574465640622082
+NVIDIA A40,adversarial,tensor_core:tuned,1.3957549774109077
+NVIDIA A40,latency,cudnn:library,1.0
+NVIDIA A40,latency,cutlass:library,1.3242398283493821
+NVIDIA A40,latency,direct,0.5106541210256653
+NVIDIA A40,latency,dispatcher:auto,2.15966834661407
+NVIDIA A40,latency,im2col_gemm,2.013078248311049
+NVIDIA A40,latency,implicit_gemm:fixed,0.35856086100510287
+NVIDIA A40,latency,implicit_gemm:tuned,0.819921365425435
+NVIDIA A40,latency,simt_tiled:fixed,0.5751621457011006
+NVIDIA A40,latency,simt_tiled:tuned,0.7204015900063802
+NVIDIA A40,latency,tensor_core:fixed,0.7076088305454824
+NVIDIA A40,latency,tensor_core:tuned,2.3348341673165924
+NVIDIA A40,sweep_batch,cudnn:library,1.0
+NVIDIA A40,sweep_batch,cutlass:library,1.3040418592118088
+NVIDIA A40,sweep_batch,direct,0.11677498334387633
+NVIDIA A40,sweep_batch,dispatcher:auto,1.125010241771328
+NVIDIA A40,sweep_batch,im2col_gemm,0.5600048182418367
+NVIDIA A40,sweep_batch,implicit_gemm:tuned,0.5522197340534934
+NVIDIA A40,sweep_batch,simt_tiled:tuned,0.4165311549595063
+NVIDIA A40,sweep_batch,tensor_core:tuned,2.164246830016574
+NVIDIA A40,sweep_channels,cudnn:library,1.0
+NVIDIA A40,sweep_channels,cutlass:library,0.9463208081323119
+NVIDIA A40,sweep_channels,direct,0.1504964292582762
+NVIDIA A40,sweep_channels,dispatcher:auto,1.0848171181014514
+NVIDIA A40,sweep_channels,im2col_gemm,0.6086596547666443
+NVIDIA A40,sweep_channels,implicit_gemm:tuned,0.6638781469091499
+NVIDIA A40,sweep_channels,simt_tiled:tuned,0.4762680837617072
+NVIDIA A40,sweep_channels,tensor_core:tuned,1.4189745516251193
+NVIDIA A40,sweep_irregular,cudnn:library,1.0
+NVIDIA A40,sweep_irregular,cutlass:library,0.6016351680233399
+NVIDIA A40,sweep_irregular,direct,0.10506655357255934
+NVIDIA A40,sweep_irregular,dispatcher:auto,0.9560063930485123
+NVIDIA A40,sweep_irregular,im2col_gemm,0.6211195250460421
+NVIDIA A40,sweep_irregular,implicit_gemm:tuned,0.6832995741121629
+NVIDIA A40,sweep_irregular,simt_tiled:tuned,0.3778114163327543
+NVIDIA A40,sweep_irregular,tensor_core:tuned,1.3874605249070717
+NVIDIA A40,sweep_kernel,cudnn:library,1.0
+NVIDIA A40,sweep_kernel,cutlass:library,0.9113062778036893
+NVIDIA A40,sweep_kernel,direct,0.06056879918419234
+NVIDIA A40,sweep_kernel,dispatcher:auto,0.8820447017508345
+NVIDIA A40,sweep_kernel,im2col_gemm,0.31529904723222146
+NVIDIA A40,sweep_kernel,implicit_gemm:tuned,0.49340423894265556
+NVIDIA A40,sweep_kernel,simt_tiled:tuned,0.2982406683306616
+NVIDIA A40,sweep_kernel,tensor_core:tuned,1.2408026843899673
+NVIDIA A40,sweep_spatial,cudnn:library,1.0
+NVIDIA A40,sweep_spatial,cutlass:library,1.141524006809893
+NVIDIA A40,sweep_spatial,direct,0.09289489068635377
+NVIDIA A40,sweep_spatial,dispatcher:auto,0.9425257998359213
+NVIDIA A40,sweep_spatial,im2col_gemm,0.3984528087235724
+NVIDIA A40,sweep_spatial,implicit_gemm:tuned,0.4962554840929793
+NVIDIA A40,sweep_spatial,simt_tiled:tuned,0.38599393724733505
+NVIDIA A40,sweep_spatial,tensor_core:tuned,1.7640050417510762
+NVIDIA A40,throughput,cudnn:library,1.0
+NVIDIA A40,throughput,cutlass:library,1.2767582593640012
+NVIDIA A40,throughput,direct,0.04260077358227549
+NVIDIA A40,throughput,dispatcher:auto,0.8191330278285914
+NVIDIA A40,throughput,im2col_gemm,0.43705769844349984
+NVIDIA A40,throughput,implicit_gemm:fixed,0.23632121751356314
+NVIDIA A40,throughput,implicit_gemm:tuned,0.4835302813108262
+NVIDIA A40,throughput,simt_tiled:fixed,0.16768451010173446
+NVIDIA A40,throughput,simt_tiled:tuned,0.25385501345546924
+NVIDIA A40,throughput,tensor_core:fixed,0.476620193937912
+NVIDIA A40,throughput,tensor_core:tuned,1.1776071031582531
+NVIDIA H100 NVL,adversarial,cudnn:library,1.0
+NVIDIA H100 NVL,adversarial,cutlass:library,0.6034594710320841
+NVIDIA H100 NVL,adversarial,direct,0.38549533659282476
+NVIDIA H100 NVL,adversarial,dispatcher:auto,1.3424898143212192
+NVIDIA H100 NVL,adversarial,im2col_gemm,0.89666498982462
+NVIDIA H100 NVL,adversarial,implicit_gemm:fixed,0.3175552937575301
+NVIDIA H100 NVL,adversarial,implicit_gemm:tuned,0.7791504773571818
+NVIDIA H100 NVL,adversarial,simt_tiled:fixed,0.4900090267188178
+NVIDIA H100 NVL,adversarial,simt_tiled:tuned,0.6776049423145121
+NVIDIA H100 NVL,adversarial,tensor_core:fixed,0.5757958478487353
+NVIDIA H100 NVL,adversarial,tensor_core:tuned,1.3986981028477528
+NVIDIA H100 NVL,latency,cudnn:library,1.0
+NVIDIA H100 NVL,latency,cutlass:library,1.3456751312537312
+NVIDIA H100 NVL,latency,direct,0.4344675624001564
+NVIDIA H100 NVL,latency,dispatcher:auto,1.924137458172847
+NVIDIA H100 NVL,latency,im2col_gemm,1.8366401530259575
+NVIDIA H100 NVL,latency,implicit_gemm:fixed,0.3269810696105616
+NVIDIA H100 NVL,latency,implicit_gemm:tuned,0.7578828440397449
+NVIDIA H100 NVL,latency,simt_tiled:fixed,0.5208593509459051
+NVIDIA H100 NVL,latency,simt_tiled:tuned,0.6307263823841707
+NVIDIA H100 NVL,latency,tensor_core:fixed,0.588518964497046
+NVIDIA H100 NVL,latency,tensor_core:tuned,1.9314769276239288
+NVIDIA H100 NVL,sweep_batch,cudnn:library,1.0
+NVIDIA H100 NVL,sweep_batch,cutlass:library,1.3957389914840055
+NVIDIA H100 NVL,sweep_batch,direct,0.1129896565950155
+NVIDIA H100 NVL,sweep_batch,dispatcher:auto,1.2458844123071942
+NVIDIA H100 NVL,sweep_batch,im2col_gemm,0.7733138249270275
+NVIDIA H100 NVL,sweep_batch,implicit_gemm:tuned,0.5145098517784348
+NVIDIA H100 NVL,sweep_batch,simt_tiled:tuned,0.40872524390823795
+NVIDIA H100 NVL,sweep_batch,tensor_core:tuned,2.085965357235747
+NVIDIA H100 NVL,sweep_channels,cudnn:library,1.0
+NVIDIA H100 NVL,sweep_channels,cutlass:library,1.4046407394826868
+NVIDIA H100 NVL,sweep_channels,direct,0.14039467219279428
+NVIDIA H100 NVL,sweep_channels,dispatcher:auto,1.1571325774847598
+NVIDIA H100 NVL,sweep_channels,im2col_gemm,0.6911277427014715
+NVIDIA H100 NVL,sweep_channels,implicit_gemm:tuned,0.6108879075845831
+NVIDIA H100 NVL,sweep_channels,simt_tiled:tuned,0.508350211995688
+NVIDIA H100 NVL,sweep_channels,tensor_core:tuned,1.5346104724950012
+NVIDIA H100 NVL,sweep_irregular,cudnn:library,1.0
+NVIDIA H100 NVL,sweep_irregular,cutlass:library,0.719028606641788
+NVIDIA H100 NVL,sweep_irregular,direct,0.10971382210299412
+NVIDIA H100 NVL,sweep_irregular,dispatcher:auto,0.9471035979919332
+NVIDIA H100 NVL,sweep_irregular,im2col_gemm,0.8811219759763969
+NVIDIA H100 NVL,sweep_irregular,implicit_gemm:tuned,0.6348545392449757
+NVIDIA H100 NVL,sweep_irregular,simt_tiled:tuned,0.4257812452932134
+NVIDIA H100 NVL,sweep_irregular,tensor_core:tuned,0.9347366051272665
+NVIDIA H100 NVL,sweep_kernel,cudnn:library,1.0
+NVIDIA H100 NVL,sweep_kernel,cutlass:library,1.1538756024862702
+NVIDIA H100 NVL,sweep_kernel,direct,0.05090924483184124
+NVIDIA H100 NVL,sweep_kernel,dispatcher:auto,0.8004113804093048
+NVIDIA H100 NVL,sweep_kernel,im2col_gemm,0.37507578758990123
+NVIDIA H100 NVL,sweep_kernel,implicit_gemm:tuned,0.3753563429928217
+NVIDIA H100 NVL,sweep_kernel,simt_tiled:tuned,0.2760008567830028
+NVIDIA H100 NVL,sweep_kernel,tensor_core:tuned,1.3876753167113187
+NVIDIA H100 NVL,sweep_spatial,cudnn:library,1.0
+NVIDIA H100 NVL,sweep_spatial,cutlass:library,1.2865673468766508
+NVIDIA H100 NVL,sweep_spatial,direct,0.08862084795468883
+NVIDIA H100 NVL,sweep_spatial,dispatcher:auto,1.1083216363193333
+NVIDIA H100 NVL,sweep_spatial,im2col_gemm,0.5646489571715592
+NVIDIA H100 NVL,sweep_spatial,implicit_gemm:tuned,0.4671194754167086
+NVIDIA H100 NVL,sweep_spatial,simt_tiled:tuned,0.37719071165017676
+NVIDIA H100 NVL,sweep_spatial,tensor_core:tuned,1.674398338024232
+NVIDIA H100 NVL,throughput,cudnn:library,1.0
+NVIDIA H100 NVL,throughput,cutlass:library,1.5043318459052069
+NVIDIA H100 NVL,throughput,direct,0.032351073338605416
+NVIDIA H100 NVL,throughput,dispatcher:auto,0.7891396900666077
+NVIDIA H100 NVL,throughput,im2col_gemm,0.4085623516711724
+NVIDIA H100 NVL,throughput,implicit_gemm:fixed,0.2234762385570354
+NVIDIA H100 NVL,throughput,implicit_gemm:tuned,0.405264481770757
+NVIDIA H100 NVL,throughput,simt_tiled:fixed,0.15809434864191377
+NVIDIA H100 NVL,throughput,simt_tiled:tuned,0.2324356043327711
+NVIDIA H100 NVL,throughput,tensor_core:fixed,0.41644257836086446
+NVIDIA H100 NVL,throughput,tensor_core:tuned,1.298069300826222

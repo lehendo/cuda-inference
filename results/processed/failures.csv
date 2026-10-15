@@ -1,0 +1,599 @@
+gpu,workload,precision,fusion,split,backend,mode,kernel,status,reason
+NVIDIA A40,ho_lat_b1_c24_20_k3,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_lat_b1_c24_20_k3,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C24_20x20_O24_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,ho_lat_b1_c24_20_k3,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_lat_b1_c24_20_k3,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C24_20x20_O24_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA A40,ho_lat_b1_c48_10_k3,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_lat_b1_c48_10_k3,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C48_10x10_O96_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,ho_lat_b1_c48_10_k3,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_lat_b1_c48_10_k3,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C48_10x10_O96_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA A40,ho_lat_b1_c96_14_k1,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_lat_b1_c96_14_k1,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C96_14x14_O192_K1x1_s1x1_p0x0_d1x1_g1_fp32_b1_relu
+NVIDIA A40,ho_lat_b1_c96_14_k1,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_lat_b1_c96_14_k1,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C96_14x14_O192_K1x1_s1x1_p0x0_d1x1_g1_fp32_b0_none
+NVIDIA A40,ho_lat_b2_c64_16_k3,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_lat_b2_c64_16_k3,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B2_C64_16x16_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,ho_lat_b2_c64_16_k3,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_lat_b2_c64_16_k3,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B2_C64_16x16_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA A40,ho_lat_b1_c3_96_k5s2,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_lat_b1_c3_96_k5s2,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C3_96x96_O32_K5x5_s2x2_p2x2_d1x1_g1_fp32_b1_relu
+NVIDIA A40,ho_lat_b1_c3_96_k5s2,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_lat_b1_c3_96_k5s2,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C3_96x96_O32_K5x5_s2x2_p2x2_d1x1_g1_fp32_b0_none
+NVIDIA A40,ho_thr_b32_c96_40_k3,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_thr_b32_c96_40_k3,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C96_40x40_O96_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,ho_thr_b32_c96_40_k3,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_thr_b32_c96_40_k3,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C96_40x40_O96_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA A40,ho_thr_b16_c192_20_k3,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_thr_b16_c192_20_k3,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C192_20x20_O192_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,ho_thr_b16_c192_20_k3,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_thr_b16_c192_20_k3,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C192_20x20_O192_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA A40,ho_thr_b32_c128_14_k1,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_thr_b32_c128_14_k1,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C128_14x14_O512_K1x1_s1x1_p0x0_d1x1_g1_fp32_b1_relu
+NVIDIA A40,ho_thr_b32_c128_14_k1,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_thr_b32_c128_14_k1,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C128_14x14_O512_K1x1_s1x1_p0x0_d1x1_g1_fp32_b0_none
+NVIDIA A40,ho_thr_b24_c80_48_k3,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_thr_b24_c80_48_k3,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B24_C80_48x48_O160_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,ho_thr_b24_c80_48_k3,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_thr_b24_c80_48_k3,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B24_C80_48x48_O160_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA A40,ho_thr_b8_c256_32_k3s2,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_thr_b8_c256_32_k3s2,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C256_32x32_O256_K3x3_s2x2_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,ho_thr_b8_c256_32_k3s2,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_thr_b8_c256_32_k3s2,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C256_32x32_O256_K3x3_s2x2_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA A40,ho_thr_b32_c32_64_k5,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_thr_b32_c32_64_k5,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C32_64x64_O64_K5x5_s1x1_p2x2_d1x1_g1_fp32_b1_relu
+NVIDIA A40,ho_thr_b32_c32_64_k5,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_thr_b32_c32_64_k5,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C32_64x64_O64_K5x5_s1x1_p2x2_d1x1_g1_fp32_b0_none
+NVIDIA A40,ho_adv_b3_c5_o11_45x47_k3,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_adv_b3_c5_o11_45x47_k3,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B3_C5_45x47_O11_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,ho_adv_b3_c5_o11_45x47_k3,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_adv_b3_c5_o11_45x47_k3,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B3_C5_45x47_O11_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA A40,ho_adv_b2_c2_o6_128_k7s2,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_adv_b2_c2_o6_128_k7s2,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B2_C2_128x128_O6_K7x7_s2x2_p3x3_d1x1_g1_fp32_b1_relu
+NVIDIA A40,ho_adv_b2_c2_o6_128_k7s2,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_adv_b2_c2_o6_128_k7s2,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B2_C2_128x128_O6_K7x7_s2x2_p3x3_d1x1_g1_fp32_b0_none
+NVIDIA A40,ho_adv_b6_c100_o250_19_k3,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_adv_b6_c100_o250_19_k3,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B6_C100_19x19_O250_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,ho_adv_b6_c100_o250_19_k3,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_adv_b6_c100_o250_19_k3,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B6_C100_19x19_O250_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA A40,ho_adv_b1_c48_12_k3_pad3,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_adv_b1_c48_12_k3_pad3,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C48_12x12_O48_K3x3_s1x1_p3x3_d1x1_g1_fp32_b1_relu
+NVIDIA A40,ho_adv_b1_c48_12_k3_pad3,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_adv_b1_c48_12_k3_pad3,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C48_12x12_O48_K3x3_s1x1_p3x3_d1x1_g1_fp32_b0_none
+NVIDIA A40,ho_adv_b10_c20_o20_30_k7,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_adv_b10_c20_o20_30_k7,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B10_C20_30x30_O20_K7x7_s1x1_p3x3_d1x1_g1_fp32_b1_relu
+NVIDIA A40,ho_adv_b10_c20_o20_30_k7,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_adv_b10_c20_o20_30_k7,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B10_C20_30x30_O20_K7x7_s1x1_p3x3_d1x1_g1_fp32_b0_none
+NVIDIA A40,ho_adv_b16_c4_o4_96_k3_lowC,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_adv_b16_c4_o4_96_k3_lowC,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C4_96x96_O4_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,ho_adv_b16_c4_o4_96_k3_lowC,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,ho_adv_b16_c4_o4_96_k3_lowC,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C4_96x96_O4_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA A40,ho_lat_b1_c3_96_k5s2,fp16,fused,heldout,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA A40,ho_adv_b3_c5_o11_45x47_k3,fp16,fused,heldout,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA A40,ho_adv_b2_c2_o6_128_k7s2,fp16,fused,heldout,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA A40,ho_adv_b6_c100_o250_19_k3,fp16,fused,heldout,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA A40,ho_adv_b10_c20_o20_30_k7,fp16,fused,heldout,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA A40,ho_adv_b16_c4_o4_96_k3_lowC,fp16,fused,heldout,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA A40,thr_b32_c64_56_k3,bf16,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C64_56x56_O64_K3x3_s1x1_p1x1_d1x1_g1_bf16_b1_relu
+NVIDIA A40,thr_b32_c64_56_k3,bf16,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C64_56x56_O64_K3x3_s1x1_p1x1_d1x1_g1_bf16_b1_relu
+NVIDIA A40,thr_b32_c64_56_k3,tf32,fused,tune,direct,fixed,,unsupported,Unsupported: no fixed direct kernel for tf32
+NVIDIA A40,thr_b32_c64_56_k3,tf32,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C64_56x56_O64_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA A40,thr_b32_c64_56_k3,tf32,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C64_56x56_O64_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA A40,thr_b32_c64_56_k3,tf32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C64_56x56_O64_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA A40,thr_b32_c64_56_k1_expand,bf16,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C64_56x56_O256_K1x1_s1x1_p0x0_d1x1_g1_bf16_b1_relu
+NVIDIA A40,thr_b32_c64_56_k1_expand,bf16,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C64_56x56_O256_K1x1_s1x1_p0x0_d1x1_g1_bf16_b1_relu
+NVIDIA A40,thr_b32_c64_56_k1_expand,tf32,fused,tune,direct,fixed,,unsupported,Unsupported: no fixed direct kernel for tf32
+NVIDIA A40,thr_b32_c64_56_k1_expand,tf32,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C64_56x56_O256_K1x1_s1x1_p0x0_d1x1_g1_tf32_b1_relu
+NVIDIA A40,thr_b32_c64_56_k1_expand,tf32,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C64_56x56_O256_K1x1_s1x1_p0x0_d1x1_g1_tf32_b1_relu
+NVIDIA A40,thr_b32_c64_56_k1_expand,tf32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C64_56x56_O256_K1x1_s1x1_p0x0_d1x1_g1_tf32_b1_relu
+NVIDIA A40,thr_b32_c128_28_k3,bf16,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C128_28x28_O128_K3x3_s1x1_p1x1_d1x1_g1_bf16_b1_relu
+NVIDIA A40,thr_b32_c128_28_k3,bf16,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C128_28x28_O128_K3x3_s1x1_p1x1_d1x1_g1_bf16_b1_relu
+NVIDIA A40,thr_b32_c128_28_k3,tf32,fused,tune,direct,fixed,,unsupported,Unsupported: no fixed direct kernel for tf32
+NVIDIA A40,thr_b32_c128_28_k3,tf32,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C128_28x28_O128_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA A40,thr_b32_c128_28_k3,tf32,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C128_28x28_O128_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA A40,thr_b32_c128_28_k3,tf32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C128_28x28_O128_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA A40,thr_b32_c256_14_k3,bf16,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C256_14x14_O256_K3x3_s1x1_p1x1_d1x1_g1_bf16_b1_relu
+NVIDIA A40,thr_b32_c256_14_k3,bf16,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C256_14x14_O256_K3x3_s1x1_p1x1_d1x1_g1_bf16_b1_relu
+NVIDIA A40,thr_b32_c256_14_k3,tf32,fused,tune,direct,fixed,,unsupported,Unsupported: no fixed direct kernel for tf32
+NVIDIA A40,thr_b32_c256_14_k3,tf32,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C256_14x14_O256_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA A40,thr_b32_c256_14_k3,tf32,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C256_14x14_O256_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA A40,thr_b32_c256_14_k3,tf32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C256_14x14_O256_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA A40,thr_b32_c512_7_k3,bf16,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C512_7x7_O512_K3x3_s1x1_p1x1_d1x1_g1_bf16_b1_relu
+NVIDIA A40,thr_b32_c512_7_k3,bf16,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C512_7x7_O512_K3x3_s1x1_p1x1_d1x1_g1_bf16_b1_relu
+NVIDIA A40,thr_b32_c512_7_k3,tf32,fused,tune,direct,fixed,,unsupported,Unsupported: no fixed direct kernel for tf32
+NVIDIA A40,thr_b32_c512_7_k3,tf32,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C512_7x7_O512_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA A40,thr_b32_c512_7_k3,tf32,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C512_7x7_O512_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA A40,thr_b32_c512_7_k3,tf32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C512_7x7_O512_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA A40,thr_b16_c128_56_k3,bf16,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C128_56x56_O128_K3x3_s1x1_p1x1_d1x1_g1_bf16_b1_relu
+NVIDIA A40,thr_b16_c128_56_k3,bf16,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C128_56x56_O128_K3x3_s1x1_p1x1_d1x1_g1_bf16_b1_relu
+NVIDIA A40,thr_b16_c128_56_k3,tf32,fused,tune,direct,fixed,,unsupported,Unsupported: no fixed direct kernel for tf32
+NVIDIA A40,thr_b16_c128_56_k3,tf32,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C128_56x56_O128_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA A40,thr_b16_c128_56_k3,tf32,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C128_56x56_O128_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA A40,thr_b16_c128_56_k3,tf32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C128_56x56_O128_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA A40,thr_b32_stem_224_k7s2,bf16,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C3_224x224_O64_K7x7_s2x2_p3x3_d1x1_g1_bf16_b1_relu
+NVIDIA A40,thr_b32_stem_224_k7s2,bf16,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C3_224x224_O64_K7x7_s2x2_p3x3_d1x1_g1_bf16_b1_relu
+NVIDIA A40,thr_b32_stem_224_k7s2,tf32,fused,tune,direct,fixed,,unsupported,Unsupported: no fixed direct kernel for tf32
+NVIDIA A40,thr_b32_stem_224_k7s2,tf32,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C3_224x224_O64_K7x7_s2x2_p3x3_d1x1_g1_tf32_b1_relu
+NVIDIA A40,thr_b32_stem_224_k7s2,tf32,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C3_224x224_O64_K7x7_s2x2_p3x3_d1x1_g1_tf32_b1_relu
+NVIDIA A40,thr_b32_stem_224_k7s2,tf32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C3_224x224_O64_K7x7_s2x2_p3x3_d1x1_g1_tf32_b1_relu
+NVIDIA A40,thr_b16_c64_28_k5,bf16,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_28x28_O96_K5x5_s1x1_p2x2_d1x1_g1_bf16_b1_relu
+NVIDIA A40,thr_b16_c64_28_k5,bf16,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_28x28_O96_K5x5_s1x1_p2x2_d1x1_g1_bf16_b1_relu
+NVIDIA A40,thr_b16_c64_28_k5,tf32,fused,tune,direct,fixed,,unsupported,Unsupported: no fixed direct kernel for tf32
+NVIDIA A40,thr_b16_c64_28_k5,tf32,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_28x28_O96_K5x5_s1x1_p2x2_d1x1_g1_tf32_b1_relu
+NVIDIA A40,thr_b16_c64_28_k5,tf32,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_28x28_O96_K5x5_s1x1_p2x2_d1x1_g1_tf32_b1_relu
+NVIDIA A40,thr_b16_c64_28_k5,tf32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_28x28_O96_K5x5_s1x1_p2x2_d1x1_g1_tf32_b1_relu
+NVIDIA A40,thr_b16_c64_112_k3,bf16,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_112x112_O64_K3x3_s1x1_p1x1_d1x1_g1_bf16_b1_relu
+NVIDIA A40,thr_b16_c64_112_k3,bf16,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_112x112_O64_K3x3_s1x1_p1x1_d1x1_g1_bf16_b1_relu
+NVIDIA A40,thr_b16_c64_112_k3,tf32,fused,tune,direct,fixed,,unsupported,Unsupported: no fixed direct kernel for tf32
+NVIDIA A40,thr_b16_c64_112_k3,tf32,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_112x112_O64_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA A40,thr_b16_c64_112_k3,tf32,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_112x112_O64_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA A40,thr_b16_c64_112_k3,tf32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_112x112_O64_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA A40,thr_b8_c256_56_k1,bf16,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C256_56x56_O64_K1x1_s1x1_p0x0_d1x1_g1_bf16_b1_relu
+NVIDIA A40,thr_b8_c256_56_k1,bf16,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C256_56x56_O64_K1x1_s1x1_p0x0_d1x1_g1_bf16_b1_relu
+NVIDIA A40,thr_b8_c256_56_k1,tf32,fused,tune,direct,fixed,,unsupported,Unsupported: no fixed direct kernel for tf32
+NVIDIA A40,thr_b8_c256_56_k1,tf32,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C256_56x56_O64_K1x1_s1x1_p0x0_d1x1_g1_tf32_b1_relu
+NVIDIA A40,thr_b8_c256_56_k1,tf32,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C256_56x56_O64_K1x1_s1x1_p0x0_d1x1_g1_tf32_b1_relu
+NVIDIA A40,thr_b8_c256_56_k1,tf32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C256_56x56_O64_K1x1_s1x1_p0x0_d1x1_g1_tf32_b1_relu
+NVIDIA A40,thr_b32_c64_56_k3,tf32,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS TF32 convolution not instantiated in this baseline
+NVIDIA A40,thr_b32_c64_56_k1_expand,tf32,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS TF32 convolution not instantiated in this baseline
+NVIDIA A40,thr_b32_c128_28_k3,tf32,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS TF32 convolution not instantiated in this baseline
+NVIDIA A40,thr_b32_c256_14_k3,tf32,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS TF32 convolution not instantiated in this baseline
+NVIDIA A40,thr_b32_c512_7_k3,tf32,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS TF32 convolution not instantiated in this baseline
+NVIDIA A40,thr_b16_c128_56_k3,tf32,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS TF32 convolution not instantiated in this baseline
+NVIDIA A40,thr_b32_stem_224_k7s2,bf16,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA A40,thr_b32_stem_224_k7s2,tf32,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS TF32 convolution not instantiated in this baseline
+NVIDIA A40,thr_b16_c64_28_k5,tf32,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS TF32 convolution not instantiated in this baseline
+NVIDIA A40,thr_b16_c64_112_k3,tf32,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS TF32 convolution not instantiated in this baseline
+NVIDIA A40,thr_b8_c256_56_k1,tf32,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS TF32 convolution not instantiated in this baseline
+NVIDIA A40,sweep_batch_b1_c64_28_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,sweep_batch_b2_c64_28_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B2_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,sweep_batch_b4_c64_28_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B4_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,sweep_batch_b8_c64_28_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,sweep_batch_b16_c64_28_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,sweep_batch_b32_c64_28_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,sweep_batch_b64_c64_28_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B64_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,sweep_kernel_k1_b16_c64_28,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_28x28_O64_K1x1_s1x1_p0x0_d1x1_g1_fp32_b1_relu
+NVIDIA A40,sweep_kernel_k3_b16_c64_28,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,sweep_kernel_k5_b16_c64_28,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_28x28_O64_K5x5_s1x1_p2x2_d1x1_g1_fp32_b1_relu
+NVIDIA A40,sweep_kernel_k7_b16_c64_28,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_28x28_O64_K7x7_s1x1_p3x3_d1x1_g1_fp32_b1_relu
+NVIDIA A40,sweep_channels_c3_b16_28_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C3_28x28_O8_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,sweep_channels_c8_b16_28_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C8_28x28_O8_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,sweep_channels_c16_b16_28_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C16_28x28_O16_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,sweep_channels_c32_b16_28_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C32_28x28_O32_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,sweep_channels_c64_b16_28_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,sweep_channels_c128_b16_28_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C128_28x28_O128_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,sweep_channels_c256_b16_28_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C256_28x28_O256_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,sweep_channels_c512_b16_28_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C512_28x28_O512_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,sweep_spatial_h7_b16_c64_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_7x7_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,sweep_spatial_h14_b16_c64_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_14x14_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,sweep_spatial_h28_b16_c64_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,sweep_spatial_h56_b16_c64_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_56x56_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,sweep_spatial_h112_b16_c64_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_112x112_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,sweep_irregular_h13_b8_c60_o100_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C60_13x13_O100_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,sweep_irregular_h27_b8_c60_o100_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C60_27x27_O100_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,sweep_irregular_h29_b8_c60_o100_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C60_29x29_O100_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,sweep_irregular_h31_b8_c60_o100_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C60_31x31_O100_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,sweep_irregular_h33_b8_c60_o100_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C60_33x33_O100_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,sweep_irregular_h55_b8_c60_o100_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C60_55x55_O100_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,sweep_irregular_h57_b8_c60_o100_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C60_57x57_O100_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,sweep_channels_c3_b16_28_k3,fp16,fused,sweep,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA A40,sweep_irregular_h13_b8_c60_o100_k3,fp16,fused,sweep,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA A40,sweep_irregular_h27_b8_c60_o100_k3,fp16,fused,sweep,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA A40,sweep_irregular_h29_b8_c60_o100_k3,fp16,fused,sweep,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA A40,sweep_irregular_h31_b8_c60_o100_k3,fp16,fused,sweep,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA A40,sweep_irregular_h33_b8_c60_o100_k3,fp16,fused,sweep,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA A40,sweep_irregular_h55_b8_c60_o100_k3,fp16,fused,sweep,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA A40,sweep_irregular_h57_b8_c60_o100_k3,fp16,fused,sweep,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA A40,lat_b1_c16_28_k3,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,lat_b1_c16_28_k3,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C16_28x28_O16_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,lat_b1_c16_28_k3,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,lat_b1_c16_28_k3,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C16_28x28_O16_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA A40,lat_b1_c32_14_k3,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,lat_b1_c32_14_k3,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C32_14x14_O32_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,lat_b1_c32_14_k3,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,lat_b1_c32_14_k3,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C32_14x14_O32_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA A40,lat_b1_c64_7_k1,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,lat_b1_c64_7_k1,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C64_7x7_O64_K1x1_s1x1_p0x0_d1x1_g1_fp32_b1_relu
+NVIDIA A40,lat_b1_c64_7_k1,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,lat_b1_c64_7_k1,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C64_7x7_O64_K1x1_s1x1_p0x0_d1x1_g1_fp32_b0_none
+NVIDIA A40,lat_b1_c64_14_k3,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,lat_b1_c64_14_k3,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C64_14x14_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,lat_b1_c64_14_k3,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,lat_b1_c64_14_k3,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C64_14x14_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA A40,lat_b1_c128_28_k1,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,lat_b1_c128_28_k1,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C128_28x28_O128_K1x1_s1x1_p0x0_d1x1_g1_fp32_b1_relu
+NVIDIA A40,lat_b1_c128_28_k1,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,lat_b1_c128_28_k1,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C128_28x28_O128_K1x1_s1x1_p0x0_d1x1_g1_fp32_b0_none
+NVIDIA A40,lat_b1_c256_14_k3,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,lat_b1_c256_14_k3,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C256_14x14_O256_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,lat_b1_c256_14_k3,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,lat_b1_c256_14_k3,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C256_14x14_O256_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA A40,lat_b1_c512_7_k3,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,lat_b1_c512_7_k3,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C512_7x7_O512_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,lat_b1_c512_7_k3,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,lat_b1_c512_7_k3,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C512_7x7_O512_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA A40,lat_b1_stem_224_k7s2,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,lat_b1_stem_224_k7s2,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C3_224x224_O64_K7x7_s2x2_p3x3_d1x1_g1_fp32_b1_relu
+NVIDIA A40,lat_b1_stem_224_k7s2,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,lat_b1_stem_224_k7s2,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C3_224x224_O64_K7x7_s2x2_p3x3_d1x1_g1_fp32_b0_none
+NVIDIA A40,thr_b32_c64_56_k3,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,thr_b32_c64_56_k3,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C64_56x56_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,thr_b32_c64_56_k3,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,thr_b32_c64_56_k3,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C64_56x56_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA A40,thr_b32_c64_56_k1_expand,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,thr_b32_c64_56_k1_expand,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C64_56x56_O256_K1x1_s1x1_p0x0_d1x1_g1_fp32_b1_relu
+NVIDIA A40,thr_b32_c64_56_k1_expand,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,thr_b32_c64_56_k1_expand,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C64_56x56_O256_K1x1_s1x1_p0x0_d1x1_g1_fp32_b0_none
+NVIDIA A40,thr_b32_c128_28_k3,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,thr_b32_c128_28_k3,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C128_28x28_O128_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,thr_b32_c128_28_k3,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,thr_b32_c128_28_k3,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C128_28x28_O128_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA A40,thr_b32_c256_14_k3,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,thr_b32_c256_14_k3,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C256_14x14_O256_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,thr_b32_c256_14_k3,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,thr_b32_c256_14_k3,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C256_14x14_O256_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA A40,thr_b32_c512_7_k3,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,thr_b32_c512_7_k3,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C512_7x7_O512_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,thr_b32_c512_7_k3,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,thr_b32_c512_7_k3,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C512_7x7_O512_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA A40,thr_b16_c128_56_k3,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,thr_b16_c128_56_k3,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C128_56x56_O128_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,thr_b16_c128_56_k3,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,thr_b16_c128_56_k3,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C128_56x56_O128_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA A40,thr_b32_stem_224_k7s2,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,thr_b32_stem_224_k7s2,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C3_224x224_O64_K7x7_s2x2_p3x3_d1x1_g1_fp32_b1_relu
+NVIDIA A40,thr_b32_stem_224_k7s2,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,thr_b32_stem_224_k7s2,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C3_224x224_O64_K7x7_s2x2_p3x3_d1x1_g1_fp32_b0_none
+NVIDIA A40,thr_b16_c64_28_k5,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,thr_b16_c64_28_k5,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_28x28_O96_K5x5_s1x1_p2x2_d1x1_g1_fp32_b1_relu
+NVIDIA A40,thr_b16_c64_28_k5,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,thr_b16_c64_28_k5,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_28x28_O96_K5x5_s1x1_p2x2_d1x1_g1_fp32_b0_none
+NVIDIA A40,thr_b16_c64_112_k3,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,thr_b16_c64_112_k3,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_112x112_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,thr_b16_c64_112_k3,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,thr_b16_c64_112_k3,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_112x112_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA A40,thr_b8_c256_56_k1,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,thr_b8_c256_56_k1,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C256_56x56_O64_K1x1_s1x1_p0x0_d1x1_g1_fp32_b1_relu
+NVIDIA A40,thr_b8_c256_56_k1,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,thr_b8_c256_56_k1,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C256_56x56_O64_K1x1_s1x1_p0x0_d1x1_g1_fp32_b0_none
+NVIDIA A40,adv_b2_c3_o5_57x59_k3,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,adv_b2_c3_o5_57x59_k3,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B2_C3_57x59_O5_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,adv_b2_c3_o5_57x59_k3,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,adv_b2_c3_o5_57x59_k3,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B2_C3_57x59_O5_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA A40,adv_b4_c7_o9_33x31_k5s2,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,adv_b4_c7_o9_33x31_k5s2,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B4_C7_33x31_O9_K5x5_s2x2_p2x2_d1x1_g1_fp32_b1_relu
+NVIDIA A40,adv_b4_c7_o9_33x31_k5s2,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,adv_b4_c7_o9_33x31_k5s2,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B4_C7_33x31_O9_K5x5_s2x2_p2x2_d1x1_g1_fp32_b0_none
+NVIDIA A40,adv_b1_c1_o8_512_k3,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,adv_b1_c1_o8_512_k3,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C1_512x512_O8_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,adv_b1_c1_o8_512_k3,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,adv_b1_c1_o8_512_k3,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C1_512x512_O8_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA A40,adv_b8_c96_o255_27_k3,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,adv_b8_c96_o255_27_k3,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C96_27x27_O255_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,adv_b8_c96_o255_27_k3,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,adv_b8_c96_o255_27_k3,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C96_27x27_O255_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA A40,adv_b1_c16_10_k5_pad4,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,adv_b1_c16_10_k5_pad4,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C16_10x10_O16_K5x5_s1x1_p4x4_d1x1_g1_fp32_b1_relu
+NVIDIA A40,adv_b1_c16_10_k5_pad4,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,adv_b1_c16_10_k5_pad4,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C16_10x10_O16_K5x5_s1x1_p4x4_d1x1_g1_fp32_b0_none
+NVIDIA A40,adv_b8_c32_28_k7_unroll49x,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,adv_b8_c32_28_k7_unroll49x,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C32_28x28_O32_K7x7_s1x1_p3x3_d1x1_g1_fp32_b1_relu
+NVIDIA A40,adv_b8_c32_28_k7_unroll49x,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,adv_b8_c32_28_k7_unroll49x,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C32_28x28_O32_K7x7_s1x1_p3x3_d1x1_g1_fp32_b0_none
+NVIDIA A40,adv_b16_c32_56_k5_unroll25x,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,adv_b16_c32_56_k5_unroll25x,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C32_56x56_O32_K5x5_s1x1_p2x2_d1x1_g1_fp32_b1_relu
+NVIDIA A40,adv_b16_c32_56_k5_unroll25x,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,adv_b16_c32_56_k5_unroll25x,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C32_56x56_O32_K5x5_s1x1_p2x2_d1x1_g1_fp32_b0_none
+NVIDIA A40,adv_b4_c130_o130_15_k3,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,adv_b4_c130_o130_15_k3,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B4_C130_15x15_O130_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA A40,adv_b4_c130_o130_15_k3,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,adv_b4_c130_o130_15_k3,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B4_C130_15x15_O130_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA A40,adv_b32_c8_o8_112_k1_membound,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,adv_b32_c8_o8_112_k1_membound,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C8_112x112_O8_K1x1_s1x1_p0x0_d1x1_g1_fp32_b1_relu
+NVIDIA A40,adv_b32_c8_o8_112_k1_membound,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA A40,adv_b32_c8_o8_112_k1_membound,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C8_112x112_O8_K1x1_s1x1_p0x0_d1x1_g1_fp32_b0_none
+NVIDIA A40,lat_b1_stem_224_k7s2,fp16,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA A40,thr_b32_stem_224_k7s2,fp16,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA A40,adv_b2_c3_o5_57x59_k3,fp16,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA A40,adv_b4_c7_o9_33x31_k5s2,fp16,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA A40,adv_b1_c1_o8_512_k3,fp16,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA A40,adv_b8_c96_o255_27_k3,fp16,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA A40,adv_b4_c130_o130_15_k3,fp16,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA H100 NVL,ho_lat_b1_c24_20_k3,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_lat_b1_c24_20_k3,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C24_20x20_O24_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,ho_lat_b1_c24_20_k3,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_lat_b1_c24_20_k3,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C24_20x20_O24_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,ho_lat_b1_c48_10_k3,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_lat_b1_c48_10_k3,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C48_10x10_O96_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,ho_lat_b1_c48_10_k3,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_lat_b1_c48_10_k3,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C48_10x10_O96_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,ho_lat_b1_c96_14_k1,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_lat_b1_c96_14_k1,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C96_14x14_O192_K1x1_s1x1_p0x0_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,ho_lat_b1_c96_14_k1,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_lat_b1_c96_14_k1,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C96_14x14_O192_K1x1_s1x1_p0x0_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,ho_lat_b2_c64_16_k3,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_lat_b2_c64_16_k3,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B2_C64_16x16_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,ho_lat_b2_c64_16_k3,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_lat_b2_c64_16_k3,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B2_C64_16x16_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,ho_lat_b1_c3_96_k5s2,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_lat_b1_c3_96_k5s2,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C3_96x96_O32_K5x5_s2x2_p2x2_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,ho_lat_b1_c3_96_k5s2,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_lat_b1_c3_96_k5s2,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C3_96x96_O32_K5x5_s2x2_p2x2_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,ho_thr_b32_c96_40_k3,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_thr_b32_c96_40_k3,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C96_40x40_O96_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,ho_thr_b32_c96_40_k3,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_thr_b32_c96_40_k3,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C96_40x40_O96_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,ho_thr_b16_c192_20_k3,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_thr_b16_c192_20_k3,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C192_20x20_O192_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,ho_thr_b16_c192_20_k3,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_thr_b16_c192_20_k3,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C192_20x20_O192_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,ho_thr_b32_c128_14_k1,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_thr_b32_c128_14_k1,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C128_14x14_O512_K1x1_s1x1_p0x0_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,ho_thr_b32_c128_14_k1,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_thr_b32_c128_14_k1,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C128_14x14_O512_K1x1_s1x1_p0x0_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,ho_thr_b24_c80_48_k3,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_thr_b24_c80_48_k3,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B24_C80_48x48_O160_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,ho_thr_b24_c80_48_k3,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_thr_b24_c80_48_k3,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B24_C80_48x48_O160_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,ho_thr_b8_c256_32_k3s2,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_thr_b8_c256_32_k3s2,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C256_32x32_O256_K3x3_s2x2_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,ho_thr_b8_c256_32_k3s2,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_thr_b8_c256_32_k3s2,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C256_32x32_O256_K3x3_s2x2_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,ho_thr_b32_c32_64_k5,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_thr_b32_c32_64_k5,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C32_64x64_O64_K5x5_s1x1_p2x2_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,ho_thr_b32_c32_64_k5,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_thr_b32_c32_64_k5,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C32_64x64_O64_K5x5_s1x1_p2x2_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,ho_adv_b3_c5_o11_45x47_k3,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_adv_b3_c5_o11_45x47_k3,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B3_C5_45x47_O11_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,ho_adv_b3_c5_o11_45x47_k3,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_adv_b3_c5_o11_45x47_k3,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B3_C5_45x47_O11_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,ho_adv_b2_c2_o6_128_k7s2,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_adv_b2_c2_o6_128_k7s2,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B2_C2_128x128_O6_K7x7_s2x2_p3x3_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,ho_adv_b2_c2_o6_128_k7s2,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_adv_b2_c2_o6_128_k7s2,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B2_C2_128x128_O6_K7x7_s2x2_p3x3_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,ho_adv_b6_c100_o250_19_k3,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_adv_b6_c100_o250_19_k3,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B6_C100_19x19_O250_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,ho_adv_b6_c100_o250_19_k3,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_adv_b6_c100_o250_19_k3,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B6_C100_19x19_O250_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,ho_adv_b1_c48_12_k3_pad3,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_adv_b1_c48_12_k3_pad3,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C48_12x12_O48_K3x3_s1x1_p3x3_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,ho_adv_b1_c48_12_k3_pad3,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_adv_b1_c48_12_k3_pad3,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C48_12x12_O48_K3x3_s1x1_p3x3_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,ho_adv_b10_c20_o20_30_k7,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_adv_b10_c20_o20_30_k7,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B10_C20_30x30_O20_K7x7_s1x1_p3x3_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,ho_adv_b10_c20_o20_30_k7,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_adv_b10_c20_o20_30_k7,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B10_C20_30x30_O20_K7x7_s1x1_p3x3_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,ho_adv_b16_c4_o4_96_k3_lowC,fp32,fused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_adv_b16_c4_o4_96_k3_lowC,fp32,fused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C4_96x96_O4_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,ho_adv_b16_c4_o4_96_k3_lowC,fp32,unfused,heldout,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,ho_adv_b16_c4_o4_96_k3_lowC,fp32,unfused,heldout,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C4_96x96_O4_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,ho_lat_b1_c3_96_k5s2,fp16,fused,heldout,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA H100 NVL,ho_adv_b3_c5_o11_45x47_k3,fp16,fused,heldout,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA H100 NVL,ho_adv_b2_c2_o6_128_k7s2,fp16,fused,heldout,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA H100 NVL,ho_adv_b6_c100_o250_19_k3,fp16,fused,heldout,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA H100 NVL,ho_adv_b10_c20_o20_30_k7,fp16,fused,heldout,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA H100 NVL,ho_adv_b16_c4_o4_96_k3_lowC,fp16,fused,heldout,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA H100 NVL,thr_b32_c64_56_k3,bf16,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C64_56x56_O64_K3x3_s1x1_p1x1_d1x1_g1_bf16_b1_relu
+NVIDIA H100 NVL,thr_b32_c64_56_k3,bf16,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C64_56x56_O64_K3x3_s1x1_p1x1_d1x1_g1_bf16_b1_relu
+NVIDIA H100 NVL,thr_b32_c64_56_k3,tf32,fused,tune,direct,fixed,,unsupported,Unsupported: no fixed direct kernel for tf32
+NVIDIA H100 NVL,thr_b32_c64_56_k3,tf32,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C64_56x56_O64_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA H100 NVL,thr_b32_c64_56_k3,tf32,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C64_56x56_O64_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA H100 NVL,thr_b32_c64_56_k3,tf32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C64_56x56_O64_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA H100 NVL,thr_b32_c64_56_k1_expand,bf16,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C64_56x56_O256_K1x1_s1x1_p0x0_d1x1_g1_bf16_b1_relu
+NVIDIA H100 NVL,thr_b32_c64_56_k1_expand,bf16,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C64_56x56_O256_K1x1_s1x1_p0x0_d1x1_g1_bf16_b1_relu
+NVIDIA H100 NVL,thr_b32_c64_56_k1_expand,tf32,fused,tune,direct,fixed,,unsupported,Unsupported: no fixed direct kernel for tf32
+NVIDIA H100 NVL,thr_b32_c64_56_k1_expand,tf32,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C64_56x56_O256_K1x1_s1x1_p0x0_d1x1_g1_tf32_b1_relu
+NVIDIA H100 NVL,thr_b32_c64_56_k1_expand,tf32,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C64_56x56_O256_K1x1_s1x1_p0x0_d1x1_g1_tf32_b1_relu
+NVIDIA H100 NVL,thr_b32_c64_56_k1_expand,tf32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C64_56x56_O256_K1x1_s1x1_p0x0_d1x1_g1_tf32_b1_relu
+NVIDIA H100 NVL,thr_b32_c128_28_k3,bf16,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C128_28x28_O128_K3x3_s1x1_p1x1_d1x1_g1_bf16_b1_relu
+NVIDIA H100 NVL,thr_b32_c128_28_k3,bf16,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C128_28x28_O128_K3x3_s1x1_p1x1_d1x1_g1_bf16_b1_relu
+NVIDIA H100 NVL,thr_b32_c128_28_k3,tf32,fused,tune,direct,fixed,,unsupported,Unsupported: no fixed direct kernel for tf32
+NVIDIA H100 NVL,thr_b32_c128_28_k3,tf32,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C128_28x28_O128_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA H100 NVL,thr_b32_c128_28_k3,tf32,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C128_28x28_O128_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA H100 NVL,thr_b32_c128_28_k3,tf32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C128_28x28_O128_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA H100 NVL,thr_b32_c256_14_k3,bf16,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C256_14x14_O256_K3x3_s1x1_p1x1_d1x1_g1_bf16_b1_relu
+NVIDIA H100 NVL,thr_b32_c256_14_k3,bf16,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C256_14x14_O256_K3x3_s1x1_p1x1_d1x1_g1_bf16_b1_relu
+NVIDIA H100 NVL,thr_b32_c256_14_k3,tf32,fused,tune,direct,fixed,,unsupported,Unsupported: no fixed direct kernel for tf32
+NVIDIA H100 NVL,thr_b32_c256_14_k3,tf32,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C256_14x14_O256_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA H100 NVL,thr_b32_c256_14_k3,tf32,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C256_14x14_O256_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA H100 NVL,thr_b32_c256_14_k3,tf32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C256_14x14_O256_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA H100 NVL,thr_b32_c512_7_k3,bf16,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C512_7x7_O512_K3x3_s1x1_p1x1_d1x1_g1_bf16_b1_relu
+NVIDIA H100 NVL,thr_b32_c512_7_k3,bf16,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C512_7x7_O512_K3x3_s1x1_p1x1_d1x1_g1_bf16_b1_relu
+NVIDIA H100 NVL,thr_b32_c512_7_k3,tf32,fused,tune,direct,fixed,,unsupported,Unsupported: no fixed direct kernel for tf32
+NVIDIA H100 NVL,thr_b32_c512_7_k3,tf32,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C512_7x7_O512_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA H100 NVL,thr_b32_c512_7_k3,tf32,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C512_7x7_O512_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA H100 NVL,thr_b32_c512_7_k3,tf32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C512_7x7_O512_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA H100 NVL,thr_b16_c128_56_k3,bf16,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C128_56x56_O128_K3x3_s1x1_p1x1_d1x1_g1_bf16_b1_relu
+NVIDIA H100 NVL,thr_b16_c128_56_k3,bf16,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C128_56x56_O128_K3x3_s1x1_p1x1_d1x1_g1_bf16_b1_relu
+NVIDIA H100 NVL,thr_b16_c128_56_k3,tf32,fused,tune,direct,fixed,,unsupported,Unsupported: no fixed direct kernel for tf32
+NVIDIA H100 NVL,thr_b16_c128_56_k3,tf32,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C128_56x56_O128_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA H100 NVL,thr_b16_c128_56_k3,tf32,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C128_56x56_O128_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA H100 NVL,thr_b16_c128_56_k3,tf32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C128_56x56_O128_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA H100 NVL,thr_b32_stem_224_k7s2,bf16,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C3_224x224_O64_K7x7_s2x2_p3x3_d1x1_g1_bf16_b1_relu
+NVIDIA H100 NVL,thr_b32_stem_224_k7s2,bf16,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C3_224x224_O64_K7x7_s2x2_p3x3_d1x1_g1_bf16_b1_relu
+NVIDIA H100 NVL,thr_b32_stem_224_k7s2,tf32,fused,tune,direct,fixed,,unsupported,Unsupported: no fixed direct kernel for tf32
+NVIDIA H100 NVL,thr_b32_stem_224_k7s2,tf32,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C3_224x224_O64_K7x7_s2x2_p3x3_d1x1_g1_tf32_b1_relu
+NVIDIA H100 NVL,thr_b32_stem_224_k7s2,tf32,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C3_224x224_O64_K7x7_s2x2_p3x3_d1x1_g1_tf32_b1_relu
+NVIDIA H100 NVL,thr_b32_stem_224_k7s2,tf32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C3_224x224_O64_K7x7_s2x2_p3x3_d1x1_g1_tf32_b1_relu
+NVIDIA H100 NVL,thr_b16_c64_28_k5,bf16,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_28x28_O96_K5x5_s1x1_p2x2_d1x1_g1_bf16_b1_relu
+NVIDIA H100 NVL,thr_b16_c64_28_k5,bf16,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_28x28_O96_K5x5_s1x1_p2x2_d1x1_g1_bf16_b1_relu
+NVIDIA H100 NVL,thr_b16_c64_28_k5,tf32,fused,tune,direct,fixed,,unsupported,Unsupported: no fixed direct kernel for tf32
+NVIDIA H100 NVL,thr_b16_c64_28_k5,tf32,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_28x28_O96_K5x5_s1x1_p2x2_d1x1_g1_tf32_b1_relu
+NVIDIA H100 NVL,thr_b16_c64_28_k5,tf32,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_28x28_O96_K5x5_s1x1_p2x2_d1x1_g1_tf32_b1_relu
+NVIDIA H100 NVL,thr_b16_c64_28_k5,tf32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_28x28_O96_K5x5_s1x1_p2x2_d1x1_g1_tf32_b1_relu
+NVIDIA H100 NVL,thr_b16_c64_112_k3,bf16,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_112x112_O64_K3x3_s1x1_p1x1_d1x1_g1_bf16_b1_relu
+NVIDIA H100 NVL,thr_b16_c64_112_k3,bf16,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_112x112_O64_K3x3_s1x1_p1x1_d1x1_g1_bf16_b1_relu
+NVIDIA H100 NVL,thr_b16_c64_112_k3,tf32,fused,tune,direct,fixed,,unsupported,Unsupported: no fixed direct kernel for tf32
+NVIDIA H100 NVL,thr_b16_c64_112_k3,tf32,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_112x112_O64_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA H100 NVL,thr_b16_c64_112_k3,tf32,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_112x112_O64_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA H100 NVL,thr_b16_c64_112_k3,tf32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_112x112_O64_K3x3_s1x1_p1x1_d1x1_g1_tf32_b1_relu
+NVIDIA H100 NVL,thr_b8_c256_56_k1,bf16,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C256_56x56_O64_K1x1_s1x1_p0x0_d1x1_g1_bf16_b1_relu
+NVIDIA H100 NVL,thr_b8_c256_56_k1,bf16,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C256_56x56_O64_K1x1_s1x1_p0x0_d1x1_g1_bf16_b1_relu
+NVIDIA H100 NVL,thr_b8_c256_56_k1,tf32,fused,tune,direct,fixed,,unsupported,Unsupported: no fixed direct kernel for tf32
+NVIDIA H100 NVL,thr_b8_c256_56_k1,tf32,fused,tune,simt_tiled,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C256_56x56_O64_K1x1_s1x1_p0x0_d1x1_g1_tf32_b1_relu
+NVIDIA H100 NVL,thr_b8_c256_56_k1,tf32,fused,tune,implicit_gemm,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C256_56x56_O64_K1x1_s1x1_p0x0_d1x1_g1_tf32_b1_relu
+NVIDIA H100 NVL,thr_b8_c256_56_k1,tf32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C256_56x56_O64_K1x1_s1x1_p0x0_d1x1_g1_tf32_b1_relu
+NVIDIA H100 NVL,thr_b32_c64_56_k3,tf32,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS TF32 convolution not instantiated in this baseline
+NVIDIA H100 NVL,thr_b32_c64_56_k1_expand,tf32,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS TF32 convolution not instantiated in this baseline
+NVIDIA H100 NVL,thr_b32_c128_28_k3,tf32,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS TF32 convolution not instantiated in this baseline
+NVIDIA H100 NVL,thr_b32_c256_14_k3,tf32,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS TF32 convolution not instantiated in this baseline
+NVIDIA H100 NVL,thr_b32_c512_7_k3,tf32,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS TF32 convolution not instantiated in this baseline
+NVIDIA H100 NVL,thr_b16_c128_56_k3,tf32,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS TF32 convolution not instantiated in this baseline
+NVIDIA H100 NVL,thr_b32_stem_224_k7s2,bf16,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA H100 NVL,thr_b32_stem_224_k7s2,tf32,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS TF32 convolution not instantiated in this baseline
+NVIDIA H100 NVL,thr_b16_c64_28_k5,tf32,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS TF32 convolution not instantiated in this baseline
+NVIDIA H100 NVL,thr_b16_c64_112_k3,tf32,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS TF32 convolution not instantiated in this baseline
+NVIDIA H100 NVL,thr_b8_c256_56_k1,tf32,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS TF32 convolution not instantiated in this baseline
+NVIDIA H100 NVL,sweep_batch_b1_c64_28_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,sweep_batch_b2_c64_28_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B2_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,sweep_batch_b4_c64_28_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B4_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,sweep_batch_b8_c64_28_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,sweep_batch_b16_c64_28_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,sweep_batch_b32_c64_28_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,sweep_batch_b64_c64_28_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B64_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,sweep_kernel_k1_b16_c64_28,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_28x28_O64_K1x1_s1x1_p0x0_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,sweep_kernel_k3_b16_c64_28,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,sweep_kernel_k5_b16_c64_28,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_28x28_O64_K5x5_s1x1_p2x2_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,sweep_kernel_k7_b16_c64_28,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_28x28_O64_K7x7_s1x1_p3x3_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,sweep_channels_c3_b16_28_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C3_28x28_O8_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,sweep_channels_c8_b16_28_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C8_28x28_O8_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,sweep_channels_c16_b16_28_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C16_28x28_O16_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,sweep_channels_c32_b16_28_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C32_28x28_O32_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,sweep_channels_c64_b16_28_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,sweep_channels_c128_b16_28_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C128_28x28_O128_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,sweep_channels_c256_b16_28_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C256_28x28_O256_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,sweep_channels_c512_b16_28_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C512_28x28_O512_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,sweep_spatial_h7_b16_c64_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_7x7_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,sweep_spatial_h14_b16_c64_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_14x14_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,sweep_spatial_h28_b16_c64_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_28x28_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,sweep_spatial_h56_b16_c64_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_56x56_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,sweep_spatial_h112_b16_c64_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_112x112_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,sweep_irregular_h13_b8_c60_o100_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C60_13x13_O100_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,sweep_irregular_h27_b8_c60_o100_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C60_27x27_O100_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,sweep_irregular_h29_b8_c60_o100_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C60_29x29_O100_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,sweep_irregular_h31_b8_c60_o100_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C60_31x31_O100_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,sweep_irregular_h33_b8_c60_o100_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C60_33x33_O100_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,sweep_irregular_h55_b8_c60_o100_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C60_55x55_O100_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,sweep_irregular_h57_b8_c60_o100_k3,fp32,fused,sweep,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C60_57x57_O100_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,sweep_channels_c3_b16_28_k3,fp16,fused,sweep,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA H100 NVL,sweep_irregular_h13_b8_c60_o100_k3,fp16,fused,sweep,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA H100 NVL,sweep_irregular_h27_b8_c60_o100_k3,fp16,fused,sweep,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA H100 NVL,sweep_irregular_h29_b8_c60_o100_k3,fp16,fused,sweep,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA H100 NVL,sweep_irregular_h31_b8_c60_o100_k3,fp16,fused,sweep,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA H100 NVL,sweep_irregular_h33_b8_c60_o100_k3,fp16,fused,sweep,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA H100 NVL,sweep_irregular_h55_b8_c60_o100_k3,fp16,fused,sweep,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA H100 NVL,sweep_irregular_h57_b8_c60_o100_k3,fp16,fused,sweep,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA H100 NVL,lat_b1_c16_28_k3,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,lat_b1_c16_28_k3,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C16_28x28_O16_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,lat_b1_c16_28_k3,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,lat_b1_c16_28_k3,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C16_28x28_O16_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,lat_b1_c32_14_k3,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,lat_b1_c32_14_k3,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C32_14x14_O32_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,lat_b1_c32_14_k3,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,lat_b1_c32_14_k3,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C32_14x14_O32_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,lat_b1_c64_7_k1,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,lat_b1_c64_7_k1,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C64_7x7_O64_K1x1_s1x1_p0x0_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,lat_b1_c64_7_k1,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,lat_b1_c64_7_k1,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C64_7x7_O64_K1x1_s1x1_p0x0_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,lat_b1_c64_14_k3,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,lat_b1_c64_14_k3,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C64_14x14_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,lat_b1_c64_14_k3,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,lat_b1_c64_14_k3,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C64_14x14_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,lat_b1_c128_28_k1,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,lat_b1_c128_28_k1,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C128_28x28_O128_K1x1_s1x1_p0x0_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,lat_b1_c128_28_k1,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,lat_b1_c128_28_k1,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C128_28x28_O128_K1x1_s1x1_p0x0_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,lat_b1_c256_14_k3,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,lat_b1_c256_14_k3,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C256_14x14_O256_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,lat_b1_c256_14_k3,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,lat_b1_c256_14_k3,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C256_14x14_O256_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,lat_b1_c512_7_k3,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,lat_b1_c512_7_k3,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C512_7x7_O512_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,lat_b1_c512_7_k3,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,lat_b1_c512_7_k3,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C512_7x7_O512_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,lat_b1_stem_224_k7s2,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,lat_b1_stem_224_k7s2,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C3_224x224_O64_K7x7_s2x2_p3x3_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,lat_b1_stem_224_k7s2,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,lat_b1_stem_224_k7s2,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C3_224x224_O64_K7x7_s2x2_p3x3_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,thr_b32_c64_56_k3,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,thr_b32_c64_56_k3,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C64_56x56_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,thr_b32_c64_56_k3,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,thr_b32_c64_56_k3,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C64_56x56_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,thr_b32_c64_56_k1_expand,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,thr_b32_c64_56_k1_expand,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C64_56x56_O256_K1x1_s1x1_p0x0_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,thr_b32_c64_56_k1_expand,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,thr_b32_c64_56_k1_expand,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C64_56x56_O256_K1x1_s1x1_p0x0_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,thr_b32_c128_28_k3,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,thr_b32_c128_28_k3,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C128_28x28_O128_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,thr_b32_c128_28_k3,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,thr_b32_c128_28_k3,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C128_28x28_O128_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,thr_b32_c256_14_k3,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,thr_b32_c256_14_k3,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C256_14x14_O256_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,thr_b32_c256_14_k3,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,thr_b32_c256_14_k3,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C256_14x14_O256_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,thr_b32_c512_7_k3,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,thr_b32_c512_7_k3,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C512_7x7_O512_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,thr_b32_c512_7_k3,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,thr_b32_c512_7_k3,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C512_7x7_O512_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,thr_b16_c128_56_k3,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,thr_b16_c128_56_k3,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C128_56x56_O128_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,thr_b16_c128_56_k3,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,thr_b16_c128_56_k3,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C128_56x56_O128_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,thr_b32_stem_224_k7s2,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,thr_b32_stem_224_k7s2,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C3_224x224_O64_K7x7_s2x2_p3x3_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,thr_b32_stem_224_k7s2,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,thr_b32_stem_224_k7s2,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C3_224x224_O64_K7x7_s2x2_p3x3_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,thr_b16_c64_28_k5,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,thr_b16_c64_28_k5,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_28x28_O96_K5x5_s1x1_p2x2_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,thr_b16_c64_28_k5,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,thr_b16_c64_28_k5,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_28x28_O96_K5x5_s1x1_p2x2_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,thr_b16_c64_112_k3,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,thr_b16_c64_112_k3,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_112x112_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,thr_b16_c64_112_k3,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,thr_b16_c64_112_k3,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C64_112x112_O64_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,thr_b8_c256_56_k1,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,thr_b8_c256_56_k1,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C256_56x56_O64_K1x1_s1x1_p0x0_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,thr_b8_c256_56_k1,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,thr_b8_c256_56_k1,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C256_56x56_O64_K1x1_s1x1_p0x0_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,adv_b2_c3_o5_57x59_k3,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,adv_b2_c3_o5_57x59_k3,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B2_C3_57x59_O5_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,adv_b2_c3_o5_57x59_k3,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,adv_b2_c3_o5_57x59_k3,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B2_C3_57x59_O5_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,adv_b4_c7_o9_33x31_k5s2,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,adv_b4_c7_o9_33x31_k5s2,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B4_C7_33x31_O9_K5x5_s2x2_p2x2_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,adv_b4_c7_o9_33x31_k5s2,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,adv_b4_c7_o9_33x31_k5s2,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B4_C7_33x31_O9_K5x5_s2x2_p2x2_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,adv_b1_c1_o8_512_k3,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,adv_b1_c1_o8_512_k3,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C1_512x512_O8_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,adv_b1_c1_o8_512_k3,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,adv_b1_c1_o8_512_k3,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C1_512x512_O8_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,adv_b8_c96_o255_27_k3,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,adv_b8_c96_o255_27_k3,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C96_27x27_O255_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,adv_b8_c96_o255_27_k3,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,adv_b8_c96_o255_27_k3,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C96_27x27_O255_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,adv_b1_c16_10_k5_pad4,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,adv_b1_c16_10_k5_pad4,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C16_10x10_O16_K5x5_s1x1_p4x4_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,adv_b1_c16_10_k5_pad4,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,adv_b1_c16_10_k5_pad4,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B1_C16_10x10_O16_K5x5_s1x1_p4x4_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,adv_b8_c32_28_k7_unroll49x,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,adv_b8_c32_28_k7_unroll49x,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C32_28x28_O32_K7x7_s1x1_p3x3_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,adv_b8_c32_28_k7_unroll49x,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,adv_b8_c32_28_k7_unroll49x,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B8_C32_28x28_O32_K7x7_s1x1_p3x3_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,adv_b16_c32_56_k5_unroll25x,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,adv_b16_c32_56_k5_unroll25x,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C32_56x56_O32_K5x5_s1x1_p2x2_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,adv_b16_c32_56_k5_unroll25x,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,adv_b16_c32_56_k5_unroll25x,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B16_C32_56x56_O32_K5x5_s1x1_p2x2_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,adv_b4_c130_o130_15_k3,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,adv_b4_c130_o130_15_k3,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B4_C130_15x15_O130_K3x3_s1x1_p1x1_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,adv_b4_c130_o130_15_k3,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,adv_b4_c130_o130_15_k3,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B4_C130_15x15_O130_K3x3_s1x1_p1x1_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,adv_b32_c8_o8_112_k1_membound,fp32,fused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,adv_b32_c8_o8_112_k1_membound,fp32,fused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C8_112x112_O8_K1x1_s1x1_p0x0_d1x1_g1_fp32_b1_relu
+NVIDIA H100 NVL,adv_b32_c8_o8_112_k1_membound,fp32,unfused,tune,tensor_core,fixed,,unsupported,Unsupported: no fixed tensor_core kernel for fp32
+NVIDIA H100 NVL,adv_b32_c8_o8_112_k1_membound,fp32,unfused,tune,tensor_core,tuned,,unsupported,Unsupported: autotune: no compatible kernel for B32_C8_112x112_O8_K1x1_s1x1_p0x0_d1x1_g1_fp32_b0_none
+NVIDIA H100 NVL,lat_b1_stem_224_k7s2,fp16,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA H100 NVL,thr_b32_stem_224_k7s2,fp16,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA H100 NVL,adv_b2_c3_o5_57x59_k3,fp16,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA H100 NVL,adv_b4_c7_o9_33x31_k5s2,fp16,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA H100 NVL,adv_b1_c1_o8_512_k3,fp16,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA H100 NVL,adv_b8_c96_o255_27_k3,fp16,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
+NVIDIA H100 NVL,adv_b4_c130_o130_15_k3,fp16,fused,tune,cutlass,library,,unsupported,Unsupported: CUTLASS 16-bit Tensor Core kernels need C_in and C_out multiples of 8 (alignment)
