@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prints the headline tables used by docs/RESULTS.md, all derived from results/processed + results/raw."""
+"""Prints the headline tables used in the results write-up, all derived from results/processed + results/raw."""
 import glob
 import json
 import os

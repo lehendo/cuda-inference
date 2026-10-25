@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Remove all rows of one backend from a results directory (results.jsonl + results.csv) so the backend can be
-re-measured and appended. Used only when a baseline's measurement method was corrected; the correction is logged in
-docs/DEVELOPMENT_LOG.md. usage: strip_backend_rows.py <results_dir> <backend>"""
+re-measured and appended. Used only when a baseline's measurement method was corrected; the correction is noted in the
+README. usage: strip_backend_rows.py <results_dir> <backend>"""
 import csv
 import json
 import os

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Numbers cited in docs/RESULTS.md that need a direct lookup (sweep trends, wins vs im2col, search cost, calibration)."""
+"""Numbers cited in the README and reports that need a direct lookup (sweep trends, wins vs im2col, search cost, calibration)."""
 import sys
 
 import numpy as np

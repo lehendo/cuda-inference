@@ -31,7 +31,7 @@ marked as such. Detailed, regenerable results live in `results/` (raw JSON/CSV, 
 Supported: forward 2D convolution, NCHW / OIHW, stride, symmetric zero padding, optional bias and ReLU,
 groups = 1, dilation = 1, FP32 (strict), FP16, BF16 (FP32 accumulation), TF32 (cuBLAS im2col and cuDNN only).
 GPUs: compute capability 8.0 and newer (the build rejects older architectures).
-See `docs/LIMITATIONS.md` for the full list of what is *not* supported.
+See "Honest status" at the bottom for what is *not* supported.
 
 ## Build
 
@@ -125,15 +125,15 @@ from two runs on the same GPU model (run-to-run drift of the unchanged kernels w
   CUDA Graph replay (un-profiled, 16 layer-chain cases per precision per GPU) cuts host launch cost by a geomean of 33-70x
   (1-3300x depending on chain length) but device time only by a geomean of 1.13-1.18x (range 1.00-1.37x); replay was bitwise
   identical to eager in every case. Independent-convolution streams (2/4/8 streams vs 1): 0.56-3.3x for the cuBLAS im2col cases and 1.5-4.8x for the tiny
-  single-kernel cases, with 2 streams slower than 1 for one size; do not generalize beyond the cases listed in `docs/RESULTS.md`.
+  single-kernel cases, with 2 streams slower than 1 for one size; do not generalize beyond the measured cases in `results/raw/*/graphs`.
 * On Hopper the `mma.sync`/WMMA path measures 566 TFLOP/s: ~59% of a clock-derived dense FP16 estimate (965) or ~68% of the
   datasheet-derived ~835 (NVIDIA's 1,671 figure for the H100 NVL carries a sparsity footnote; halved here). Neither number is a
   hard ceiling for `mma.sync`; `wgmma`/TMA are not implemented. The A40 microbenchmark reaches 99% of its estimate.
 * Not available/verified: Nsight Compute hardware counters (`ERR_NVGPUCTRPERM`), A100/Blackwell GPUs. Counter-based profiling
   claims are therefore absent; Nsight Systems timelines (`results/raw/*/nsys`) are included.
 
-Full tables, losses, accuracy and the methodology are in `docs/RESULTS.md` and `docs/BENCHMARK_METHODOLOGY.md` (kept out of
-version control); figures are in `results/figures/` (`fig01`-`fig10`, `expB_*`) and tables in `results/processed/`.
+Full per-workload tables are in `results/processed/` and figures in `results/figures/` (`fig01`-`fig10`, `expB_*`); both are
+regenerated from `results/raw` by the scripts under `analysis/`.
 
 ## Reproduction
 
