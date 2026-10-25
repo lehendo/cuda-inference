@@ -145,11 +145,3 @@ scripts/submit.sh scripts/slurm/profile_nsys.sbatch     # Nsight Systems timelin
 python analysis/aggregate_results.py --raw results/raw --out results/processed
 python analysis/make_figures.py --raw results/raw --figures results/figures
 ```
-
-## Honest status
-
-Not implemented: Python bindings, grouped/dilated convolution, an NHWC public layout (the mma.sync kernels transpose
-internally and count that cost), Hopper/Blackwell-specific instructions (`wgmma`, TMA), TF32 in the custom Tensor Core
-kernels. The CUDA-core FP32 kernels reach about half of the FMA ceiling and trail cuDNN. `C_in % 8 != 0` shapes cannot use
-the fast Tensor Core family. Weight prepacking is not implemented, so every `mma.sync` call repacks W (and transposes X) and
-that cost is included in its timings.
