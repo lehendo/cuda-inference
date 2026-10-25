@@ -1,147 +1,214 @@
-# Hardware-Aware GPU Inference Engine
+# CUDA Inference Engine
 
-A from-scratch CUDA convolution inference library that implements several forward-convolution algorithms
-(naive, explicit im2col, shared-memory tiled, implicit GEMM, Tensor Core), selects between them with a
-capability-aware dispatcher and a measuring autotuner, and ships a reproducible benchmark / profiling / Slurm
-workflow that compares everything against cuDNN and CUTLASS.
+A hardware-aware GPU inference library built from scratch in CUDA C++, featuring custom convolution kernels, Tensor Core acceleration, and automated kernel tuning. The project is intended for experimentation with GPU kernel design, hardware-aware optimization, and reproducible inference performance measurements.
 
-Everything reported below was measured on the hardware named next to the number; anything not measured is
-marked as such. Detailed, regenerable results live in `results/` (raw JSON/CSV, processed tables, figures).
+The engine implements multiple convolution algorithms, from shared-memory tiled CUDA kernels to implicit GEMM and Tensor Core kernels using `mma.sync`, `ldmatrix`, and asynchronous `cp.async`. A capability-aware dispatcher and autotuner select validated implementations based on workload characteristics and GPU architecture.
 
-## What is implemented
+Benchmarked against NVIDIA cuDNN and CUTLASS on A40 and H100 GPUs.
 
-| Component | Where | Notes |
-|---|---|---|
-| CPU reference | `src/cpu/cpu_reference.cpp` | nested loops, double accumulation, emits an error-scale array for the tolerance model |
-| Naive direct CUDA | `src/kernels/direct_conv.cu` | one thread per output element |
-| Explicit im2col + GEMM | `src/kernels/im2col.cu` | custom im2col kernel + cuBLAS strided-batched GEMM (library-assisted baseline); no output permutation |
-| Tiled SIMT convolution | `src/kernels/simt_tiled_conv.cu` | shared-memory tiling, register blocking, 5 tile shapes x 2 channel chunks |
-| Custom implicit GEMM (CUDA cores) | `src/kernels/implicit_gemm.cu` | never materializes im2col; lookup-table gather, 2-stage smem pipeline, 8 tile shapes |
-| Custom Tensor Core convolution (WMMA) | `src/kernels/tensor_core_conv.cu` | WMMA 16x16x16, FP16/BF16 in, FP32 accumulate, 9 tile shapes, irregular M/N/K by predication |
-| Custom Tensor Core convolution (mma.sync) | `src/kernels/tensor_core_mma.cu` | `mma.sync.m16n8k16` + `ldmatrix` + multi-stage 16-byte `cp.async`, NHWC repack in the timed pipeline, split-K; needs C_in % 8 == 0 |
-| Fused epilogues | all custom kernels | bias and bias+ReLU applied to the FP32 accumulator before the single rounding |
-| Dispatcher | `src/runtime/dispatcher.cpp` | capability check -> selection (explicit > tuning cache > autotune > cost model) -> plan -> execute |
-| Autotuner + cache | `src/autotuner/` | validates every candidate against a double-precision reference, robust-median timing, JSON cache keyed by GPU/CUDA/problem |
-| Roofline cost model | `src/runtime/perf_model.cpp`, `src/profiling/ceilings.cu` | spec-derived and *measured* ceilings; ranks / prunes candidates |
-| CUDA Graphs | `src/runtime/cuda_graph.cpp` | capture/replay/update of layer chains |
-| Benchmarks | `benchmarks/` | harness, cuDNN + CUTLASS (+ optional PyTorch) baselines, tuning experiments, graph/stream experiment |
-| Analysis | `analysis/` | aggregation tables and figures generated only from saved results |
-| Optional extra | `src/transformer/rmsnorm.cu` | fused (add +) RMSNorm, FP32/FP16/BF16 |
+## Performance
 
-Supported: forward 2D convolution, NCHW / OIHW, stride, symmetric zero padding, optional bias and ReLU,
-groups = 1, dilation = 1, FP32 (strict), FP16, BF16 (FP32 accumulation), TF32 (cuBLAS im2col and cuDNN only).
-GPUs: compute capability 8.0 and newer (the build rejects older architectures).
-See "Honest status" at the bottom for what is *not* supported.
+Custom FP16 Tensor Core convolution achieves **1.32–1.51x geometric mean speedup over accuracy-qualified cuDNN** across the evaluated GPU and workload sets.
 
-## Build
+| GPU | Tuning set (27 workloads) | Evaluation set (17 workloads) |
+|---|---:|---:|
+| NVIDIA A40 | **1.39x** | **1.51x** |
+| NVIDIA H100 NVL | **1.32x** | **1.34x** |
 
-Requirements: CUDA toolkit >= 12.x with cuBLAS (tested with 12.8), CMake >= 3.24, a C++17 compiler.
-Optional: cuDNN 9 (`-DCUDNN_ROOT=...`) and a CUTLASS checkout (`-DCUTLASS_DIR=...`, tested with v3.9.2) for
-the baselines; without them those baselines are compiled out and reported as "unsupported", never silently
-replaced.
+Results measure fused FP16 convolution with FP32 accumulation, bias, and ReLU using an NCHW interface. Speedup is cuDNN execution time divided by custom execution time, so values above 1.0x favor the custom implementation.
+
+The custom kernels outperform cuDNN on 23/27 tuning and 15/17 evaluation workloads on A40, and 20/27 and 13/17 on H100.
+
+**Additional findings**
+
+- **CUTLASS:** Its NHWC convolution kernel is approximately 1.6–2.0x faster than the custom Tensor Core pipeline when measured without CUTLASS layout conversions. With transformations required by the NCHW interface included, performance is approximately comparable.
+- **FP32:** Custom implicit GEMM reaches 0.63–0.76x of unrestricted cuDNN performance on average across the evaluated sets.
+- **Autotuning:** Cost-model-guided top-3 search comes within approximately 5–9% of exhaustive tuning on the measured tuning sets, using substantially fewer candidate measurements.
+- **Kernel fusion:** Fused bias and ReLU improve Tensor Core execution by 1.33x on A40 and 1.40x on H100 over separate elementwise operations.
+
+Measurements use CUDA 12.8, cuDNN 9.5.1, and CUTLASS 3.9.2. Results are geometric means over the specified workloads, not guarantees for arbitrary convolution shapes. The evaluation set was excluded from tuning and cost-model fitting, but its shapes were visible during development and it is not a blind test set.
+
+## Features
+
+### Custom CUDA kernels
+
+| Backend | Implementation |
+|---|---|
+| Direct convolution | One CUDA thread per output element |
+| Tiled SIMT | Shared-memory tiling and register blocking |
+| Explicit im2col | Custom input unrolling with cuBLAS GEMM |
+| Implicit GEMM | Custom CUDA-core GEMM without materializing the im2col matrix |
+| Tensor Core WMMA | FP16/BF16 matrix operations with FP32 accumulation |
+| Tensor Core MMA | `mma.sync`, `ldmatrix`, multi-stage `cp.async`, and split-K |
+
+The im2col backend uses cuBLAS for matrix multiplication. The SIMT, implicit GEMM, WMMA, and MMA convolution kernels are custom implementations.
+
+### Hardware-aware autotuning
+
+A runtime dispatcher filters kernels by GPU capability, precision, tensor dimensions, shared-memory usage, and workspace requirements.
+
+The autotuner validates candidate kernels against a double-precision reference, benchmarks supported configurations, and caches the fastest validated selection.
+
+A roofline-inspired cost model estimates arithmetic intensity, occupancy, tile efficiency, and launch overhead to rank configurations and reduce tuning cost.
+
+Cached selections are keyed by workload, backend, GPU characteristics, software versions, and source fingerprint.
+
+### Additional optimizations
+
+- **Fused epilogues:** Apply bias and ReLU directly to FP32 accumulators before output conversion.
+- **CUDA Graphs:** Capture and replay convolution chains, reducing host launch overhead.
+- **Split-K parallelism:** Improve GPU utilization for workloads with long reductions and relatively small output dimensions.
+- **Reusable execution plans:** Cache kernel selection and setup state for repeated execution.
+- **Fused RMSNorm:** Additional FP32/FP16/BF16 normalization operator with optional residual addition.
+
+## Architecture
+
+```text
+                      Conv2D request
+                            |
+                            v
+                    Problem validation
+                            |
+                            v
+                    Execution plan cache
+                            |
+                            v
+                    Capability filtering
+                            |
+                            v
+                    Kernel selection
+                  /         |          \
+            Explicit      Cached      Autotune /
+            override      winner      cost model
+                  \         |          /
+                            v
+                      Execution plan
+                            |
+                            v
+                       CUDA stream
+                            |
+                            v
+                    Convolution output
+```
+
+The runtime separates kernel compatibility, configuration selection, plan creation, and execution.
+
+Each kernel registers its supported configurations and hardware constraints. Execution plans own reusable setup state and launch kernels on caller-provided CUDA streams.
+
+The optimized Tensor Core backend converts NCHW inputs into a channel-contiguous representation to enable vectorized `cp.async` transfers. Required layout transformations and weight repacking are included in its measured execution times.
+
+## Getting started
+
+### Requirements
+
+- NVIDIA GPU with compute capability 8.0 or newer
+- CUDA Toolkit 12.x or newer
+- CMake 3.24 or newer
+- C++17-compatible compiler
+- cuBLAS, included with CUDA
+
+Optional dependencies for library comparisons:
+
+- cuDNN 9
+- CUTLASS (tested with v3.9.2)
+
+The core library builds without cuDNN or CUTLASS. Those benchmark backends are disabled when their dependencies are unavailable.
+
+### Build
+
+Configure CMake for your GPU architecture. For example, on an NVIDIA A40:
 
 ```bash
-cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_CUDA_ARCHITECTURES="80;86;89;90" \
-      -DCUDNN_ROOT=/path/to/cudnn -DCUTLASS_DIR=/path/to/cutlass
-cmake --build build -j
-ctest --test-dir build --output-on-failure        # run on a GPU node
-```
-On the Illinois Campus Cluster use the helpers in `scripts/` (`env.sh`, `build.sh`, `submit.sh`,
-`slurm/*.sbatch`); resources are configurable through `GPU_SLURM_*` environment variables.
+cmake -S . -B build \
+  -DCMAKE_BUILD_TYPE=Release \
+  -DCMAKE_CUDA_ARCHITECTURES=86
 
-## Usage
+cmake --build build -j
+```
+
+Use architecture `90` for H100. Builds have also been verified for `sm_80` and `sm_89`, although performance tests were conducted only on A40 and H100 NVL.
+
+To enable cuDNN and CUTLASS comparisons, add:
+
+```bash
+-DCUDNN_ROOT=/path/to/cudnn \
+-DCUTLASS_DIR=/path/to/cutlass
+```
+
+Run the correctness tests on a machine with an NVIDIA GPU:
+
+```bash
+ctest --test-dir build --output-on-failure
+```
+
+### Usage
+
+The library exposes a C++ convolution API through [`conv2d.h`](include/gpu_inference/conv2d.h).
 
 ```cpp
 #include "gpu_inference/conv2d.h"
+
 using namespace gie;
 
 ConvProblem prob;
-prob.p.batch = 8; prob.p.in_channels = 64; prob.p.in_h = prob.p.in_w = 56;
-prob.p.out_channels = 64; prob.p.kernel_h = prob.p.kernel_w = 3; prob.p.pad_h = prob.p.pad_w = 1;
-prob.precision = Precision::kFp16;          // FP16 storage, FP32 accumulation
-prob.has_bias = true; prob.activation = Activation::kReLU;
+prob.p.batch = 8;
+prob.p.in_channels = 64;
+prob.p.in_h = prob.p.in_w = 56;
+prob.p.out_channels = 64;
+prob.p.kernel_h = prob.p.kernel_w = 3;
+prob.p.pad_h = prob.p.pad_w = 1;
 
-size_t ws = Conv2D::workspace_size(prob);   // 0 for the fused custom kernels
-Conv2D::forward(x, w, &bias, prob, y, workspace, ws, stream);   // backend chosen by the dispatcher
+prob.precision = Precision::kFp16;
+prob.has_bias = true;
+prob.activation = Activation::kReLU;
 
-Conv2DOptions opt; opt.backend = Backend::kTensorCore;          // or force a backend / a specific kernel
-opt.autotune = true;                                            // measure + cache the best configuration
+// x, w, bias, y, workspace, and stream are caller-provided.
+size_t ws = Conv2D::workspace_size(prob);
+Conv2D::forward(x, w, &bias, prob, y, workspace, ws, stream);
 ```
-`examples/quickstart.cpp` is a complete program. Tools: `gie_info` (device + ceilings), `gie_bench`
-(benchmarks), `gie_tune` (autotuning, Experiment B), `gie_graph_bench` (CUDA Graphs / streams),
-`gie_rmsnorm_bench`.
 
-## Correctness
+This is an API sketch. See [`examples/quickstart.cpp`](examples/quickstart.cpp) for the complete example, including device memory management and execution.
 
-Every kernel is validated against a double-precision reference (CPU for small shapes, GPU for large) on 26
-public shapes (batch 1-32, 1x1 to 7x7 and non-square kernels, stride 1/2, odd and unequal sizes, tiny
-outputs, boundary-dominated padding) with four input distributions, with and without bias/ReLU. The
-tolerance is derived from the reduction length and the output type (`include/gpu_inference/reference.h`),
-not tuned to pass. Tests also cover argument validation, aliasing, workspace size, the dispatcher,
-the autotuner (including injected faulty kernels that must never be selected) and the tuning cache.
-`compute-sanitizer` memcheck / racecheck / initcheck / synccheck are run by `scripts/run_sanitizers.sh` (reduced shapes; racecheck on
-representative subsets for the concurrency and CUDA Graph tests; the cuBLAS-backed backend is excluded from synccheck because
-of a divergent barrier inside a cuBLAS kernel on Hopper). Concurrency tests cover creating a plan while other streams are busy,
-sharing one plan across streams and host threads, unaligned user pointers, grid limits and CUDA Graph replay.
+Available command-line tools include `gie_info`, `gie_bench`, `gie_tune`, `gie_graph_bench`, and `gie_rmsnorm_bench`.
 
-## Results (measured; NVIDIA A40 sm_86 and H100 NVL sm_90, CUDA 12.8, cuDNN 9.5.1, CUTLASS 3.9.2)
+## Benchmarking
 
-All numbers are medians of 30 CUDA-event samples, validated against a double-precision reference, and regenerable from
-`results/raw` (see Reproduction). Speedup = baseline time / our time on the same GPU and workload; > 1 is faster.
-27 tuning workloads, 17 held-out workloads (never used to select tuning configurations or fit the cost model; their shapes
-and results were visible during development, so they are not a blind test), 31 sweep workloads.
+Benchmarks use deterministic synthetic convolution workloads spanning batch size, channel count, spatial resolution, kernel size, padding, and stride.
 
-**cuDNN baseline.** An audit found that cuDNN's one-shot algorithm search can mis-rank small kernels (on two FP16 H100 shapes
-one run picked a 48 us algorithm where another picked a 20 us one). The baseline now re-times every algorithm that fits the
-workspace limit and passes the same accuracy gate as the custom kernels, and keeps the fastest; across two repetitions it
-picks the same algorithm for 51-54 of 54 tuning rows (the few changes are ties within ~1-3%) with latencies repeating to
-+-0.7% (geomean). All "vs cuDNN" numbers below use the corrected baseline (separate repetition files under
-`results/raw/audit_cudnn_retime_*`); the correction lowered the H100 FP16 advantage from 1.49x / 1.66x to 1.32x / 1.34x.
-Custom and CUTLASS rows come from a separate run of the same sources (`results/raw/audit_repr_*`), so each ratio pairs rows
-from two runs on the same GPU model (run-to-run drift of the unchanged kernels was +-1%).
+GPU execution is measured with CUDA events after warmup. Short kernels are timed using repeated back-to-back launches to reduce event-resolution error. Reported execution measurements use the median of 30 samples.
 
-| FP16 storage / FP32 accumulate, fused conv+bias+ReLU | A40 tuning / held-out | H100 tuning / held-out |
-|---|---|---|
-| custom Tensor Core (tuned) vs unrestricted cuDNN NCHW (corrected) | 1.39x / 1.51x (faster on 23/27, 15/17; worst 0.54x) | 1.32x / 1.34x (20/27, 13/17; worst 0.48x) |
-| custom Tensor Core (tuned) vs custom CUDA-core implicit GEMM | 2.5x geomean over 119 workloads | 2.8x |
-| tuned vs fixed hand-picked configuration (autotuning gain) | 1.4-2.4x geomean by backend | 1.3-2.7x |
-| CUTLASS NHWC kernel-only vs our path (we are slower) | CUTLASS 1.6-1.8x faster | CUTLASS 1.9-2.0x faster |
-| same, if CUTLASS must also convert NCHW<->NHWC | parity (1.15x / 1.00x in our favour) | parity (1.08x / 0.98x) |
+The benchmark harness distinguishes:
 
-* Strict FP32: cuDNN is faster than every custom FP32 kernel on average; the best custom kernel (CUDA-core implicit GEMM,
-  tuned) reaches 0.67x / 0.76x (A40) and 0.63x / 0.72x (H100) of unrestricted cuDNN (tuning / held-out; wins on 5-7 of 17-27).
-  cuDNN's largest FP32 wins use FFT/FFT_TILING/Winograd algorithms that do fewer multiply-adds than direct convolution, so
-  "effective TFLOP/s" computed from direct-convolution FLOPs can exceed the FMA ceiling. Against cuDNN restricted to its
-  GEMM-family algorithms (a labelled diagnostic, not the primary comparison) the custom kernel reaches 0.82x / 0.84x (A40) and
-  0.72x / 0.78x (H100). The dispatcher (0.90-0.97x of cuDNN in FP32; 1.50-1.60x in FP16) may also pick cuBLAS im2col, so it is
-  not a custom-kernel result.
-* FP32 kernel work in the audit: occupancy-capped and column-interleaved variants of the 8x8-tile kernels improve individual
-  shapes (up to +29% on one H100 shape, +12% on A40) but change the aggregate over 44 workloads by only +0.6% (A40) / +1.4% (H100).
-  The ablations did not support uncoalesced output stores as the bottleneck; removing the global-load path cut ~38% of the
-  64x64 kernel's time on the H100 and its inner loop reached ~70% of the FMA ceiling even without loads.
-* Cost-model-guided search (top-3 of ~20-44 candidates) finds a kernel within 0-9% (geomean) of the exhaustive optimum at 8-18% of the
-  search cost; a fixed manual configuration is 2.5-3.5x (geomean) slower than the tuned one.
-* Fusing bias+ReLU into the Tensor Core epilogue is 1.33x (A40) / 1.40x (H100) faster than separate elementwise kernels (geomean);
-  CUDA Graph replay (un-profiled, 16 layer-chain cases per precision per GPU) cuts host launch cost by a geomean of 33-70x
-  (1-3300x depending on chain length) but device time only by a geomean of 1.13-1.18x (range 1.00-1.37x); replay was bitwise
-  identical to eager in every case. Independent-convolution streams (2/4/8 streams vs 1): 0.56-3.3x for the cuBLAS im2col cases and 1.5-4.8x for the tiny
-  single-kernel cases, with 2 streams slower than 1 for one size; do not generalize beyond the measured cases in `results/raw/*/graphs`.
-* On Hopper the `mma.sync`/WMMA path measures 566 TFLOP/s: ~59% of a clock-derived dense FP16 estimate (965) or ~68% of the
-  datasheet-derived ~835 (NVIDIA's 1,671 figure for the H100 NVL carries a sparsity footnote; halved here). Neither number is a
-  hard ceiling for `mma.sync`; `wgmma`/TMA are not implemented. The A40 microbenchmark reaches 99% of its estimate.
-* Not available/verified: Nsight Compute hardware counters (`ERR_NVGPUCTRPERM`), A100/Blackwell GPUs. Counter-based profiling
-  claims are therefore absent; Nsight Systems timelines (`results/raw/*/nsys`) are included.
+- **Steady-state execution:** GPU kernel and required pipeline operations with data already resident on the device.
+- **Layout-inclusive execution:** Required format transformations to match the public NCHW interface.
+- **Setup and tuning:** Workspace preparation, algorithm search, and autotuning, measured separately.
+- **Host overhead:** Launch and synchronization costs, reported separately from device execution.
 
-Full per-workload tables are in `results/processed/` and figures in `results/figures/` (`fig01`-`fig10`, `expB_*`); both are
-regenerated from `results/raw` by the scripts under `analysis/`.
+For cuDNN, all available algorithms passing the workspace and numerical accuracy requirements are re-timed with a consistent CUDA-event measurement procedure. The fastest accepted algorithm is used as the baseline. Unrestricted cuDNN is the primary reference; GEMM-family-only comparisons are treated as diagnostic results.
 
-## Reproduction
+Strict FP32 benchmarks disable implicit TF32 substitution.
+
+### Reproducing benchmarks
+
+The repository contains benchmark workloads, profiling tools, analysis scripts, and optional Slurm integration.
+
+Run the benchmark harness on an allocated GPU:
 
 ```bash
-scripts/submit.sh scripts/slurm/inspect_env.sbatch      # record the environment
-scripts/submit.sh scripts/slurm/build_test.sbatch       # build + all tests on one GPU
-scripts/submit.sh scripts/slurm/bench_full.sbatch       # full benchmark campaign (or scripts/run_campaign.sh on a GPU node)
-scripts/submit.sh scripts/slurm/profile_nsys.sbatch     # Nsight Systems timeline (GPU_NSYS_WORKLOAD / GPU_NSYS_BACKEND)
-python analysis/aggregate_results.py --raw results/raw --out results/processed
-python analysis/make_figures.py --raw results/raw --figures results/figures
+scripts/run_benchmarks.sh --e2e --mode both \
+  --backends implicit_gemm,tensor_core,dispatcher,cudnn,cutlass
 ```
+
+Optional cuDNN and CUTLASS dependencies must be available to include those backends.
+
+The repository also includes scripts for full benchmark campaigns and report generation:
+
+```bash
+# Full benchmark campaign on a Slurm cluster
+scripts/submit.sh scripts/slurm/bench_full.sbatch
+
+# Regenerate processed results and figures
+scripts/make_report_data.sh
+```
+
+Slurm integration is optional and requires an appropriately configured cluster account.
